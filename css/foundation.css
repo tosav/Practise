@@ -1192,13 +1192,13 @@ select {
   padding: 0.85em 1em;
   -webkit-appearance: none;
   border: 1px solid transparent;
-  border-radius: 3px;
+  border-radius: 0;
   transition: background-color 0.25s ease-out, color 0.25s ease-out;
   font-size: 0.9rem;
   line-height: 1;
   text-align: center;
   cursor: pointer;
-  background-color: #269489;
+  background-color: #228379;
   color: #fefefe; }
   [data-whatinput='mouse'] .button {
     outline: 0; }
@@ -1975,7 +1975,7 @@ a.button:hover, a.button:focus {
     padding: 0.7rem 1rem;
     font-weight: bold;
     line-height: 1;
-    color: inherit; }
+    color: #ffffff; }
 
 .menu-centered > .menu {
   -ms-flex-pack: center;
@@ -2472,12 +2472,12 @@ a.button:hover, a.button:focus {
       justify-content: space-between;
   -ms-flex-align: center;
       align-items: center;
-  padding: 0.5rem;
+  padding: 0rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
   .top-bar,
   .top-bar ul {
-    background-color: #e6e6e6; }
+    background-color: #269489; }
   .top-bar input {
     max-width: 200px;
     margin-right: 1rem; }
@@ -2641,7 +2641,7 @@ a.button:hover, a.button:focus {
   display: block;
   padding: 1.25rem 1rem;
   border: 1px solid #e6e6e6;
-  border-bottom: 0;
+  border-bottom: 1px solid #31c0b2;
   font-size: 0.75rem;
   line-height: 1;
   color: #269489; }
