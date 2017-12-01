@@ -6,6 +6,26 @@
         });
     });
 </script>
+<?php
+    $db = mysql_connect ("Practise","root","");
+    mysql_select_db ("practice",$db);
+    if (isset($_GET['login'])){	
+        $query=mysql_query("SELECT activate FROM users WHERE login='".$_GET['login']."' AND password='".$_GET['password']."'");
+        if (!$query){
+            echo "ошибка";
+        }
+        else{
+            $activate=mysql_result($query,0);
+            if (!$activate)
+            {
+                echo "нет аккаунта";
+            }
+            else{
+                echo "есть аккаунт";
+            }
+        }
+    }
+?>
 <div class="top-bar" id="responsive-menu">
   <div class="top-bar-left">
     <ul class="menu">
@@ -25,13 +45,16 @@
     </ul>
   </div>
 </div>
-<div id="dialog" title="Авторизация">
-<form id="login" class="log-in-form">
-    <input type="email" placeholder="login">
-    <input type="password" placeholder="password">
-  <p><input type="submit" class="button expanded" value="Вход"></input></p>
-</form>
-<label><center>У вас еще нет аккаунта?</center>
-</label>
-    <a href="http://practise/reg.php" class="button expanded">Регистрация</a>
+<div class="dark-side" id="dialog">
+    <div title="Авторизация">
+        <form id="login" action="" method="GET" class="log-in-form">
+            <input type="text" name="login" placeholder="Login">
+            <input type="password" name="password" placeholder="Password">
+          <p><input type="submit" class="button login" value="Вход"></input></p>
+        </form>
+        <label><center>У вас еще нет аккаунта?</center>
+        </label>
+        <a href="http://practise/reg.php" class="button expanded">Регистрация</a>
+    </div>
 </div>
+<div id="overlay"></div>
