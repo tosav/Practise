@@ -13,6 +13,7 @@
       <?php include ("menu.php");?>
       <? 
       //блокировать пользователя
+      //если его страница
       $num=3;
       switch ($num){
         case 0:
@@ -277,6 +278,7 @@
       ?>
         
     </div>
+    <!--если чужая страница
     </div>
     <?php include ("footer.php");?>
   </body>
