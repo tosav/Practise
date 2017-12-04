@@ -18,7 +18,7 @@
         }
     }
 ?>
-<div title="Авторизация" id="modal">
+<div title="Авторизация" id="modal" style="display:none">
     <form id="login" action="" method="GET" class="log-in-form">
         <input type="text" name="login" placeholder="Login">
         <input type="password" name="password" placeholder="Password">
@@ -28,7 +28,7 @@
     </label>
     <a href="http://practise/reg.php" class="button expanded">Регистрация</a>
 </div>
-<div id="bg_layer"></div>
+<div id="bg_layer"  style="display:none"></div>
 <div class="grid-container"> 
     <?php include ("header.php");?>
     <div class="top-bar" id="responsive-menu">
