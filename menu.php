@@ -57,8 +57,14 @@
             $("#modal").css({
                 
             });          
+            $('.grid-container').css({
+                "filter": "blur(10px)"
+            });
         });
         $('#bg_layer').click(function(){
-            $('#modal, #bg_layer').hide();
+            $('#modal, #bg_layer').hide();     
+            $('.grid-container').css({
+                "filter": "none"
+            });
         });
 </script>
