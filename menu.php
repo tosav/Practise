@@ -18,25 +18,6 @@
         }
     }
 ?>
-<div class="top-bar" id="responsive-menu">
-  <div class="top-bar-left">
-    <ul class="menu">
-      <li><a class="button large">Гость</a></li>
-    </ul>
-  </div>
-  <div class="top-bar-right">
-    <ul class="menu">
-      <?
-            $path=parse_url($_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"],PHP_URL_PATH);
-            if ($path=="practise/"||$path=="practise/index.php"){
-                echo '<li class="menu-text">Поиск</li>';
-                echo '<li><input type="search" placeholder="Search"></li>';
-            }
-      ?>
-      <li><a id="openD" onclick="in()" class="button large">Войти</a></li>
-    </ul>
-  </div>
-</div>
 <div title="Авторизация" id="modal">
     <form id="login" action="" method="GET" class="log-in-form">
         <input type="text" name="login" placeholder="Login">
@@ -48,23 +29,36 @@
     <a href="http://practise/reg.php" class="button expanded">Регистрация</a>
 </div>
 <div id="bg_layer"></div>
+<div class="grid-container"> 
+    <?php include ("header.php");?>
+    <div class="top-bar" id="responsive-menu">
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li><a class="button large">Гость</a></li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          <?
+                $path=parse_url($_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"],PHP_URL_PATH);
+                if ($path=="practise/"||$path=="practise/index.php"){
+                    echo '<li class="menu-text">Поиск</li>';
+                    echo '<li><input type="search" placeholder="Search"></li>';
+                }
+          ?>
+          <li><a id="openD" class="button large">Войти</a></li>
+        </ul>
+      </div>
+    </div>
 <script>
         $('#modal, #bg_layer').hide();
         $('#openD').click(function(){
-            alert("here");
             $('#modal, #bg_layer').show();
-            $("#modal").css(
-            {
-                position: 'absolute',
-                left: ( $(document).width()  - modalWindow.outerWidth()  ) / 2,
-                top:  ( $(document).height() - modalWindow.outerHeight() ) / 2,
+            $("#modal").css({
+                
             });          
-            $('#bg_layer').animate({
-                opacity: 0.5
-            });
         });
         $('#bg_layer').click(function(){
-            $('#modal, #bg_layer').fadeOut(500);
             $('#modal, #bg_layer').hide();
         });
 </script>

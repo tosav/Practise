@@ -7,9 +7,7 @@
     <title>Практики</title>
     <?php include ("head.php");?>
   </head>
-  <body>
-    <div class="grid-container">    
-      <?php include ("header.php");?>
+  <body>  
       <?php include ("menu.php");?>
         <ul class="accordion" data-accordion data-allow-all-closed="true">
             <li class="accordion-item" data-accordion-item>
