@@ -10,9 +10,6 @@
     text-align: center; 
     margin: auto;
 }
-body {
-filter: blur(5px) contrast(.8) brightness(.6);
-}
 #modal {
     position: fixed;
     left: 50%;

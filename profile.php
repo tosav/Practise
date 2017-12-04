@@ -9,7 +9,6 @@
   </head>
   <body>
     <div class="grid-container">    
-      <?php include ("header.php");?>
       <?php include ("menu.php");?>
       <? 
       //блокировать пользователя
