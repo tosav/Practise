@@ -72,7 +72,8 @@
                     <fieldset class="small-12 columns">
                       <button class="button float-right" type="submit" value="Submit">Записаться</button>
                     </fieldset>
-                </form>
+                  </div>
+                  </form>
                 </div>
             </li>
         </ul>

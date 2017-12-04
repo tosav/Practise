@@ -28,11 +28,6 @@
                 </div>
             </li>
         </ul>
-        <div class="grid-x grid-margin-x">
-          <div class="large-12 medium-2 cell">
-            <img src="../9.png">
-          </div>
-        </div>
     </div>
     </div>
     <?php include ("footer.php");?>

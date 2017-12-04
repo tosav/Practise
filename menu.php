@@ -1,12 +1,4 @@
-﻿<script>
-    $(function(){
-        $("#dialog").dialog({autoOpen: false});
-        $("#openD").click(function(){
-        $("#dialog").dialog("open");
-        });
-    });
-</script>
-<?php
+﻿<?php
     $db = mysql_connect ("Practise","root","");
     mysql_select_db ("practice",$db);
     if (isset($_GET['login'])){	
@@ -41,20 +33,38 @@
                 echo '<li><input type="search" placeholder="Search"></li>';
             }
       ?>
-      <li><a id="openD" class="button large">Войти</a></li>
+      <li><a id="openD" onclick="in()" class="button large">Войти</a></li>
     </ul>
   </div>
 </div>
-<div class="dark-side" id="dialog">
-    <div title="Авторизация">
-        <form id="login" action="" method="GET" class="log-in-form">
-            <input type="text" name="login" placeholder="Login">
-            <input type="password" name="password" placeholder="Password">
-          <p><input type="submit" class="button login" value="Вход"></input></p>
-        </form>
-        <label><center>У вас еще нет аккаунта?</center>
-        </label>
-        <a href="http://practise/reg.php" class="button expanded">Регистрация</a>
-    </div>
+<div title="Авторизация" id="modal">
+    <form id="login" action="" method="GET" class="log-in-form">
+        <input type="text" name="login" placeholder="Login">
+        <input type="password" name="password" placeholder="Password">
+      <p><input type="submit" class="button login" value="Вход"></input></p>
+    </form>
+    <label><center>У вас еще нет аккаунта?</center>
+    </label>
+    <a href="http://practise/reg.php" class="button expanded">Регистрация</a>
 </div>
-<div id="overlay"></div>
+<div id="bg_layer"></div>
+<script>
+        $('#modal, #bg_layer').hide();
+        $('#openD').click(function(){
+            alert("here");
+            $('#modal, #bg_layer').show();
+            $("#modal").css(
+            {
+                position: 'absolute',
+                left: ( $(document).width()  - modalWindow.outerWidth()  ) / 2,
+                top:  ( $(document).height() - modalWindow.outerHeight() ) / 2,
+            });          
+            $('#bg_layer').animate({
+                opacity: 0.5
+            });
+        });
+        $('#bg_layer').click(function(){
+            $('#modal, #bg_layer').fadeOut(500);
+            $('#modal, #bg_layer').hide();
+        });
+</script>

@@ -619,7 +619,7 @@ h6, .h6 {
 
 a {
   line-height: inherit;
-  color: #269489;
+  color: #000;
   text-decoration: none;
   cursor: pointer; }
   a:hover, a:focus {
@@ -782,8 +782,6 @@ ul.no-bullet, ol.no-bullet {
   th.show-for-print {
     display: table-cell !important; }
   a,
-  a:visited {
-    text-decoration: underline; }
   a[href]:after {
     content: " (" attr(href) ")"; }
   .ir a:after,
