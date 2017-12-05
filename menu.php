@@ -18,7 +18,8 @@
         }
     }
 ?>
-<div title="Авторизация" id="modal" style="display:none">
+<div class="modal">
+    <a class="accordion-title">Авторизация</a>
     <form id="login" action="" method="GET" class="log-in-form">
         <input type="text" name="login" placeholder="Login">
         <input type="password" name="password" placeholder="Password">
@@ -28,41 +29,38 @@
     </label>
     <a href="http://practise/reg.php" class="button expanded">Регистрация</a>
 </div>
-<div id="bg_layer"  style="display:none"></div>
+<div class="bg_layer"></div>
 <div class="grid-container"> 
     <?php include ("header.php");?>
     <div class="top-bar" id="responsive-menu">
-      <div class="top-bar-left">
         <ul class="menu">
-          <li><a class="button large">Гость</a></li>
-        </ul>
-      </div>
-      <div class="top-bar-right">
-        <ul class="menu">
+          <li><a class="button">Гость</a></li>
           <?
                 $path=parse_url($_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"],PHP_URL_PATH);
                 if ($path=="practise/"||$path=="practise/index.php"){
+                    printf('</ul><ul class="menu align-center">');
                     echo '<li class="menu-text">Поиск</li>';
-                    echo '<li><input type="search" placeholder="Search"></li>';
+                    echo '<li class="menu-input"><input type="search" placeholder="Search"></li>';
                 }
           ?>
-          <li><a id="openD" class="button large">Войти</a></li>
+        </ul>
+        <ul class="menu align-right">
+          <li><a id="openD" class="button ">Войти</a></li>
         </ul>
       </div>
-    </div>
 <script>
-        $('#modal, #bg_layer').hide();
+        $('.modal, .bg_layer').hide();
         $('#openD').click(function(){
-            $('#modal, #bg_layer').show();
-            $("#modal").css({
+            $('.modal, .bg_layer').show();
+            $(".modal").css({
                 
             });          
             $('.grid-container').css({
                 "filter": "blur(10px)"
             });
         });
-        $('#bg_layer').click(function(){
-            $('#modal, #bg_layer').hide();     
+        $('.bg_layer').click(function(){
+            $('.modal, .bg_layer').hide();     
             $('.grid-container').css({
                 "filter": "none"
             });

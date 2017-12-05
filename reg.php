@@ -10,11 +10,7 @@
   <body>
       <?php include ("menu.php");?>
 
-        <ul class="accordion" data-accordion>
-            <li class="accordion-item is-active" data-accordion-item>
-                <a class="accordion-title">Регистрация</a>
-                <div class="accordion-content" data-tab-content>
-                  <form data-abide novalidate>
+                <form data-abide novalidate>
                   <div data-abide-error class="alert callout" style="display: none;">
                     <p><i class="fi-alert"></i> На этой странице присутствуют ошибки</p>
                   </div>
@@ -72,9 +68,6 @@
                     </fieldset>
                   </div>
                   </form>
-                </div>
-            </li>
-        </ul>
     </div>
     <?php include ("footer.php");?>
   </body>
