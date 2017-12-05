@@ -622,8 +622,6 @@ a {
   color: #000;
   text-decoration: none;
   cursor: pointer; }
-  a:hover, a:focus {
-    color: #217f76; }
   a img {
     border: 0; }
 
@@ -819,11 +817,11 @@ textarea {
   display: block;
   box-sizing: border-box;
   width: 90%;
-  height: 2.4375rem;
-  margin: 0.5rem 1rem 1rem 1rem;
+  height: 2rem;
+  margin: 0.5rem 1rem 0.5rem 1rem;
   padding: 0.5rem;
   border: 1px solid #cacaca;
-  border-radius: 3px;
+  border-radius: 0px;
   background-color: #fefefe;
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
   font-family: inherit;
@@ -1208,7 +1206,8 @@ select {
   .button.small {
     font-size: 0.75rem; }
   .button.large {
-    font-size: 1.25rem; }
+    font-size: 1.25rem; 
+}
   .button.expanded {
     display: block;
     width: 100%;
@@ -1829,7 +1828,7 @@ a.button:hover, a.button:focus {
     line-height: 1;
     text-decoration: none;
     display: block;
-    padding: 0.7rem 1rem; }
+    padding: 1.1rem 2.75rem; }
   .menu input,
   .menu select,
   .menu a,
@@ -1970,8 +1969,7 @@ a.button:hover, a.button:focus {
       -ms-flex-pack: start;
           justify-content: flex-start; }
   .menu .menu-text {
-    padding: 0.7rem 1rem;
-    font-weight: bold;
+    padding: 1rem 1rem;
     line-height: 1;
     color: #ffffff; }
 
@@ -2477,7 +2475,7 @@ a.button:hover, a.button:focus {
   .top-bar ul {
     background-color: #269489; }
   .top-bar input {
-    max-width: 200px;
+    max-width: 1000px;
     margin-right: 1rem; }
   .top-bar .input-group-field {
     width: 100%;
@@ -2491,6 +2489,7 @@ a.button:hover, a.button:focus {
     max-width: 100%; }
   @media print, screen and (min-width: 40em) {
     .top-bar {
+       margin: 1rem 0;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap; }
       .top-bar .top-bar-left {
@@ -2629,20 +2628,22 @@ a.button:hover, a.button:focus {
     cursor: not-allowed; }
 
 .accordion-item:first-child > :first-child {
-  border-radius: 3px 3px 0 0; }
+  border-radius: 3px 3px 0 0;
+  background-color: #31c0b2;
+  }
 
 .accordion-item:last-child > :last-child {
   border-radius: 0 0 3px 3px; }
 
 .accordion-title {
-  position: relative;
-  display: block;
-  padding: 1.25rem 1rem;
-  border: 1px solid #e6e6e6;
-  border-bottom: 1px solid #31c0b2;
-  font-size: 0.75rem;
-  line-height: 1;
-  color: #269489; }
+    position: relative;
+    display: block;
+    padding: 1.25rem 1rem;
+    border: 1px solid #e6e6e6;
+    border-bottom: 1px solid #31c0b2;
+    font-size: 1rem;
+    line-height: 1;
+    color: #FFF; }
   :last-child:not(.is-active) > .accordion-title {
     border-bottom: 1px solid #e6e6e6;
     border-radius: 0 0 3px 3px; }
