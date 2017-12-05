@@ -2639,7 +2639,8 @@ a.button:hover, a.button:focus {
     position: relative;
     display: block;
     padding: 1.25rem 1rem;
-    border: 1px solid #e6e6e6;
+    border: 1px solid #31c0b2;
+    background-color: #31c0b2;
     border-bottom: 1px solid #31c0b2;
     font-size: 1rem;
     line-height: 1;
