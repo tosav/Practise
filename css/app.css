@@ -1,3 +1,11 @@
+#lumen{
+    width: 100px;
+    height: auto;   
+}
+.grid-container {
+    position: relative;
+    top: -40px;
+}
 .log-in-form {
     border: 1px solid #31c0b2;
     padding: 0rem;
@@ -11,7 +19,7 @@
     margin: auto;
 }
 
-#modal {
+.modal {
     position: fixed;
     left: 50%;
     top: 50%;
@@ -23,12 +31,14 @@
     line-height: 200px;
     text-align: center;
     background: #FFF;
+    display:none;
 }
-#bg_layer {
+.bg_layer {
     position: absolute;
+    top: 0px;
     z-index: 1000;
-    width: 110%;
-    height: 110%;
+    width: 100%;
+    height: 100%;
     background: #000;
     opacity: 0.8;
     -webkit-filter: blur(5px);
@@ -36,4 +46,5 @@
     -o-filter: blur(5px);
     -ms-filter: blur(5px);
     filter: blur(5px);
+    display:none;
 }

@@ -18,7 +18,7 @@
         }
     }
 ?>
-<div title="Авторизация" id="modal" style="display:none">
+<div title="Авторизация" class="modal">
     <form id="login" action="" method="GET" class="log-in-form">
         <input type="text" name="login" placeholder="Login">
         <input type="password" name="password" placeholder="Password">
@@ -28,7 +28,7 @@
     </label>
     <a href="http://practise/reg.php" class="button expanded">Регистрация</a>
 </div>
-<div id="bg_layer"  style="display:none"></div>
+<div class="bg_layer"></div>
 <div class="grid-container"> 
     <?php include ("header.php");?>
     <div class="top-bar" id="responsive-menu">
@@ -51,18 +51,18 @@
       </div>
     </div>
 <script>
-        $('#modal, #bg_layer').hide();
+        $('.modal, .bg_layer').hide();
         $('#openD').click(function(){
-            $('#modal, #bg_layer').show();
-            $("#modal").css({
+            $('.modal, .bg_layer').show();
+            $(".modal").css({
                 
             });          
             $('.grid-container').css({
                 "filter": "blur(10px)"
             });
         });
-        $('#bg_layer').click(function(){
-            $('#modal, #bg_layer').hide();     
+        $('.bg_layer').click(function(){
+            $('.modal, .bg_layer').hide();     
             $('.grid-container').css({
                 "filter": "none"
             });
