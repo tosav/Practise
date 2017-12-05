@@ -8,8 +8,6 @@
     <?php include ("head.php");?>
   </head>
   <body>
-    <div class="grid-container">    
-      <?php include ("header.php");?>
       <?php include ("menu.php");?>
       <?
         //изменить удалить

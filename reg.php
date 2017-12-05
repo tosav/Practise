@@ -8,7 +8,6 @@
     <?php include ("head.php");?>
   </head>
   <body>
-    <div class="grid-container">    
       <?php include ("menu.php");?>
 
         <ul class="accordion" data-accordion>

@@ -7,12 +7,11 @@
     <title>Практики</title>
     <?php include ("head.php");?>
   </head>
-  <body>
-    <div class="grid-container">    
+  <body> 
       <?php include ("menu.php");?>
       <? 
       //блокировать пользователя
-      //если его страница
+      //если его страница   
       $num=3;
       switch ($num){
         case 0:
