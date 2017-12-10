@@ -1193,12 +1193,12 @@ select {
   line-height: 1;
   text-align: center;
   cursor: pointer;
-  background-color: #228379;
+  background-color: #279389;
   color: #fefefe; }
   [data-whatinput='mouse'] .button {
     outline: 0; }
   .button:hover, .button:focus {
-    background-color: #207e74;
+    background-color: #279389;
     color: #fefefe; }
   .button.tiny {
     font-size: 0.6rem; }
@@ -2621,7 +2621,6 @@ a.button:hover, a.button:focus {
 
 .accordion {
   margin-left: 0;
-  background: #fefefe;
   list-style-type: none; }
   .accordion[disabled] .accordion-title {
     cursor: not-allowed; }
@@ -2645,7 +2644,7 @@ a.button:hover, a.button:focus {
     line-height: 1;
     color: #FFF; }
   :last-child:not(.is-active) > .accordion-title {
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
     border-radius: 0 0 3px 3px; }
   .accordion-title:hover, .accordion-title:focus {
     background-color: #31c0b2; }

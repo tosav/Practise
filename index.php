@@ -9,7 +9,7 @@
   </head>
   <body>  
       <?php include ("menu.php");?>
-        <ul class="accordion" data-accordion data-allow-all-closed="true">
+        <ul class="accordion shade" data-accordion data-allow-all-closed="true">
           <li class="accordion-item" data-accordion-item>
             <a href="#" class="accordion-title">Accordion 1</a>
             <div class="accordion-content" data-tab-content>
@@ -18,7 +18,7 @@
             </div>
           </li>
         </ul>
-        <ul class="accordion" data-accordion data-allow-all-closed="true">
+        <ul class="accordion shade" data-accordion data-allow-all-closed="true">
             <li class="accordion-item" data-accordion-item>
                 <a class="accordion-title">Узнай основную информацию о практике</a>
                 <div class="accordion-content" data-tab-content>

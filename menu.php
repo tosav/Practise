@@ -23,20 +23,20 @@
     <form id="login" action="" method="GET" class="log-in-form">
         <input type="text" name="login" placeholder="Login">
         <input type="password" name="password" placeholder="Password">
-      <p><input type="submit" class="button login" value="Вход"></input></p>
+      <p><input type="submit" style="padding: 0;" class="button login" value="Вход"></input></p>
     </form>
     <div class="bottom">
-    <label><center>У вас еще нет аккаунта?</center>
+    <label style="color: #949494; padding: 5px 0;"><center>У вас еще нет аккаунта?</center>
     </label>
-    <a href="http://practise/reg.php" class="button login">Регистрация</a>
+    <a href="http://practise/reg.php" style="padding: 9px;" class="button login">Регистрация</a>
     </div>
 </div>
 <div class="bg_layer"></div>
 <div class="grid-container"> 
     <?php include ("header.php");?>
-    <div class="top-bar" id="responsive-menu">
+    <div class="top-bar shade" id="responsive-menu">
         <ul class="menu">
-          <li><a class="button">Гость</a></li>
+          <li><a class="button top">Гость</a></li>
           <?
                 $path=parse_url($_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"],PHP_URL_PATH);
                 if ($path=="practise/"||$path=="practise/index.php"){
@@ -47,7 +47,7 @@
           ?>
         </ul>
         <ul class="menu align-right">
-          <li><a id="openD" class="button ">Войти</a></li>
+          <li><a id="openD" class="button top">Войти</a></li>
         </ul>
       </div>
 <script>
