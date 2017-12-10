@@ -1,0 +1,7 @@
+Загрузить себе
+Branch -> Merge into current branch -> Lana -> Merge into Ветка
+
+Выгрузить
+Current branch = ветка
+Сhanges -> Commit to Ветка
+Fetch origin

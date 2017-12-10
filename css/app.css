@@ -10,10 +10,11 @@
     height: 40px;
     background:31c0b2;
 }
+.bottom{
+    background-color:#d8d8d8;
+    
+}
 .log-in-form {
-    border: 1px solid #31c0b2;
-    padding: 0rem;
-    border-radius: 0;
     z-index: 9100;
  }
  ul.menu.align-center {
@@ -27,7 +28,7 @@ li.menu-input {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 30%;
+    width: 25%;
     min-width: 300px;
     height: auto;
     z-index: 1100;
@@ -35,6 +36,7 @@ li.menu-input {
     text-align: center;
     background: #FFF;
     display:none;
+    background-color: #eeeeee;
 }
 .bg_layer {
     position: absolute;

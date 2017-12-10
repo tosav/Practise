@@ -25,9 +25,11 @@
         <input type="password" name="password" placeholder="Password">
       <p><input type="submit" class="button login" value="Вход"></input></p>
     </form>
+    <div class="bottom">
     <label><center>У вас еще нет аккаунта?</center>
     </label>
-    <a href="http://practise/reg.php" class="button expanded">Регистрация</a>
+    <a href="http://practise/reg.php" class="button login">Регистрация</a>
+    </div>
 </div>
 <div class="bg_layer"></div>
 <div class="grid-container"> 
