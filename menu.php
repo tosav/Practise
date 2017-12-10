@@ -19,13 +19,13 @@
     }
 ?>
 <div class="modal">
-    <a class="accordion-title">Авторизация</a>
-    <form id="login" action="" method="GET" class="log-in-form">
-        <input type="text" name="login" placeholder="Login">
-        <input type="password" name="password" placeholder="Password">
+    <a class="accordion-title shade">Авторизация</a>
+    <form id="login" action="" method="GET" class="log-in-form shade">
+        <input class="reg" type="text" name="login" placeholder="Login">
+        <input class="reg" type="password" name="password" placeholder="Password">
       <p><input type="submit" style="padding: 0;" class="button login" value="Вход"></input></p>
     </form>
-    <div class="bottom">
+    <div class="shade-in bottom">
     <label style="color: #949494; padding: 5px 0;"><center>У вас еще нет аккаунта?</center>
     </label>
     <a href="http://practise/reg.php" style="padding: 9px;" class="button login">Регистрация</a>

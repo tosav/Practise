@@ -2642,6 +2642,7 @@ a.button:hover, a.button:focus {
     border-bottom: 1px solid #31c0b2;
     font-size: 1rem;
     line-height: 1;
+    text-align: left;
     color: #FFF; }
   :last-child:not(.is-active) > .accordion-title {
     border-bottom: 1px solid rgba(0,0,0,0.5);
