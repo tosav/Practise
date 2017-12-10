@@ -9,7 +9,7 @@
   </head>
   <body>
       <?php include ("menu.php");?>
-
+            <div>
                 <form data-abide novalidate>
                   <div data-abide-error class="alert callout" style="display: none;">
                     <p><i class="fi-alert"></i> На этой странице присутствуют ошибки</p>
@@ -68,6 +68,7 @@
                     </fieldset>
                   </div>
                   </form>
+            </div>
     </div>
     <?php include ("footer.php");?>
   </body>

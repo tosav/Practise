@@ -12,6 +12,7 @@
 }
 .bottom{
     background-color:#d8d8d8;
+    
 }
 .log-in-form {
     z-index: 9100;
@@ -27,7 +28,7 @@ li.menu-input {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 30%;
+    width: 25%;
     min-width: 300px;
     height: auto;
     z-index: 1100;

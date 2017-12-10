@@ -28,7 +28,7 @@
     <div class="bottom">
     <label><center>У вас еще нет аккаунта?</center>
     </label>
-    <a href="http://practise/reg.php" class="button expanded">Регистрация</a>
+    <a href="http://practise/reg.php" class="button login">Регистрация</a>
     </div>
 </div>
 <div class="bg_layer"></div>
