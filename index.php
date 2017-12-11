@@ -1,4 +1,7 @@
-﻿<!doctype html>
+<?
+session_start();
+?>
+<!doctype html>
 <html class="no-js" lang="ru" dir="ltr">
   <head>
     <meta charset="utf-8">

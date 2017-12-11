@@ -1,26 +1,111 @@
-﻿<?php
-    $db = mysql_connect ("Practise","root","");
-    mysql_select_db ("practice",$db);
-    if (isset($_GET['login'])){	
-        $query=mysql_query("SELECT activate FROM users WHERE login='".$_GET['login']."' AND password='".$_GET['password']."'");
-        if (!$query){
-            echo "ошибка";
+<?php 
+$db = mysql_connect ("Practise","root","");
+mysql_select_db ("practice",$db);
+ 
+/** 
+ * Класс для авторизации
+ * @author дизайн студия ox2.ru 
+ */ 
+class AuthClass {
+    private $_login = 'ничеготакого'; //Устанавливаем логин
+    private $_password = 'ээ'; //Устанавливаем пароль
+ 
+    /**
+     * Проверяет, авторизован пользователь или нет
+     * Возвращает true если авторизован, иначе false
+     * @return boolean 
+     */
+    public function isAuth() {
+        if (isset($_SESSION["is_auth"])) { //Если сессия существует
+            return $_SESSION["is_auth"]; //Возвращаем значение переменной сессии is_auth (хранит true если авторизован, false если не авторизован)
         }
-        else{
+        else return false; //Пользователь не авторизован, т.к. переменная is_auth не создана
+    }
+     
+    /**
+     * Авторизация пользователя
+     * @param string $login
+     * @param string $passwors 
+     */
+    public function auth($login, $passwors) {
+        $login=trim($login);
+        $password=md5(trim($passwors));
+        $query=mysql_query("SELECT activate FROM users WHERE login='".$login."' AND password='".$password."'");
+        if (!$query){
+            $_SESSION["is_auth"] = false;
+            return false; 
+        }
+        else {
+            print_r( $query);
             $activate=mysql_result($query,0);
             if (!$activate)
-            {
-                echo "нет аккаунта";
+            {   //Логин и пароль не подошел
+                $_SESSION["is_auth"] = false;
+                return false; 
             }
-            else{
-                echo "есть аккаунт";
+            else { 
+                $_SESSION["is_auth"] = true; //Делаем пользователя авторизованным
+                $_SESSION["login"] = $login; //Записываем в сессию логин пользователя
+                
+                $query=mysql_query("SELECT role, id FROM users WHERE login='".$_login."' AND password='".$_password."'");        
+                if (!$query)
+                    echo "<script>alert('Ошибка')</script>";
+                else{
+                    $role=mysql_result($query,0);
+                    if (!$role)
+                        echo "<script>alert('Ошибка')</script>";
+                    else 
+                        $_SESSION["role"] = $role;
+                    $id=mysql_result($query,1);
+                    if (!$id)
+                        echo "<script>alert('Ошибка')</script>";
+                    else 
+                        $_SESSION["id"] = $id;
+                }
+                return true;
             }
         }
     }
+     
+    /**
+     * Метод возвращает логин авторизованного пользователя 
+     */
+    public function getLogin() {
+        if ($this->isAuth()) { //Если пользователь авторизован
+            return $_SESSION["login"]; //Возвращаем логин, который записан в сессию
+        }
+    }    
+    public function getRole() {
+        if ($this->isAuth()) { //Если пользователь авторизован
+            return $_SESSION["role"]; //Возвращаем логин, который записан в сессию
+        }
+    }
+     
+     
+    public function out() {
+        $_SESSION = array(); //Очищаем сессию
+        session_destroy(); //Уничтожаем
+    }
+}
+
+$auth = new AuthClass();
+ 
+if (isset($_POST["login"]) && isset($_POST["password"])) { //Если логин и пароль были отправлены
+    if (!$auth->auth($_POST["login"], $_POST["password"])) { //Если логин и пароль введен не правильно
+        echo "<script>alert(Логин или пароль введен не правильно!);</script>";
+    }
+}
+ 
+if (isset($_GET["is_exit"])) { //Если нажата кнопка выхода
+    if ($_GET["is_exit"] == 1) {
+        $auth->out(); //Выходим
+        header("Location: ?is_exit=0"); //Редирект после выхода
+    }
+}
 ?>
 <div class="modal">
     <a class="accordion-title shade">Авторизация</a>
-    <form id="login" action="" method="GET" class="log-in-form shade">
+    <form id="login" action="" method="POST" class="log-in-form shade">
         <input class="reg" type="text" name="login" placeholder="Login">
         <input class="reg" type="password" name="password" placeholder="Password">
       <p><input type="submit" style="padding: 0;" class="button login" value="Вход"></input></p>

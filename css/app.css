@@ -38,7 +38,7 @@
 }
 .grid-container {
     position: relative;
-    top: -40px;
+    top: 0;
 }
 .reg{
     font-size: 0.7rem;

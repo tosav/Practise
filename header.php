@@ -1,4 +1,4 @@
-﻿    <div class="grid-x grid-margin-x">
+    <div class="grid-x grid-margin-x">
       <div style="width: 120px; padding: 0 0.9375rem; padding-bottom: 2px;">
             <a href="http://practise/" ><img id="lumen" src="../lumen.png"></a>
       </div>
