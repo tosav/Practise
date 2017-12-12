@@ -37,11 +37,11 @@ session_start();
                 if ($_SESSION['role']==2 OR $_SESSION['role']==3){
                     $show=true;
                     if ($_SESSION['role']==2){
-                        $string='<a action="&stid='.$_SESSION.'" style="padding: 9px;" class="button main top float-right shade">Записаться</a>';
+                        $string='<a href="'.$_SERVER['REQUEST_URI'].'&stid='.$_SESSION.'" style="padding: 9px;" class="button main top float-right shade">Записаться</a>';
                     }
                     else{                    
                         if ($_SESSION['id']==$row['company']){
-                            $string='<a action="vac.php?id='.$row['id'].'" style="padding: 9px;" class="button main top float-right shade">Изменить</a>';
+                            $string='<a href="vac.php?id='.$row['id'].'" style="padding: 9px;" class="button main top float-right shade">Изменить</a>';
                         }
                     }
                 }
