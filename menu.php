@@ -222,7 +222,11 @@ if (isset($_GET["is_exit"])) { //Если нажата кнопка выхода
                 if ($path=="practise/"||$path=="practise/index.php"){
                     printf('</ul><ul class="menu align-center">');
                     echo '<li class="menu-text">Поиск</li>';
-                    echo '<li class="menu-input"><input type="search" placeholder="Search"></li>';
+                    echo '<li class="menu-input">
+                    <form method="get" class="full" action="" onsubmit="check()">
+                    <input id="search" type="text" class="full" value="'.$_GET['search'].'" name="search">
+                    <input type="submit" style="display:none;">
+                    </form></li>';
                 }
           ?>
         </ul>
@@ -254,7 +258,13 @@ if (isset($_GET["is_exit"])) { //Если нажата кнопка выхода
                 "filter": "none"
             });
         });
-        
+     function check(){
+         value=document.getElementById('search').value;
+         var matches = text.match(/^[a-zA-Z0-9 ]+$/);
+         match = regex.exec(value);
+         document.getElementById('search').value=match;
+         return true;
+     }         
     window.onload = function(){
         
     }

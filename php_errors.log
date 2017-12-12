@@ -5,3 +5,29 @@ Stack trace:
 #0 D:\OpenServer\domains\Practise\index.php(17): PDO->prepare('SELECT v.*, c.n...', Array)
 #1 {main}
   thrown in D:\OpenServer\domains\Practise\index.php on line 17
+[12-Dec-2017 10:28:20 Europe/Moscow] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in D:\OpenServer\domains\Practise\index.php on line 13
+[12-Dec-2017 10:30:09 Europe/Moscow] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%?%
+                GROUP BY v.id' at line 4' in D:\OpenServer\domains\Practise\index.php:19
+Stack trace:
+#0 D:\OpenServer\domains\Practise\index.php(19): PDO->prepare('SELECT v.*, c.n...', Array)
+#1 {main}
+  thrown in D:\OpenServer\domains\Practise\index.php on line 19
+[12-Dec-2017 10:30:25 Europe/Moscow] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%?%
+                GROUP BY v.id' at line 4' in D:\OpenServer\domains\Practise\index.php:19
+Stack trace:
+#0 D:\OpenServer\domains\Practise\index.php(19): PDO->prepare('SELECT v.*, c.n...', Array)
+#1 {main}
+  thrown in D:\OpenServer\domains\Practise\index.php on line 19
+[12-Dec-2017 10:30:26 Europe/Moscow] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%?%
+                GROUP BY v.id' at line 4' in D:\OpenServer\domains\Practise\index.php:19
+Stack trace:
+#0 D:\OpenServer\domains\Practise\index.php(19): PDO->prepare('SELECT v.*, c.n...', Array)
+#1 {main}
+  thrown in D:\OpenServer\domains\Practise\index.php on line 19
+[12-Dec-2017 10:30:36 Europe/Moscow] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%?%
+                GROUP BY v.id' at line 4' in D:\OpenServer\domains\Practise\index.php:19
+Stack trace:
+#0 D:\OpenServer\domains\Practise\index.php(19): PDO->prepare('SELECT v.*, c.n...', Array)
+#1 {main}
+  thrown in D:\OpenServer\domains\Practise\index.php on line 19
+[12-Dec-2017 10:34:50 Europe/Moscow] PHP Parse error:  syntax error, unexpected '%', expecting ']' in D:\OpenServer\domains\Practise\index.php on line 20

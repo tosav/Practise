@@ -9,13 +9,24 @@ session_start();
             ];
              
             $pdo = new PDO($dsn, 'root', '', $opt);
-            $sql="SELECT v.*, c.name as com_name, c.description as descr 
-            FROM vacancies v 
-            LEFT OUTER JOIN company c ON v.company=c.id
-            GROUP BY v.id";
-            
-            $stm = $pdo->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL));
-            $stm->execute();
+            $_GET['search']=trim($_GET['search']);
+            if ($_GET['search']){
+                $sql="SELECT v.*, c.name as com_name, c.description as descr 
+                FROM vacancies v 
+                LEFT OUTER JOIN company c ON v.company=c.id
+                WHERE v.name LIKE ?
+                GROUP BY v.id";
+                $stm = $pdo->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL));
+                $stm->execute(['%'.$_GET['search'].'%']);
+            }
+            else{
+                $sql="SELECT v.*, c.name as com_name, c.description as descr 
+                FROM vacancies v 
+                LEFT OUTER JOIN company c ON v.company=c.id
+                GROUP BY v.id";
+                $stm = $pdo->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL));
+                $stm->execute();
+            }
 ?>
 <!doctype html>
 <html class="no-js" lang="ru" dir="ltr">
