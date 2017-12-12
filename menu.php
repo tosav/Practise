@@ -170,7 +170,7 @@ if ($_POST["login"] && $_POST["password"]) { //Если логин и парол
     }
     else{
         echo "<script>alert('Вы авторизованы');</script>";
-		echo "<script>window.location.href='".$_SERVER['PHP_SELF']."'</script>";//ну тип
+		echo "<script>window.location.href='".$_SERVER['REQUEST_URI']."'</script>";//ну тип
     }
 }
 if (isset($_GET["is_exit"])) { //Если нажата кнопка выхода

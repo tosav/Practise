@@ -31,3 +31,8 @@ Stack trace:
 #1 {main}
   thrown in D:\OpenServer\domains\Practise\index.php on line 19
 [12-Dec-2017 10:34:50 Europe/Moscow] PHP Parse error:  syntax error, unexpected '%', expecting ']' in D:\OpenServer\domains\Practise\index.php on line 20
+[12-Dec-2017 10:40:47 Europe/Moscow] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at D:\OpenServer\domains\Practise\vacancy.php:1) in D:\OpenServer\domains\Practise\vacancy.php on line 2
+[12-Dec-2017 10:41:05 Europe/Moscow] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at D:\OpenServer\domains\Practise\vacancy.php:1) in D:\OpenServer\domains\Practise\vacancy.php on line 2
+[12-Dec-2017 11:00:22 Europe/Moscow] PHP Parse error:  syntax error, unexpected '==' (T_IS_EQUAL) in D:\OpenServer\domains\Practise\vacancy.php on line 23
+[12-Dec-2017 11:00:41 Europe/Moscow] PHP Parse error:  syntax error, unexpected '.' in D:\OpenServer\domains\Practise\vacancy.php on line 29
+[12-Dec-2017 11:02:56 Europe/Moscow] PHP Fatal error:  Call to a member function isAuth() on a non-object in D:\OpenServer\domains\Practise\vacancy.php on line 22
