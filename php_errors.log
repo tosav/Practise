@@ -1,2 +1,7 @@
 [12-Dec-2017 07:56:35 Europe/Moscow] PHP Fatal error:  Call to undefined function out() in D:\OpenServer\domains\Practise\menu.php on line 137
 [12-Dec-2017 08:03:31 Europe/Moscow] PHP Parse error:  syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in D:\OpenServer\domains\Practise\menu.php on line 150
+[12-Dec-2017 09:42:52 Europe/Moscow] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'b.id_b' in 'group statement'' in D:\OpenServer\domains\Practise\index.php:17
+Stack trace:
+#0 D:\OpenServer\domains\Practise\index.php(17): PDO->prepare('SELECT v.*, c.n...', Array)
+#1 {main}
+  thrown in D:\OpenServer\domains\Practise\index.php on line 17

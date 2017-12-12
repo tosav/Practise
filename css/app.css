@@ -1,3 +1,33 @@
+a.text{
+    position: relative;
+    right: 2%;
+    color: #fff;
+    top: -40px;
+    font-size: 1rem;
+}
+a.main{
+    margin-top: 10px;
+}
+.inf{
+    background-color: #eaeaea;
+    padding: 2%;
+    line-height: 200px;
+}
+.button.main{
+    position: relative;
+    vertical-align: top;
+    width: 100px;
+    min-width: 100px;
+    height: 30px;
+    font-size: 0.8rem;
+    top: -43px;
+    right: 2%;
+    background-color:#269489;
+}
+.button.top{
+    background-color: #228379;
+    top: -54px;
+}
 .button.role{
     height: 80px;
     background-color: #31c0b2;
@@ -19,9 +49,6 @@
 }
 .shade-in{
     box-shadow: inset 0px 2px 3px rgba(0,0,0,0.3);
-}
-.button.top{
-    background-color: #228379;
 }
 .login{
     position: inherit;
