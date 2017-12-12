@@ -120,7 +120,11 @@ class AuthClass {
                                 echo $_SESSION['name'];
                               break;
                               case 3:
-                                $_SESSION['name']='Предприятие';
+                                $sql="SELECT name FROM company WHERE id=?";
+                                $stm = $pdo->prepare($sql);
+                                $stm->execute([$_SESSION['id']]);
+                                $res = $stm->fetch();
+                                $_SESSION['name']=$res['name'];
                               break;
                         }
                         return true;
