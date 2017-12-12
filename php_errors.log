@@ -1,4 +1,0 @@
-[11-Dec-2017 16:41:19 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 6 in D:\OpenServer\domains\Practise\menu.php on line 39
-[11-Dec-2017 16:47:06 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 6 in D:\OpenServer\domains\Practise\menu.php on line 39
-[11-Dec-2017 16:47:33 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 6 in D:\OpenServer\domains\Practise\menu.php on line 40
-[11-Dec-2017 16:47:46 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 6 in D:\OpenServer\domains\Practise\menu.php on line 40
