@@ -1,0 +1,2 @@
+[12-Dec-2017 07:56:35 Europe/Moscow] PHP Fatal error:  Call to undefined function out() in D:\OpenServer\domains\Practise\menu.php on line 137
+[12-Dec-2017 08:03:31 Europe/Moscow] PHP Parse error:  syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in D:\OpenServer\domains\Practise\menu.php on line 150
