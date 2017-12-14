@@ -37,6 +37,24 @@ a.main{
     width: 100%;
     padding: 30px;
 }
+.button.adm{
+    position: relative;
+    vertical-align: top;
+    min-width: 100px;
+    height: 30px;
+    font-size: 0.8rem;
+    top: 0px;
+    right: 2%;
+    background-color:#269489;
+    padding-top: 8px;
+}
+input.adm{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.inf.adm{
+    height: 65px;
+}
 .in{
     margin: 6px 0px 15px;
     width: 100%;
