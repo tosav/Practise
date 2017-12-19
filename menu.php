@@ -239,7 +239,7 @@ if (isset($_GET["is_exit"])) { //Если нажата кнопка выхода
             if ($path!="practise/"&&$path!="practise/index.php"&&$_SESSION['role'] == 3){
                 printf('
                       <li><a  href="../vac.php" class="button top" style="background-color:#89aeab; color:#fff;">
-                        Добавить вакансии</a></li>
+                        Добавить вакансию</a></li>
               ');
             }
            ?>
