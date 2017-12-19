@@ -235,6 +235,14 @@ if (isset($_GET["is_exit"])) { //Если нажата кнопка выхода
           ?>
         </ul>
         <ul class="menu align-right">
+           <?
+            if ($path!="practise/"&&$path!="practise/index.php"&&$_SESSION['role'] == 3){
+                printf('
+                      <li><a  href="../vac.php" class="button top" style="background-color:#89aeab; color:#fff;">
+                        Добавить вакансии</a></li>
+              ');
+            }
+           ?>
           <li><a id="openD" class="button top"><?
           if ($_GET['name'])
             echo $_GET['name'];
