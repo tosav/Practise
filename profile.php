@@ -1,4 +1,7 @@
-﻿<!doctype html>
+<?
+session_start();
+?>
+<!doctype html>
 <html class="no-js" lang="ru" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -12,8 +15,7 @@
       <? 
       //блокировать пользователя
       //если его страница   
-      $num=1;
-      switch ($num){
+      switch (/*$_SESSION['role']*/1){
         case 0://Админ
             printf('
             <a class="accordion-title shade main">Профиль</a>
@@ -38,9 +40,9 @@
               <p><b>Логин: </b>'.$row['login'].'</br>
               <b>ФИО: </b>'.$contr.'</br>
               <b>Номер телефона: </b>'.$row['description'].'</br>
-              <b>Почта: </b>'.$row['description'].'</br>
-              //Остальные данные</p>
-              <p>
+              <b>Почта: </b>'.$row['description'].'</br></p>
+              <p class="link" onclick="is_clicked(`hidden_text`, this)" style="color:#949494; cursor: pointer;"><b>Остальные данные...</b></p>
+              <p id="hidden_text" style="display:none;">
               <b>Номер зачётной книжки: </b>'.$row['description'].'</br>
               <b>Статус занятости: </b>'.$row['description'].'</br>
               <b>Руководитель практики: </b>'.$row['description'].'</br>
@@ -96,89 +98,40 @@
                 ');   
         break;
         case 3:
-           /* //администратор
             printf('
-                <ul class="accordion" data-accordion data-allow-all-closed="true">
-                    <li class="accordion-item is-active">
-                        <a class="accordion-title">Студенты</a>
-                        <div class="accordion-content" data-tab-content>
-                            <table>
-                              <thead>
-                                <tr>
-                                  <th>ФИО</th>
-                                  <th></th>
-                                  <th></th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>Иванов</td>
-                                  <td><button class="button">Принять</button></td>
-                                  <td><button class="button">Отклонить</button></td>
-                                </tr>
-                              </tbody>
-                            </table>
-                        </div>
-                    </li>
-                </ul>
-                ');
-            printf('
-                <ul class="accordion" data-accordion data-allow-all-closed="true">
-                    <li class="accordion-item" data-accordion-item>
-                        <a class="accordion-title">Руководители</a>
-                        <div class="accordion-content" data-tab-content>
-                            <table>
-                              <thead>
-                                <tr>
-                                  <th>ФИО</th>
-                                  <th></th>
-                                  <th></th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>Иванов</td>
-                                  <td><button class="button">Принять</button></td>
-                                  <td><button class="button">Отклонить</button></td>
-                                </tr>
-                              </tbody>
-                            </table>
-                        </div>
-                    </li>
-                </ul>                
-            ');
-            printf('
-                <ul class="accordion" data-accordion data-allow-all-closed="true">
-                    <li class="accordion-item" data-accordion-item>
-                        <a class="accordion-title">Предприятия</a>
-                        <div class="accordion-content" data-tab-content>
-                            <table>
-                              <thead>
-                                <tr>
-                                  <th>Название</th>
-                                  <th></th>
-                                  <th></th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>Иванов</td>
-                                  <td><button class="button">Принять</button></td>
-                                  <td><button class="button">Отклонить</button></td>
-                                </tr>
-                              </tbody>
-                            </table>
-                        </div>
-                    </li>
-                </ul>
-            ');   */
+            <a class="accordion-title shade main">Профиль</a>
+            <div class="inf">
+              <p><b>Логин: </b>'.$row['login'].'</br>
+              <b>ФИО: </b>'.$contr.'</br>
+              <b>Номер телефона: </b>'.$row['description'].'</br>
+              <b>Почта: </b>'.$row['description'].'</br>
+              //Остальные данные</p>
+              <p>
+              <b>Номер зачётной книжки: </b>'.$row['description'].'</br>
+              <b>Статус занятости: </b>'.$row['description'].'</br>
+              <b>Руководитель практики: </b>'.$row['description'].'</br>
+              </br>
+              </p>
+            </div>
+            <a href="vacancy.php?id='.$row['id'].'" style="padding: 9px;" class="button main top float-right shade">Изменить</a>
+                ');     
         break;
       }
       ?>
         
     </div>
-    <!--если чужая страница
-    </div>
     <?php include ("footer.php");?>
+    <script>
+    function is_clicked(id, p){
+            if (document.getElementById(id).style.display=='none'){ 
+            document.getElementById(id).style.display='block'; 
+            p.innerHTML = '<b>Скрыть данные...</b>'
+            }
+            else{ 
+            document.getElementById(id).style.display='none'; 
+            p.innerHTML = '<b>Остальные данные...</b>'
+            }
+         }
+    </script>
   </body>
 </html>
