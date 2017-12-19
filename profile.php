@@ -30,7 +30,7 @@ session_start();
               </br>
               </p>
             </div>
-            <a href="vacancy.php?id='.$row['id'].'" style="padding: 9px;" class="button main top float-right shade">Изменить</a>
+            <a href="reg.php?id='.$row['id'].'" style="padding: 9px;" class="button main top float-right shade">Изменить</a>
                 ');   
         break;
         case 1://Руководитель
@@ -49,7 +49,7 @@ session_start();
               </br>
               </p>
             </div>
-            <a href="vacancy.php?id='.$row['id'].'" style="padding: 9px;" class="button main top float-right shade">Изменить</a>
+            <a href="reg.php?id='.$row['id'].'" style="padding: 9px;" class="button main top float-right shade">Изменить</a>
                 ');               
                 
             printf('
@@ -94,7 +94,7 @@ session_start();
               </br>
               </p>
             </div>
-            <a href="vacancy.php?id='.$row['id'].'" style="padding: 9px;" class="button main top float-right shade">Изменить</a>
+            <a href="reg.php?id='.$row['id'].'" style="padding: 9px;" class="button main top float-right shade">Изменить</a>
                 ');   
         break;
         case 3:
@@ -113,7 +113,7 @@ session_start();
               </br>
               </p>
             </div>
-            <a href="vacancy.php?id='.$row['id'].'" style="padding: 9px;" class="button main top float-right shade">Изменить</a>
+            <a href="reg.php?id='.$row['id'].'" style="padding: 9px;" class="button main top float-right shade">Изменить</a>
                 ');     
         break;
       }
