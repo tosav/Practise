@@ -50,6 +50,11 @@ session_start();
           if ($row['contract']==1){
                 $contr='Есть';
           }
+          print_r('<a class="accordion-title shade main" style="background-color:#ffda9c;
+            border: 1px solid #ffda9c;"></br></a>
+            <a href="vac.php?id='.$row['id'].'" style="padding: 9px; margin-left: 18px; background-color: #ca3838;" class="button main top float-right shade">Удалить</a>
+            <a href="del.php?id='.$row['id'].'" style="padding: 9px;" class="button main top float-right shade">Изменить</a>'
+            );
           print_r('          
             <a class="accordion-title shade main">'.$row['name'].'</a>
             <!--<a class="float-right text">Даты которых нигде нет</a>-->

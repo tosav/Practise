@@ -31,6 +31,10 @@ a.main{
     background-color: #228379;
     top: -54px;
 }
+.button.admin{
+    background-color:#f5a623; 
+    top: -54px;
+}
 .button.role{
     height: 80px;
     background-color: #31c0b2;
@@ -60,6 +64,7 @@ input.adm{
     width: 100%;
     box-shadow: inset 0px 1px 1px rgba(0,0,0,0.2);
 }
+
 .regi{
     background-color: #eaeaea;
     padding: 6px 6% 15px;

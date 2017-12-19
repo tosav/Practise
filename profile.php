@@ -15,23 +15,26 @@ session_start();
       <? 
       //блокировать пользователя
       //если его страница   
-      switch (/*$_SESSION['role']*/3){
+      switch ($_SESSION['role']){
         case 0://Админ
             printf('
-            <a class="accordion-title shade main">Профиль</a>
-            <div class="inf">
-              <p><b>Логин: </b>'.$row['login'].'</br>
-              <b>ФИО: </b>'.$contr.'</br>
-              <b>Номер телефона: </b>'.$row['description'].'</br>
-              <b>Номер группы: </b>'.$row['description'].'</br>
-              <b>Номер зачётной книжки: </b>'.$row['description'].'</br>
-              <b>Статус занятости: </b>'.$row['description'].'</br>
-              <b>Руководитель практики: </b>'.$row['description'].'</br>
-              </br>
-              </p>
-            </div>
-            <a href="reg.php?id='.$row['id'].'" style="padding: 9px;" class="button main top float-right shade">Изменить</a>
-                ');   
+            <a class="accordion-title shade main">Студенты</a>
+            <a id="0b" onclick="is_clicked_b(`0`, this)" style="padding: 9px;" class="button main top float-right shade">Развернуть</a>
+            <div id="0" style="display:none;" class="inf">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            </div>');
+            printf('
+            <a class="accordion-title shade main">Руководители</a>
+            <a id="1b" onclick="is_clicked_b(`1`, this)" style="padding: 9px;" class="button main top float-right shade">Развернуть</a>
+            <div id="1" style="display:none;" class="inf">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            </div>');  
+            printf('
+            <a class="accordion-title shade main">Предприятия</a>
+            <a id="2b" onclick="is_clicked_b(`2`, this)" style="padding: 9px;" class="button main top float-right shade">Развернуть</a>
+            <div id="2" style="display:none;" class="inf">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            </div>'); 
         break;
         case 1://Руководитель
             printf('
@@ -145,7 +148,7 @@ session_start();
             if (document.getElementById(id).style.display=='none'){ 
             document.getElementById(id).style.display='block'; 
             document.getElementById(id+'b').style['background-color']='#d8d8d8'; 
-            document.getElementById(id+'b').style['color']='#000'; 
+            document.getElementById(id+'b').style['color']='#fff'; 
             document.getElementById(id+'b').style['box-shadow']='inset 0px 2px 3px rgba(0,0,0,0.3)'; 
             p.innerHTML = 'Свернуть'
             }
