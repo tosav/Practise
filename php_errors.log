@@ -36,3 +36,73 @@ Stack trace:
 [12-Dec-2017 11:00:22 Europe/Moscow] PHP Parse error:  syntax error, unexpected '==' (T_IS_EQUAL) in D:\OpenServer\domains\Practise\vacancy.php on line 23
 [12-Dec-2017 11:00:41 Europe/Moscow] PHP Parse error:  syntax error, unexpected '.' in D:\OpenServer\domains\Practise\vacancy.php on line 29
 [12-Dec-2017 11:02:56 Europe/Moscow] PHP Fatal error:  Call to a member function isAuth() on a non-object in D:\OpenServer\domains\Practise\vacancy.php on line 22
+[12-Dec-2017 11:49:05 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 5 in C:\OpenServer\domains\Practise\save_user2.php on line 45
+[14-Dec-2017 13:40:41 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 5 in C:\OpenServer\domains\Practise\save_user2.php on line 46
+[14-Dec-2017 13:47:43 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 5 in C:\OpenServer\domains\Practise\save_user2.php on line 46
+[14-Dec-2017 13:49:22 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 5 in C:\OpenServer\domains\Practise\save_user2.php on line 39
+[14-Dec-2017 14:33:20 Europe/Moscow] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in C:\OpenServer\domains\Practise\save_user2.php on line 25
+[14-Dec-2017 14:35:53 Europe/Moscow] PHP Notice:  Query was empty in  in C:\OpenServer\domains\Practise\save_user2.php on line 42
+[14-Dec-2017 14:45:40 Europe/Moscow] PHP Notice:  Query was empty in  in C:\OpenServer\domains\Practise\save_user2.php on line 42
+[14-Dec-2017 14:47:07 Europe/Moscow] PHP Notice:  You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1' at line 1 in 1 in C:\OpenServer\domains\Practise\save_user2.php on line 42
+[14-Dec-2017 14:58:12 Europe/Moscow] PHP Notice:  Query was empty in  in C:\OpenServer\domains\Practise\save_user2.php on line 42
+[14-Dec-2017 15:34:55 Europe/Moscow] PHP Notice:  Query was empty in  in C:\OpenServer\domains\Practise\save_user2.php on line 39
+[14-Dec-2017 15:38:06 Europe/Moscow] PHP Notice:  Query was empty in  in C:\OpenServer\domains\Practise\save_user2.php on line 39
+[14-Dec-2017 16:20:55 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, null given in C:\OpenServer\domains\Practise\save_user2.php on line 39
+[14-Dec-2017 16:23:39 Europe/Moscow] PHP Parse error:  syntax error, unexpected '$id' (T_VARIABLE) in C:\OpenServer\domains\Practise\save_user2.php on line 40
+[19-Dec-2017 04:25:24 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\save_user.php on line 38
+[19-Dec-2017 06:24:34 Europe/Moscow] PHP Parse error:  syntax error, unexpected '<' in C:\OpenServer\domains\Practise\menu.php on line 215
+[19-Dec-2017 06:24:36 Europe/Moscow] PHP Parse error:  syntax error, unexpected '<' in C:\OpenServer\domains\Practise\menu.php on line 215
+[19-Dec-2017 06:25:54 Europe/Moscow] PHP Parse error:  syntax error, unexpected '<' in C:\OpenServer\domains\Practise\menu.php on line 215
+[19-Dec-2017 06:25:56 Europe/Moscow] PHP Parse error:  syntax error, unexpected '<' in C:\OpenServer\domains\Practise\menu.php on line 215
+[19-Dec-2017 06:26:54 Europe/Moscow] PHP Parse error:  syntax error, unexpected '.' in C:\OpenServer\domains\Practise\menu.php on line 217
+[19-Dec-2017 06:26:55 Europe/Moscow] PHP Parse error:  syntax error, unexpected '.' in C:\OpenServer\domains\Practise\menu.php on line 217
+[19-Dec-2017 06:37:39 Europe/Moscow] PHP Warning:  Illegal string offset 'role' in C:\OpenServer\domains\Practise\menu.php on line 217
+[19-Dec-2017 06:54:34 Europe/Moscow] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, null given in C:\OpenServer\domains\Practise\menu.php on line 216
+[19-Dec-2017 06:56:43 Europe/Moscow] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, null given in C:\OpenServer\domains\Practise\menu.php on line 216
+[19-Dec-2017 06:56:44 Europe/Moscow] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, null given in C:\OpenServer\domains\Practise\menu.php on line 216
+[19-Dec-2017 07:27:35 Europe/Moscow] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in C:\OpenServer\domains\Practise\menu.php on line 215
+[19-Dec-2017 07:58:32 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\menu.php on line 258
+[19-Dec-2017 07:59:31 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\menu.php on line 258
+[19-Dec-2017 08:48:33 Europe/Moscow] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at C:\OpenServer\domains\Practise\reg.php:1) in C:\OpenServer\domains\Practise\reg.php on line 1
+[19-Dec-2017 10:16:07 Europe/Moscow] PHP Parse error:  syntax error, unexpected '$result2' (T_VARIABLE) in C:\OpenServer\domains\Practise\save_change_student.php on line 24
+[19-Dec-2017 10:17:11 Europe/Moscow] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at C:\OpenServer\domains\Practise\save_change_student.php:2) in C:\OpenServer\domains\Practise\save_change_student.php on line 3
+[19-Dec-2017 10:17:11 Europe/Moscow] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in C:\OpenServer\domains\Practise\save_change_student.php on line 25
+[19-Dec-2017 10:17:11 Europe/Moscow] PHP Warning:  mysql_query(): A link to the server could not be established in C:\OpenServer\domains\Practise\save_change_student.php on line 25
+[19-Dec-2017 10:17:11 Europe/Moscow] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in C:\OpenServer\domains\Practise\save_change_student.php on line 26
+[19-Dec-2017 10:17:11 Europe/Moscow] PHP Warning:  mysql_query(): A link to the server could not be established in C:\OpenServer\domains\Practise\save_change_student.php on line 26
+[19-Dec-2017 10:17:11 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\save_change_student.php on line 27
+[19-Dec-2017 10:17:11 Europe/Moscow] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in C:\OpenServer\domains\Practise\save_change_student.php on line 30
+[19-Dec-2017 10:17:11 Europe/Moscow] PHP Warning:  mysql_query(): A link to the server could not be established in C:\OpenServer\domains\Practise\save_change_student.php on line 30
+[19-Dec-2017 10:18:55 Europe/Moscow] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at C:\OpenServer\domains\Practise\save_change_student.php:2) in C:\OpenServer\domains\Practise\save_change_student.php on line 3
+[19-Dec-2017 10:19:15 Europe/Moscow] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at C:\OpenServer\domains\Practise\save_change_student.php:2) in C:\OpenServer\domains\Practise\save_change_student.php on line 3
+[19-Dec-2017 10:20:08 Europe/Moscow] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at C:\OpenServer\domains\Practise\save_change_student.php:2) in C:\OpenServer\domains\Practise\save_change_student.php on line 3
+[19-Dec-2017 10:22:14 Europe/Moscow] PHP Parse error:  syntax error, unexpected '$result2' (T_VARIABLE) in C:\OpenServer\domains\Practise\save_change_student.php on line 24
+[19-Dec-2017 10:22:26 Europe/Moscow] PHP Parse error:  syntax error, unexpected '$result2' (T_VARIABLE) in C:\OpenServer\domains\Practise\save_change_student.php on line 24
+[19-Dec-2017 10:24:17 Europe/Moscow] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at C:\OpenServer\domains\Practise\save_change_student.php:2) in C:\OpenServer\domains\Practise\save_change_student.php on line 3
+[19-Dec-2017 10:24:17 Europe/Moscow] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in C:\OpenServer\domains\Practise\save_change_student.php on line 25
+[19-Dec-2017 10:24:17 Europe/Moscow] PHP Warning:  mysql_query(): A link to the server could not be established in C:\OpenServer\domains\Practise\save_change_student.php on line 25
+[19-Dec-2017 10:24:17 Europe/Moscow] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in C:\OpenServer\domains\Practise\save_change_student.php on line 26
+[19-Dec-2017 10:24:17 Europe/Moscow] PHP Warning:  mysql_query(): A link to the server could not be established in C:\OpenServer\domains\Practise\save_change_student.php on line 26
+[19-Dec-2017 10:24:17 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\save_change_student.php on line 27
+[19-Dec-2017 10:24:17 Europe/Moscow] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in C:\OpenServer\domains\Practise\save_change_student.php on line 30
+[19-Dec-2017 10:24:17 Europe/Moscow] PHP Warning:  mysql_query(): A link to the server could not be established in C:\OpenServer\domains\Practise\save_change_student.php on line 30
+[19-Dec-2017 10:25:57 Europe/Moscow] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at C:\OpenServer\domains\Practise\save_change_student.php:2) in C:\OpenServer\domains\Practise\save_change_student.php on line 21
+[19-Dec-2017 10:25:57 Europe/Moscow] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in C:\OpenServer\domains\Practise\save_change_student.php on line 25
+[19-Dec-2017 10:25:57 Europe/Moscow] PHP Warning:  mysql_query(): A link to the server could not be established in C:\OpenServer\domains\Practise\save_change_student.php on line 25
+[19-Dec-2017 10:25:57 Europe/Moscow] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in C:\OpenServer\domains\Practise\save_change_student.php on line 26
+[19-Dec-2017 10:25:57 Europe/Moscow] PHP Warning:  mysql_query(): A link to the server could not be established in C:\OpenServer\domains\Practise\save_change_student.php on line 26
+[19-Dec-2017 10:25:57 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\save_change_student.php on line 27
+[19-Dec-2017 10:25:57 Europe/Moscow] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in C:\OpenServer\domains\Practise\save_change_student.php on line 30
+[19-Dec-2017 10:25:57 Europe/Moscow] PHP Warning:  mysql_query(): A link to the server could not be established in C:\OpenServer\domains\Practise\save_change_student.php on line 30
+[19-Dec-2017 10:52:33 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\index.php on line 52
+[19-Dec-2017 10:52:33 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\index.php on line 55
+[19-Dec-2017 10:52:36 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\index.php on line 52
+[19-Dec-2017 10:52:36 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\index.php on line 55
+[19-Dec-2017 10:54:51 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\index.php on line 53
+[19-Dec-2017 10:54:51 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\index.php on line 56
+[19-Dec-2017 10:56:43 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\index.php on line 53
+[19-Dec-2017 10:56:43 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\index.php on line 56
+[19-Dec-2017 10:56:47 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\index.php on line 53
+[19-Dec-2017 10:56:47 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\index.php on line 56
+[19-Dec-2017 10:56:48 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\index.php on line 53
+[19-Dec-2017 10:56:48 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\index.php on line 56

@@ -77,7 +77,7 @@ class AuthClass {
             } 
             else
             { //если существует, то сверяем пароли
-                $password=md5($password);
+                $password=$password;
                 if ($res['password']==$password) 
                 {
                     if($res['activate']==0)
@@ -245,6 +245,7 @@ if (isset($_GET["is_exit"])) { //Если нажата кнопка выхода
           ?></a></li>
         </ul>
       </div>
+	 
 <script>
         $('.modal, .bg_layer').hide();
         $('#openD').click(function(){
