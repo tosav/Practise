@@ -106,3 +106,12 @@ Stack trace:
 [19-Dec-2017 10:56:47 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\index.php on line 56
 [19-Dec-2017 10:56:48 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\index.php on line 53
 [19-Dec-2017 10:56:48 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\index.php on line 56
+[19-Dec-2017 12:46:46 Europe/Moscow] PHP Parse error:  syntax error, unexpected 'Ищет' (T_STRING) in C:\OpenServer\domains\Practise\index.php on line 66
+[19-Dec-2017 13:17:19 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\index.php on line 53
+[19-Dec-2017 13:17:19 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\index.php on line 56
+[19-Dec-2017 13:17:21 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\index.php on line 53
+[19-Dec-2017 13:17:21 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\index.php on line 56
+[19-Dec-2017 13:18:23 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\Change_student.php on line 20
+[19-Dec-2017 13:18:23 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\Change_student.php on line 23
+[19-Dec-2017 13:21:47 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\index.php on line 53
+[19-Dec-2017 13:21:47 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\index.php on line 56
