@@ -11,6 +11,25 @@ a.text{
 a.main{
     margin-top: 10px;
 }
+a.podt{
+    background-color: #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+    border: 1px solid #d8d8d8;
+    color: #31c0b2;
+    text-decoration: underline;
+}
+a.podt:hover{
+    background-color: #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+    border: 1px solid #d8d8d8;
+    color: #31c0b2;
+    text-decoration: underline;
+}
+.podtv{
+    background-color: #eaeaea;
+    padding: 1%;
+    line-height: 200px;
+}
 .inf{
     background-color: #eaeaea;
     padding: 2%;
@@ -29,6 +48,10 @@ a.main{
 }
 .button.top{
     background-color: #228379;
+    top: -54px;
+}
+.button.admin{
+    background-color:#f5a623; 
     top: -54px;
 }
 .button.role{
@@ -60,6 +83,7 @@ input.adm{
     width: 100%;
     box-shadow: inset 0px 1px 1px rgba(0,0,0,0.2);
 }
+
 .regi{
     background-color: #eaeaea;
     padding: 6px 6% 15px;

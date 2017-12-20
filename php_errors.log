@@ -128,5 +128,14 @@ Stack trace:
 [14-Dec-2017 15:43:10 Europe/Moscow] PHP Warning:  printf(): Too few arguments in D:\OpenServer\domains\Practise\profile.php on line 78
 [14-Dec-2017 15:43:22 Europe/Moscow] PHP Warning:  printf(): Too few arguments in D:\OpenServer\domains\Practise\profile.php on line 78
 [14-Dec-2017 15:43:31 Europe/Moscow] PHP Warning:  printf(): Too few arguments in D:\OpenServer\domains\Practise\profile.php on line 78
+<<<<<<< HEAD
 >>>>>>> abf612963b23c7f2d98fba4fc23059bb5a2cb86e
 [20-Dec-2017 08:54:41 Europe/Moscow] PHP Parse error:  syntax error, unexpected '*' in C:\OpenServer\domains\Practise\profile.php on line 174
+=======
+[19-Dec-2017 09:02:03 Europe/Moscow] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at D:\OpenServer\domains\Practise\profile.php:1) in D:\OpenServer\domains\Practise\profile.php on line 2
+[19-Dec-2017 10:30:35 Europe/Moscow] PHP Parse error:  syntax error, unexpected '0' (T_LNUMBER) in D:\OpenServer\domains\Practise\profile.php on line 115
+[19-Dec-2017 10:43:23 Europe/Moscow] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in D:\OpenServer\domains\Practise\menu.php on line 207
+[19-Dec-2017 10:59:18 Europe/Moscow] PHP Parse error:  syntax error, unexpected '<' in D:\OpenServer\domains\Practise\menu.php on line 212
+[19-Dec-2017 12:11:56 Europe/Moscow] PHP Parse error:  syntax error, unexpected '/' in D:\OpenServer\domains\Practise\profile.php on line 27
+[19-Dec-2017 12:11:57 Europe/Moscow] PHP Parse error:  syntax error, unexpected '/' in D:\OpenServer\domains\Practise\profile.php on line 27
+>>>>>>> master

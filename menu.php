@@ -202,7 +202,14 @@ if (isset($_GET["is_exit"])) { //Если нажата кнопка выхода
     <?php include ("header.php");?>
     <div class="top-bar shade" id="responsive-menu">
         <ul class="menu">
-          <li><a href="../profile.php" class="button top"><? if($_SESSION['is_auth']){
+          <? if($_SESSION['is_auth'] && $_SESSION['role']==0){
+                printf ('<li><a href="../profile.php" class="button admin">');
+            }
+            else{
+                printf ('<li><a href="../profile.php" class="button top">');
+            }
+            ?>
+                                    <? if($_SESSION['is_auth']){
                                             switch ($_SESSION['role']){
                                               case 0:
                                                 echo 'Администратор';
@@ -235,6 +242,14 @@ if (isset($_GET["is_exit"])) { //Если нажата кнопка выхода
           ?>
         </ul>
         <ul class="menu align-right">
+           <?
+            if ($path!="practise/"&&$path!="practise/index.php"&&$_SESSION['role'] == 3){
+                printf('
+                      <li><a  href="../vac.php" class="button top" style="background-color:#89aeab; color:#fff;">
+                        Добавить вакансию</a></li>
+              ');
+            }
+           ?>
           <li><a id="openD" class="button top"><?
           if ($_GET['name'])
             echo $_GET['name'];

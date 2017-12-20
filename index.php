@@ -94,7 +94,7 @@ session_start();
 	  }
 		?>
         <a class="accordion-title shade main">Узнай основную информацию о практике</a>
-        <a id="0b" onclick="is_clicked('0')" style="padding: 9px;" class="button main top float-right shade">Подробнее</a>
+        <a id="0b" onclick="is_clicked('0', this)" style="padding: 9px;" class="button main top float-right shade">Подробнее</a>
         <div id="0" style="display:none;" class="inf">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
         </div>
@@ -121,18 +121,20 @@ session_start();
     </div>
     <?php include ("footer.php");?>
     <script>
-         function is_clicked(id){
+         function is_clicked(id, p){
             if (document.getElementById(id).style.display=='none'){ 
             document.getElementById(id).style.display='block'; 
             document.getElementById(id+'b').style['background-color']='#d8d8d8'; 
             document.getElementById(id+'b').style['color']='#000'; 
             document.getElementById(id+'b').style['box-shadow']='inset 0px 2px 3px rgba(0,0,0,0.3)'; 
+            p.innerHTML = 'Свернуть';
             }
             else{ 
             document.getElementById(id).style.display='none'; 
             document.getElementById(id+'b').style['background-color']='#269489'; 
             document.getElementById(id+'b').style['color']='#fff'; 
             document.getElementById(id+'b').style['box-shadow']='0px 2px 2px rgba(0,0,0,0.3)'; 
+            p.innerHTML = 'Подробнее';
             }
          }
     </script>
