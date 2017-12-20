@@ -11,6 +11,25 @@ a.text{
 a.main{
     margin-top: 10px;
 }
+a.podt{
+    background-color: #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+    border: 1px solid #d8d8d8;
+    color: #31c0b2;
+    text-decoration: underline;
+}
+a.podt:hover{
+    background-color: #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+    border: 1px solid #d8d8d8;
+    color: #31c0b2;
+    text-decoration: underline;
+}
+.podtv{
+    background-color: #eaeaea;
+    padding: 1%;
+    line-height: 200px;
+}
 .inf{
     background-color: #eaeaea;
     padding: 2%;

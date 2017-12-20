@@ -1,5 +1,48 @@
 <?
 session_start();
+if ($_GET['id']){
+    $dsn = 'mysql:dbname=practice;host=127.0.0.1;port=3306;charset=utf8';
+    $opt = [
+        PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+        PDO::ATTR_EMULATE_PREPARES   => false,
+    ];
+     
+    $pdo = new PDO($dsn, 'root', '', $opt);
+    $sql="SELECT * FROM users WHERE id=?";
+    
+    $stm = $pdo->prepare($sql);
+    $stm->execute([$_GET['id']]);
+    $res = $stm->fetch();
+    switch($res['role']){
+          case 0:
+                $_SESSION['name']='Админ';
+          break;
+          case 1:
+            $sql="SELECT * FROM leader WHERE id=?";
+            $stm = $pdo->prepare($sql);
+            $stm->execute([$_GET['id']]);
+            $row = $stm->fetch();
+          break;
+          case 2:
+            $sql="SELECT * FROM student WHERE id=?";
+            $stm = $pdo->prepare($sql);
+            $stm->execute([$_GET['id']]);
+            $row = $stm->fetch();
+          break;
+          case 3:
+            $sql="SELECT * FROM company WHERE id=?";
+            $stm = $pdo->prepare($sql);
+            $stm->execute([$_GET['id']]);
+            $res = $stm->fetch();
+            $sql="SELECT * FROM vacancies WHERE company=?";
+            $stm = $pdo->prepare($sql);
+            $stm->execute([$_GET['id']]);
+            $vac = $stm->fetch();
+            //еще студенты
+          break;
+    }
+}
 ?>
 <!doctype html>
 <html class="no-js" lang="ru" dir="ltr">
@@ -15,13 +58,15 @@ session_start();
       <? 
       //блокировать пользователя
       //если его страница   
-      switch ($_SESSION['role']){
+      switch (/*$_SESSION['role']*/3){
         case 0://Админ
             printf('
             <a class="accordion-title shade main">Студенты</a>
             <a id="0b" onclick="is_clicked_b(`0`, this)" style="padding: 9px;" class="button main top float-right shade">Развернуть</a>
-            <div id="0" style="display:none;" class="inf">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <div id="0" style="display:none;" class="podtv">
+                <a class="accordion-title podt" href="profile.php?id=">Студенты</a>
+                <a href="vac.php?id='.$row['id'].'" style="padding: 9px; margin-left: 18px; background-color: #ca3838;" class="button main top float-right shade">Отклонить</a>
+                <a href="del.php?id='.$row['id'].'" style="padding: 9px;" class="button main top float-right shade">Принять</a>
             </div>');
             printf('
             <a class="accordion-title shade main">Руководители</a>
@@ -40,10 +85,10 @@ session_start();
             printf('
             <a class="accordion-title shade main">Профиль</a>
             <div class="inf">
-              <p><b>Логин: </b>'.$row['login'].'</br>
-              <b>ФИО: </b>'.$contr.'</br>
-              <b>Номер телефона: </b>'.$row['description'].'</br>
-              <b>Почта: </b>'.$row['description'].'</br></p>
+              <p><b>Логин: </b>'.$res['login'].'</br>
+              <b>ФИО: </b>'.$row['fio'].'</br>
+              <b>Номер телефона: </b>'.$res['phone'].'</br>
+              <b>Почта: </b>'.$res['phone'].'</br></p>
               <p class="link" onclick="is_clicked(`hidden_text`, this)" style="color:#949494; cursor: pointer;"><b>Остальные данные...</b></p>
               <p id="hidden_text" style="display:none;">
               <b>Номер зачётной книжки: </b>'.$row['description'].'</br>
@@ -90,7 +135,9 @@ session_start();
               <p><b>Логин: </b>'.$row['login'].'</br>
               <b>ФИО: </b>'.$contr.'</br>
               <b>Номер телефона: </b>'.$row['description'].'</br>
-              <b>Номер группы: </b>'.$row['description'].'</br>
+              <b>Номер группы: </b>'.$row['description'].'</br></p>
+              <p class="link" onclick="is_clicked(`hidden_text`, this)" style="color:#949494; cursor: pointer;"><b>Остальные данные...</b></p>
+              <p id="hidden_text" style="display:none;">
               <b>Номер зачётной книжки: </b>'.$row['description'].'</br>
               <b>Статус занятости: </b>'.$row['description'].'</br>
               <b>Руководитель практики: </b>'.$row['description'].'</br>
@@ -100,7 +147,7 @@ session_start();
             <a href="reg.php?id='.$row['id'].'" style="padding: 9px;" class="button main top float-right shade">Изменить</a>
                 ');   
         break;
-        case 3:
+        case 3://компания
             printf('
             <a class="accordion-title shade main">Профиль</a>
             <div class="inf">
