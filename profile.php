@@ -85,21 +85,21 @@ if ($_GET['id']){
             printf('
             <a class="accordion-title shade main">Профиль</a>
             <div class="inf">
-<<<<<<< HEAD
+/*
               <p><b>Логин: </b>'.$row['login'].'</br>
               <b>ФИО: </b>'.$contr.'</br>
               <b>Номер телефона: </b>'.$row['description'].'</br>
               <b>Почта: </b>'.$row['description'].'</br>
               Остальные данные</p>
               <p>
-=======
+*/
               <p><b>Логин: </b>'.$res['login'].'</br>
               <b>ФИО: </b>'.$row['fio'].'</br>
               <b>Номер телефона: </b>'.$res['phone'].'</br>
               <b>Почта: </b>'.$res['phone'].'</br></p>
               <p class="link" onclick="is_clicked(`hidden_text`, this)" style="color:#949494; cursor: pointer;"><b>Остальные данные...</b></p>
               <p id="hidden_text" style="display:none;">
->>>>>>> master
+
               <b>Номер зачётной книжки: </b>'.$row['description'].'</br>
               <b>Статус занятости: </b>'.$row['description'].'</br>
               <b>Руководитель практики: </b>'.$row['description'].'</br>
@@ -156,12 +156,12 @@ if ($_GET['id']){
             <a href="reg.php?id='.$row['id'].'" style="padding: 9px;" class="button main top float-right shade">Изменить</a>
                 ');   
         break;
-<<<<<<< HEAD
+/*
         case 3:
             //администратор
-=======
+ */
         case 3://компания
->>>>>>> master
+
             printf('
             <a class="accordion-title shade main">Профиль</a>
             <div class="inf">
@@ -181,7 +181,7 @@ if ($_GET['id']){
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
             </div>');
             printf('
-<<<<<<< HEAD
+/* 
                 <ul class="accordion" data-accordion data-allow-all-closed="true">
                     <li class="accordion-item" data-accordion-item>
                         <a class="accordion-title">Предприятия</a>
@@ -205,15 +205,16 @@ if ($_GET['id']){
                         </div>
                     </li>
                 </ul>
-            ');   
-=======
+            ');  
+ */			
+
             <a class="accordion-title shade main">Заявки</a>
             <a class="accordion-title shade main" style="background-color: #95c9c3; color:#fff;">Какая-то вакансия</a>
             <a id="0b" onclick="is_clicked_b(`0`, this)" style="padding: 9px;" class="button main top float-right shade">Развернуть</a>
             <div id="0" style="display:none;" class="inf">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
             </div>');
->>>>>>> master
+
         break;
       }
       ?>
