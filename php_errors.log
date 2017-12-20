@@ -129,3 +129,4 @@ Stack trace:
 [14-Dec-2017 15:43:22 Europe/Moscow] PHP Warning:  printf(): Too few arguments in D:\OpenServer\domains\Practise\profile.php on line 78
 [14-Dec-2017 15:43:31 Europe/Moscow] PHP Warning:  printf(): Too few arguments in D:\OpenServer\domains\Practise\profile.php on line 78
 >>>>>>> abf612963b23c7f2d98fba4fc23059bb5a2cb86e
+[20-Dec-2017 08:54:41 Europe/Moscow] PHP Parse error:  syntax error, unexpected '*' in C:\OpenServer\domains\Practise\profile.php on line 174

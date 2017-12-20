@@ -39,7 +39,7 @@
               <b>ФИО: </b>'.$contr.'</br>
               <b>Номер телефона: </b>'.$row['description'].'</br>
               <b>Почта: </b>'.$row['description'].'</br>
-              //Остальные данные</p>
+              Остальные данные</p>
               <p>
               <b>Номер зачётной книжки: </b>'.$row['description'].'</br>
               <b>Статус занятости: </b>'.$row['description'].'</br>
@@ -96,7 +96,7 @@
                 ');   
         break;
         case 3:
-           /* //администратор
+            //администратор
             printf('
                 <ul class="accordion" data-accordion data-allow-all-closed="true">
                     <li class="accordion-item is-active">
@@ -171,7 +171,7 @@
                         </div>
                     </li>
                 </ul>
-            ');   */
+            ');   
         break;
       }
       ?>
