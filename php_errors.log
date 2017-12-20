@@ -36,6 +36,7 @@ Stack trace:
 [12-Dec-2017 11:00:22 Europe/Moscow] PHP Parse error:  syntax error, unexpected '==' (T_IS_EQUAL) in D:\OpenServer\domains\Practise\vacancy.php on line 23
 [12-Dec-2017 11:00:41 Europe/Moscow] PHP Parse error:  syntax error, unexpected '.' in D:\OpenServer\domains\Practise\vacancy.php on line 29
 [12-Dec-2017 11:02:56 Europe/Moscow] PHP Fatal error:  Call to a member function isAuth() on a non-object in D:\OpenServer\domains\Practise\vacancy.php on line 22
+<<<<<<< HEAD
 [12-Dec-2017 11:49:05 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 5 in C:\OpenServer\domains\Practise\save_user2.php on line 45
 [14-Dec-2017 13:40:41 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 5 in C:\OpenServer\domains\Practise\save_user2.php on line 46
 [14-Dec-2017 13:47:43 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 5 in C:\OpenServer\domains\Practise\save_user2.php on line 46
@@ -115,3 +116,16 @@ Stack trace:
 [19-Dec-2017 13:18:23 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\Change_student.php on line 23
 [19-Dec-2017 13:21:47 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\index.php on line 53
 [19-Dec-2017 13:21:47 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\index.php on line 56
+=======
+[14-Dec-2017 14:49:04 Europe/Moscow] PHP Warning:  printf(): Too few arguments in D:\OpenServer\domains\Practise\profile.php on line 63
+[14-Dec-2017 14:51:09 Europe/Moscow] PHP Warning:  printf(): Too few arguments in D:\OpenServer\domains\Practise\profile.php on line 65
+[14-Dec-2017 14:51:55 Europe/Moscow] PHP Warning:  printf(): Too few arguments in D:\OpenServer\domains\Practise\profile.php on line 65
+[14-Dec-2017 14:52:27 Europe/Moscow] PHP Warning:  printf(): Too few arguments in D:\OpenServer\domains\Practise\profile.php on line 65
+[14-Dec-2017 14:56:01 Europe/Moscow] PHP Warning:  printf(): Too few arguments in D:\OpenServer\domains\Practise\profile.php on line 65
+[14-Dec-2017 15:03:29 Europe/Moscow] PHP Parse error:  syntax error, unexpected 'but_s' (T_STRING) in D:\OpenServer\domains\Practise\profile.php on line 60
+[14-Dec-2017 15:03:30 Europe/Moscow] PHP Parse error:  syntax error, unexpected 'but_s' (T_STRING) in D:\OpenServer\domains\Practise\profile.php on line 60
+[14-Dec-2017 15:42:48 Europe/Moscow] PHP Warning:  printf(): Too few arguments in D:\OpenServer\domains\Practise\profile.php on line 78
+[14-Dec-2017 15:43:10 Europe/Moscow] PHP Warning:  printf(): Too few arguments in D:\OpenServer\domains\Practise\profile.php on line 78
+[14-Dec-2017 15:43:22 Europe/Moscow] PHP Warning:  printf(): Too few arguments in D:\OpenServer\domains\Practise\profile.php on line 78
+[14-Dec-2017 15:43:31 Europe/Moscow] PHP Warning:  printf(): Too few arguments in D:\OpenServer\domains\Practise\profile.php on line 78
+>>>>>>> abf612963b23c7f2d98fba4fc23059bb5a2cb86e
