@@ -1,19 +1,23 @@
 <?
 session_start();
-if ($_GET['id']){
+$id=$_SESSION["is_auth"]?$_SESSION['id']:-1;
+if ($_GET['id'])
+    $id=$_GET['id'];
+$role=$_SESSION["is_auth"]?$_SESSION['role']:-1;
+if ($id){
     $dsn = 'mysql:dbname=practice;host=127.0.0.1;port=3306;charset=utf8';
     $opt = [
         PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
         PDO::ATTR_EMULATE_PREPARES   => false,
     ];
-     
     $pdo = new PDO($dsn, 'root', '', $opt);
     $sql="SELECT * FROM users WHERE id=?";
     
     $stm = $pdo->prepare($sql);
-    $stm->execute([$_GET['id']]);
+    $stm->execute([$id]);
     $res = $stm->fetch();
+    $role=$res['role'];
     switch($res['role']){
           case 0:
                 $_SESSION['name']='Админ';
@@ -21,23 +25,32 @@ if ($_GET['id']){
           case 1:
             $sql="SELECT * FROM leader WHERE id=?";
             $stm = $pdo->prepare($sql);
-            $stm->execute([$_GET['id']]);
+            $stm->execute([$id]);
             $row = $stm->fetch();
           break;
           case 2:
-            $sql="SELECT * FROM student WHERE id=?";
+            $sql="SELECT s.*,g.number, g.name, l.id AS l_id, l.fio AS l_fio , v.name as v_name
+            FROM student s 
+            LEFT OUTER JOIN `group` g 
+            ON s.group = g.id
+            LEFT OUTER JOIN leader l 
+            ON s.leader = l.id             
+            LEFT OUTER JOIN vacancies v 
+            ON s.vacancy = v.id 
+            WHERE s.id=?";
             $stm = $pdo->prepare($sql);
-            $stm->execute([$_GET['id']]);
+            $stm->execute([$id]);
             $row = $stm->fetch();
+            $vacancy=$row['vacancy']?$row['v_name']:'Нет';
           break;
           case 3:
             $sql="SELECT * FROM company WHERE id=?";
             $stm = $pdo->prepare($sql);
-            $stm->execute([$_GET['id']]);
+            $stm->execute([$id]);
             $res = $stm->fetch();
             $sql="SELECT * FROM vacancies WHERE company=?";
             $stm = $pdo->prepare($sql);
-            $stm->execute([$_GET['id']]);
+            $stm->execute([$id]);//чёт не то
             $vac = $stm->fetch();
             //еще студенты
           break;
@@ -58,7 +71,7 @@ if ($_GET['id']){
       <? 
       //блокировать пользователя
       //если его страница   
-      switch (/*$_SESSION['role']*/3){
+      switch (/*$_SESSION['role']*/$role/*2*/){
         case 0://Админ
             printf('
             <a class="accordion-title shade main">Студенты</a>
@@ -143,20 +156,23 @@ if ($_GET['id']){
             printf('
             <a class="accordion-title shade main">Профиль</a>
             <div class="inf">
-              <p><b>Логин: </b>'.$row['login'].'</br>
-              <b>ФИО: </b>'.$contr.'</br>
-              <b>Номер телефона: </b>'.$row['description'].'</br>
-              <b>Номер группы: </b>'.$row['description'].'</br></p>
+              <p><b>Логин: </b>'.$res['login'].'</br>
+              <b>ФИО: </b>'.$row['fio'].'</br>
+              <b>Номер телефона: </b>'.$res['phone'].'</br>
+              <b>Номер группы: </b>'.$row['number'].' ('.$row['name'].')</br></p>
               <p class="link" onclick="is_clicked(`hidden_text`, this)" style="color:#949494; cursor: pointer;"><b>Остальные данные...</b></p>
               <p id="hidden_text" style="display:none;">
-              <b>Номер зачётной книжки: </b>'.$row['description'].'</br>
-              <b>Статус занятости: </b>'.$row['description'].'</br>
-              <b>Руководитель практики: </b>'.$row['description'].'</br>
+              <b>Номер зачётной книжки: </b>'.$row['num'].'</br>
+              <b>Статус занятости: </b>'.$vacancy.'</br>
+              <b>Руководитель практики: </b>'.$row['l_fio'].'</br>
               </br>
               </p>
-            </div>
-            <a href="reg.php?id='.$row['id'].'" style="padding: 9px;" class="button main top float-right shade">Изменить</a>
-                ');   
+            </div>');
+            if ($_SESSION["is_auth"]&& $_SESSION["id"]=$id){
+                printf('
+                <a href="reg.php?id='.$row['id'].'" style="padding: 9px;" class="button main top float-right shade">Изменить</a>
+                    ');   
+            }
         break;
         case 3://компания
 
