@@ -100,11 +100,16 @@ if ($id){
             <div class="inf">');
             /*printf('
                 
+=======
+            <div class="inf">
+/*
+>>>>>>> master
               <p><b>Логин: </b>'.$row['login'].'</br>
               <b>ФИО: </b>'.$contr.'</br>
               <b>Номер телефона: </b>'.$row['description'].'</br>
               <b>Почта: </b>'.$row['description'].'</br>
               Остальные данные</p>
+<<<<<<< HEAD
               <p>');*/
               
             printf('
@@ -174,6 +179,10 @@ if ($id){
                     ');   
             }
         break;
+/*
+        case 3:
+            //администратор
+ */
         case 3://компания
 
             printf('
@@ -196,6 +205,10 @@ if ($id){
             </div>');
 /*            printf('
  
+=======
+            printf('
+/* 
+>>>>>>> master
                 <ul class="accordion" data-accordion data-allow-all-closed="true">
                     <li class="accordion-item" data-accordion-item>
                         <a class="accordion-title">Предприятия</a>

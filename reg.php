@@ -28,49 +28,94 @@
                             </div>
                         </div>
                     </div>
-                    <form id="student" data-abide style="display: block;">
+                    <form id="student" action="save_user.php" method="post" data-abide style="display: block;">
                       <div data-abide-error class="alert callout" style="display: none;">
                         <p class="reg"><i class="fi-alert"></i> На этой странице присутствуют ошибки</p>
                       </div>
                       <div class="row">
                         <div class="small-12 columns">
                           <label class="reg">Логин</label>
-                            <input class="in" type="text" required pattern="text">
+                            <input name="login" class="in" type="text" required>
                             <span class="form-error"></span>
                         </div>
                         <div class="small-12 columns">
                           <label class="reg">Пароль</label>
-                            <input class="in" type="password" id="password" required >
+                            <input name="password" class="in" type="password" id="password" required >
                             <span class="form-error"></span>
                         </div>
                         <div class="small-12 columns">
                           <label class="reg">Повторите пароль</label>
-                            <input class="in" type="password" aequired pattern="alpha_numeric" data-equalto="password">
+                            <input name="checkPassword" class="in" type="password" required data-equalto="password">
                             <span class="form-error"></span>
                         </div>
                         <div class="small-12 columns">
                           <label class="reg">ФИО</label>
-                            <input class="in" type="text" required pattern="text">
+                            <input  name="fullName" class="in" type="text" required>
                             <span class="form-error"></span>
                         </div>
                         <div class="small-12 columns">
                           <label class="reg">E-mail</label>
-                            <input class="in" type="text" required pattern="url">
+                            <input name="email" class="in" type="text" required>
                             <span class="form-error"></span>                      
                         </div>
                         <div class="small-12 columns">
                           <label class="reg">Группа</label>
-                            <input class="in" type="text" required pattern="text">
+                            <input name="group" class="in" type="text" required>
                             <span class="form-error"></span>
                         </div>
                         <div class="small-12 columns">
                           <label class="reg">Номер телефона</label>
-                            <input class="in" type="text" required pattern="number">
+                            <input name="phone" class="in" type="text" required>
                             <span class="form-error"></span>
                         </div>
                         <div class="small-12 columns">
                             <label class="reg">Номер зачётной книжки</label>
-                            <input class="in" type="text" required pattern="number">
+                            <input name="num" class="in" type="text" required>
+                            <span class="form-error"></span>
+                        </div>
+                        <fieldset class="small-12 columns">
+                          <button class="button float-right login shade" style="background-color: 269489; min-width:95px; width: 10%" type="submit" value="Submit">Записаться</button>
+                        </fieldset>
+                      </div>
+                    </form>
+                    <form id="leader" action="save_user2.php" method="post" data-abide style="display: none;">
+                      <div data-abide-error class="alert callout" style="display: none;">
+                        <p class="reg"><i class="fi-alert"></i> На этой странице присутствуют ошибки</p>
+                      </div>
+                      <div class="row">
+                        <div class="small-12 columns">
+                          <label class="reg">Логин</label>
+                            <input name="login" class="in" type="text" required>
+                            <span class="form-error"></span>
+                        </div>
+                        <div class="small-12 columns">
+                          <label class="reg">Пароль</label>
+                            <input name="password" class="in" type="password" id="password" required >
+                            <span class="form-error"></span>
+                        </div>
+                        <div class="small-12 columns">
+                          <label class="reg">Повторите пароль</label>
+                            <input name="checkPassword" class="in" type="password" required data-equalto="password">
+                            <span class="form-error"></span>
+                        </div>
+                        <div class="small-12 columns">
+                          <label class="reg">ФИО</label>
+                            <input  name="fullName" class="in" type="text" required>
+                            <span class="form-error"></span>
+                        </div>
+                        <div class="small-12 columns">
+                          <label class="reg">E-mail</label>
+                            <input name="email" class="in" type="text" required>
+                            <span class="form-error"></span>                      
+                        </div>
+                        <div class="small-12 columns">
+                          <label class="reg">Список групп</label>
+                            <input name="gropus" class="in" type="text" required>
+                            <span class="form-error"></span>
+                        </div>
+                        <div class="small-12 columns">
+                          <label class="reg">Номер телефона</label>
+                            <input name="phone" class="in" type="text" required>
                             <span class="form-error"></span>
                         </div>
                         <fieldset class="small-12 columns">
@@ -78,99 +123,54 @@
                         </fieldset>
                       </div>
                     </form>
-                    <form id="leader" data-abide style="display: none;">
+                    <form id="company" action="save_user3.php" method="post" data-abide style="display: none;">
                       <div data-abide-error class="alert callout" style="display: none;">
                         <p class="reg"><i class="fi-alert"></i> На этой странице присутствуют ошибки</p>
                       </div>
                       <div class="row">
                         <div class="small-12 columns">
                           <label class="reg">Логин</label>
-                            <input class="in" type="text" required pattern="text">
+                            <input name="login" class="in" type="text" required>
                             <span class="form-error"></span>
                         </div>
                         <div class="small-12 columns">
                           <label class="reg">Пароль</label>
-                            <input class="in" type="password" id="password" required >
+                            <input name="password" class="in" type="password" id="password" required >
                             <span class="form-error"></span>
                         </div>
                         <div class="small-12 columns">
                           <label class="reg">Повторите пароль</label>
-                            <input class="in" type="password" aequired pattern="alpha_numeric" data-equalto="password">
+                            <input name="checkPassword" class="in" type="password" required data-equalto="password">
                             <span class="form-error"></span>
                         </div>
                         <div class="small-12 columns">
-                          <label class="reg">ФИО</label>
-                            <input class="in" type="text" required pattern="text">
-                            <span class="form-error"></span>
-                        </div>
-                        <div class="small-12 columns">
-                          <label class="reg">E-mail</label>
-                            <input class="in" type="text" required pattern="url">
-                            <span class="form-error"></span>                      
-                        </div>
-                        <div class="small-12 columns">
-                          <label class="reg">Группа</label>
-                            <input class="in" type="text" required pattern="text">
-                            <span class="form-error"></span>
-                        </div>
-                        <div class="small-12 columns">
-                          <label class="reg">Номер телефона</label>
-                            <input class="in" type="text" required pattern="number">
-                            <span class="form-error"></span>
-                        </div>
-                        <div class="small-12 columns">
-                            <label class="reg">Номер зачётной книжки</label>
-                            <input class="in" type="text" required pattern="number">
-                            <span class="form-error"></span>
-                        </div>
-                        <fieldset class="small-12 columns">
-                          <button class="button float-right login shade" style="background-color: 269489; min-width:95px; width: 10%"type="submit" value="Submit">Записаться</button>
-                        </fieldset>
-                      </div>
-                    </form>
-                    <form id="company" data-abide style="display: none;">
-                      <div data-abide-error class="alert callout" style="display: none;">
-                        <p class="reg"><i class="fi-alert"></i> На этой странице присутствуют ошибки</p>
-                      </div>
-                      <div class="row">
-                        <div class="small-12 columns">
-                          <label class="reg">Логин</label>
-                            <input class="in" type="text" required pattern="text">
-                            <span class="form-error"></span>
-                        </div>
-                        <div class="small-12 columns">
-                          <label class="reg">Пароль</label>
-                            <input class="in" type="password" id="password" required >
-                            <span class="form-error"></span>
-                        </div>
-                        <div class="small-12 columns">
-                          <label class="reg">Повторите пароль</label>
-                            <input class="in" type="password" aequired pattern="alpha_numeric" data-equalto="password">
-                            <span class="form-error"></span>
-                        </div>
-                        <div class="small-12 columns">
-                          <label class="reg">ФИО</label>
-                            <input class="in" type="text" required pattern="text">
+                          <label class="reg">Наименование предприятия</label>
+                            <input  name="fullName" class="in" type="text" required>
                             <span class="form-error"></span>
                         </div>
                         <div class="small-12 columns">
                           <label class="reg">E-mail</label>
-                            <input class="in" type="text" required pattern="url">
+                            <input name="email" class="in" type="text" required>
                             <span class="form-error"></span>                      
                         </div>
                         <div class="small-12 columns">
-                          <label class="reg">Группа</label>
-                            <input class="in" type="text" required pattern="text">
-                            <span class="form-error"></span>
-                        </div>
-                        <div class="small-12 columns">
                           <label class="reg">Номер телефона</label>
-                            <input class="in" type="text" required pattern="number">
+                            <input name="phone" class="in" type="text" required>
                             <span class="form-error"></span>
                         </div>
-                        <div class="small-12 columns">
-                            <label class="reg">Номер зачётной книжки</label>
-                            <input class="in" type="text" required pattern="number">
+						<div class="small-12 columns">
+                          <label class="reg">ИНН</label>
+                            <input name="inn" class="in" type="text" required>
+                            <span class="form-error"></span>
+                        </div>
+						<div class="small-12 columns">
+                          <label class="reg">Описание предприятия</label>
+                            <input name="description" class="in" type="text" required>
+                            <span class="form-error"></span>
+                        </div>
+						<div class="small-12 columns">
+                          <label class="reg">Договор с ДВФУ(1 если есть или 0 если нет)</label>
+                            <input name="contract" class="in" type="text" required>
                             <span class="form-error"></span>
                         </div>
                         <fieldset class="small-12 columns">

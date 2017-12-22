@@ -39,6 +39,60 @@ session_start();
   </head>
   <body>  
       <?php include ("menu.php");?>
+	   <?
+	  if($_SESSION['is_auth'])
+	  {
+		if($_SESSION['role'] == 2)
+		{
+		$log = $_SESSION['login'];	
+		$prof1 = mysql_query("SELECT * FROM users INNER JOIN student ON (users.id = student.id)
+		where users.login = '$log'");
+		$prof = mysql_fetch_assoc($prof1);
+		$group = $prof['group'];
+		$res = mysql_query("SELECT number FROM `group` WHERE id = $group");
+		$group = mysql_result($res, 0);	  
+		$leader = $prof['leader'];
+		$res = mysql_query("SELECT fio FROM `leader` WHERE id = $leader");
+		$leader = mysql_result($res, 0);
+		print_r('
+			  <a class="accordion-title shade main">Профиль</a>
+			  <div class="inf">
+              <p><b>Логин: </b>'.$prof['login'].'</br>
+              <b>ФИО: </b>'.$prof['fio'].'</br>
+			  <b>Номер телефона: </b>'.$prof['phone'].'</br>
+			  <b>Почта: </b>'.$prof['email'].'</br>
+			  <b>Номер группы: </b>'.$group.'</br>
+			  <b>Номер зачетной книжки: </b>'.$prof['num'].'</br>
+			  <b>Статус занятости: </b>Ищет вакансии</br>
+              <b>Руководитель практики: </b>'.$leader.'</br>
+              </br>
+              </p>
+              </div>
+              <a href="Change_student.php" style="padding: 9px;" class="button main top float-right shade">Изменить</a>
+		');
+	    }
+	  elseif($_SESSION['role'] == 1)
+	  {
+	  $log = $_SESSION['login'];	
+	  $prof1 = mysql_query("SELECT * FROM users INNER JOIN leader ON (users.id = leader.id)
+	  where users.login = '$log'");
+	  $prof = mysql_fetch_assoc($prof1);
+	  print_r('
+	   <a class="accordion-title shade main">Профиль</a>
+            <div class="inf">
+              <p><b>Логин: </b>'.$prof['login'].'</br>
+              <b>ФИО: </b>'.$prof['fio'].'</br>
+			  <b>Номер телефона: </b>'.$prof['phone'].'</br>
+			  <b>Почта: </b>'.$prof['email'].'</br>
+			  <b>Номера групп: </b>'.$prof['gropus'].'</br>
+              </br>
+              </p>
+            </div>
+            <a href="Change_leader.php" style="padding: 9px;" class="button main top float-right shade">Изменить</a>
+		');
+	  }
+	  }
+		?>
         <a class="accordion-title shade main">Узнай основную информацию о практике</a>
         <a id="0b" onclick="is_clicked('0', this)" style="padding: 9px;" class="button main top float-right shade">Подробнее</a>
         <div id="0" style="display:none;" class="inf">
