@@ -73,6 +73,14 @@ if ($id&&$_GET['delst']){
     $stmt->bindParam(':id', $_GET['delst'], PDO::PARAM_INT);   
     $stmt->execute();
 }
+if ($_GET['actid']){
+    //еще студенты
+    $sql = "UPDATE users SET activate = '1'
+    WHERE id = :id";
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':id', $_GET['actid'], PDO::PARAM_INT);   
+    $stmt->execute();
+}
 //удалить вакансию
 if ($id&&$_GET['delvac']){
     $sql = "DELETE FROM vacancies WHERE id =:id";
@@ -183,8 +191,8 @@ if ($id){
                         $stm->execute([$link['id']]);
                         $fio = $stm->fetch();
                         printf('<a class="accordion-title podt" href="profile.php?id='.$link['id'].'" style="margin-bottom: 5px;">'.$link['login'].'</a>
-                        <a href="profile.php?actid='.$link['id'].'" style="top: -58px; padding: 9px; margin-left: 18px; background-color: #ca3838;" class="button main top float-right shade">Отклонить</a>
-                        <a href="profile.php?disactid='.$link['id'].'" style="top: -58px; padding: 9px;" class="button main top float-right shade">Принять</a>');
+                        <a href="profile.php?disactid='.$link['id'].'" style="top: -58px; padding: 9px; margin-left: 18px; background-color: #ca3838;" class="button main top float-right shade">Отклонить</a>
+                        <a href="profile.php?actid='.$link['id'].'" style="top: -58px; padding: 9px;" class="button main top float-right shade">Принять</a>');
                         $a++;
                     }
                 printf('</div>');
@@ -199,8 +207,8 @@ if ($id){
                         $stm->execute([$link['id']]);
                         $fio = $stm->fetch();
                         printf('<a class="accordion-title podt" href="profile.php?id='.$link['id'].'" style="margin-bottom: 5px;">'.$fio['fio'].'</a>
-                        <a href="profile.php?actid='.$link['id'].'" style="top: -58px; padding: 9px; margin-left: 18px; background-color: #ca3838;" class="button main top float-right shade">Отклонить</a>
-                        <a href="profile.php?disactid='.$link['id'].'" style="top: -58px; padding: 9px;" class="button main top float-right shade">Принять</a>');
+                        <a href="profile.php?disactid='.$link['id'].'" style="top: -58px; padding: 9px; margin-left: 18px; background-color: #ca3838;" class="button main top float-right shade">Отклонить</a>
+                        <a href="profile.php?actid='.$link['id'].'" style="top: -58px; padding: 9px;" class="button main top float-right shade">Принять</a>');
                         $a++;
                     }
                 printf('</div>');
@@ -215,8 +223,8 @@ if ($id){
                         $stm->execute([$link['id']]);
                         $fio = $stm->fetch();
                         printf('<a class="accordion-title podt" href="profile.php?id='.$link['id'].'" style="margin-bottom: 5px;">'.$fio['name'].'</a>
-                        <a href="profile.php?actid='.$link['id'].'" style="top: -58px; padding: 9px; margin-left: 18px; background-color: #ca3838;" class="button main top float-right shade">Отклонить</a>
-                        <a href="profile.php?disactid='.$link['id'].'" style="top: -58px; padding: 9px;" class="button main top float-right shade">Принять</a>');
+                        <a href="profile.php?disactid='.$link['id'].'" style="top: -58px; padding: 9px; margin-left: 18px; background-color: #ca3838;" class="button main top float-right shade">Отклонить</a>
+                        <a href="profile.php?actid='.$link['id'].'" style="top: -58px; padding: 9px;" class="button main top float-right shade">Принять</a>');
                         $a++;
                     }
                 printf('</div>');

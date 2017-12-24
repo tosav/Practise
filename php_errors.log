@@ -381,3 +381,18 @@ Stack trace:
 #1 {main}
   thrown in D:\OpenServer\domains\Practise\profile.php on line 107
 [24-Dec-2017 15:04:27 Europe/Moscow] PHP Parse error:  syntax error, unexpected ''</a>' (T_CONSTANT_ENCAPSED_STRING) in D:\OpenServer\domains\Practise\profile.php on line 187
+[24-Dec-2017 16:14:40 Europe/Moscow] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'activate' in 'field list'' in D:\OpenServer\domains\Practise\profile.php:80
+Stack trace:
+#0 D:\OpenServer\domains\Practise\profile.php(80): PDO->prepare('UPDATE student ...')
+#1 {main}
+  thrown in D:\OpenServer\domains\Practise\profile.php on line 80
+[24-Dec-2017 16:15:39 Europe/Moscow] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'activate' in 'field list'' in D:\OpenServer\domains\Practise\profile.php:80
+Stack trace:
+#0 D:\OpenServer\domains\Practise\profile.php(80): PDO->prepare('UPDATE student ...')
+#1 {main}
+  thrown in D:\OpenServer\domains\Practise\profile.php on line 80
+[24-Dec-2017 16:15:51 Europe/Moscow] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'activate' in 'field list'' in D:\OpenServer\domains\Practise\profile.php:80
+Stack trace:
+#0 D:\OpenServer\domains\Practise\profile.php(80): PDO->prepare('UPDATE student ...')
+#1 {main}
+  thrown in D:\OpenServer\domains\Practise\profile.php on line 80
