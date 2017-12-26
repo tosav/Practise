@@ -413,3 +413,4 @@ Stack trace:
   thrown in D:\OpenServer\domains\Practise\profile.php on line 101
 [26-Dec-2017 07:10:31 Europe/Moscow] PHP Parse error:  syntax error, unexpected '{' in D:\OpenServer\domains\Practise\profile.php on line 333
 [26-Dec-2017 07:11:49 Europe/Moscow] PHP Parse error:  syntax error, unexpected ')' in D:\OpenServer\domains\Practise\profile.php on line 315
+[26-Dec-2017 07:34:59 Europe/Moscow] PHP Parse error:  syntax error, unexpected '<' in D:\OpenServer\domains\Practise\index.php on line 96

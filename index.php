@@ -39,7 +39,7 @@ session_start();
   </head>
   <body>  
       <?php include ("menu.php");?>
-	   <?
+	   <!--
 	  if($_SESSION['is_auth'])
 	  {
 		if($_SESSION['role'] == 2)
@@ -92,7 +92,7 @@ session_start();
 		');
 	  }
 	  }
-		?>
+		?>-->
         <a class="accordion-title shade main">Узнай основную информацию о практике</a>
         <a id="0b" onclick="is_clicked('0', this)" style="padding: 9px;" class="button main top float-right shade">Подробнее</a>
         <div id="0" style="display:none;" class="inf">
