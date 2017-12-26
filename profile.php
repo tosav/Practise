@@ -282,14 +282,17 @@ if ($id>0){
               <p><b>Логин: </b>'.$res['login'].'</br>
               <b>ФИО: </b>'.$row['fio'].'</br>
               <b>Номер телефона: </b>'.$res['phone'].'</br>
-              <b>Почта: </b>'.$res['phone'].'</br></p>
-              <p class="link" onclick="is_clicked(`hidden_text`, this)" style="color:#949494; cursor: pointer;"><b>Остальные данные...</b></p>
-              <p id="hidden_text" style="display:none;">
-
-              <b>Номер зачётной книжки: </b>'.$row['description'].'</br>
-              <b>Статус занятости: </b>'.$row['description'].'</br>
-              <b>Руководитель практики: </b>'.$row['description'].'</br>
-              </br>
+              <b>Почта: </b>'.$res['phone'].'</br>
+              <b>Группы: </b>');
+            $stds=explode(";",$row['groups']);
+            foreach($stds as $gr){
+                $sql='SELECT number, name FROM `group` WHERE id=?';
+                $stm = $pdo->prepare($sql);
+                $stm->execute([$gr]);
+                $group = $stm->fetch();      
+                echo ''.$group['number'].' ('.$group['name'].')</br>';
+            }       
+            printf('</br>
               </p>
             </div>
             <a href="reg.php?id='.$row['id'].'" style="padding: 9px;" class="button main top float-right shade">Изменить</a>

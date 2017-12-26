@@ -414,3 +414,4 @@ Stack trace:
 [26-Dec-2017 07:10:31 Europe/Moscow] PHP Parse error:  syntax error, unexpected '{' in D:\OpenServer\domains\Practise\profile.php on line 333
 [26-Dec-2017 07:11:49 Europe/Moscow] PHP Parse error:  syntax error, unexpected ')' in D:\OpenServer\domains\Practise\profile.php on line 315
 [26-Dec-2017 07:34:59 Europe/Moscow] PHP Parse error:  syntax error, unexpected '<' in D:\OpenServer\domains\Practise\index.php on line 96
+[26-Dec-2017 09:02:19 Europe/Moscow] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH) in D:\OpenServer\domains\Practise\profile.php on line 288
