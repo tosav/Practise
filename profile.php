@@ -212,7 +212,7 @@ if ($id>0){
       <? 
       switch ($role){
         case -1:
-        break;
+		break;
         case 0://Админ         
             //видно админам   
             if ($_SESSION['is_auth']&&$_SESSION['role']==0){
@@ -296,37 +296,57 @@ if ($id>0){
               </p>
             </div>
             <a href="reg.php?id='.$row['id'].'" style="padding: 9px;" class="button main top float-right shade">Изменить</a>
-                ');               
-            //ВИДНО ПОЛЬЗОВАТЕЛЮ
+                ');                  
             if ($_SESSION["is_auth"]&& $_SESSION["id"]==$id) {
-                printf('
-                <a class="accordion-title shade main">Отчет</a>
-                <div class="inf adm">
-                        <div class="grid-x">
-                            <div class="large-12 cell">
-                                <div class="grid-x grid-margin-x">
-                                    <div class="medium-1 cell">
-                                        <p class="adm"><b>Группа: </b></p>
-                                    </div> 
-                                    <div class="medium-3 cell">
-                                       <input id="search" type="text" class="adm" value="'.$_GET['search'].'" name="search">
-                                    </div>
-                                    <div class="medium-2 cell">
-                                        <a id="but_s" class="button adm top shade" onclick="is_clicked("but_s","student")">Вывести</a>
-                                    </div>
-                                    <div class="medium-2 cell">
-                                        <a id="but_l" class="button adm top shade" onclick="is_clicked("but_l","leader")">Скачать .xls</a>
-                                    </div>
-                                    <div class="medium-4 cell">
-                                        <a id="but_c" class="button adm top shade" onclick="is_clicked("but_c","company")">Скачать все группы .xls</a>
-                                    </div>
+            printf('
+            <a class="accordion-title shade main">Отчет</a>
+            <div class="inf adm">
+                    <div class="grid-x">
+                        <div class="large-12 cell">
+                            <div class="grid-x grid-margin-x">
+                                <div class="medium-1 cell">
+                                    <p class="adm"><b>Группа: </b></p>
+                                </div> 
+                                <div class="medium-3 cell">
+                                   <input id="search" type="text" class="adm" onchange=prof() value="'.$_GET['search'].'" name="search" list="citynames">
+                                </div>
+                                <div class="medium-2 cell">
+                                    <a href="profile.php?grnnamexls=" id="but_v" class="button adm top shade" onclick="is_clicked("but_v","student")">Вывести</a>
+                                </div>
+                                <div class="medium-2 cell">
+                                    <a href="download_group.php?grnname="  id="but_s" class="button adm top shade" onclick="is_clicked("but_s","leader")">Скачать .xls</a>
+                                </div>
+					
+								
+                                <div class="medium-4 cell">
+                                    <a href="download_groups.php" id="but_c" class="button adm top shade" onclick="is_clicked("but_c","company")">Скачать все группы .xls</a>
                                 </div>
                             </div>
                         </div>
-                </div>
-                    ');   
-            }
-                
+                    </div>
+            </div>
+                ');   
+            if ($_GET['grnnamexls']<>"") {
+			$grnnamexls	= $_GET['grnnamexls'];
+			printf('
+			<table border="1">
+			<caption>Группа '.$_GET['grnnamexls'].'</caption>
+			<tr>
+			<th>ФИО</th>
+			<th>Вакансия</th>
+			</tr> ');
+			$query = "SELECT * FROM `student` LEFT OUTER JOIN `group` ON student.`group`=group.id where group.number = '$grnnamexls' ORDER BY student.fio";
+			$res = mysql_query( $query );
+			while( $prd = mysql_fetch_assoc($res) ) {
+			printf('
+				<tr>
+				<td align="center">'.$prd['fio'].'</td>
+				<td align="center">'.$prd['vacancy'].'</td>
+				</tr> ');
+			}
+
+			}
+			}
         break;
         case 2://студент
             //видно администратору
@@ -376,7 +396,49 @@ if ($id>0){
               <b>Описание: </b>'.$row['description'].'</br>
               </br>
               </p>
+            </div>
+            <a href="reg.php?id='.$row['id'].'" style="padding: 9px;" class="button main top float-right shade">Изменить</a>');
+            /*printf('
+            <a class="accordion-title shade main">Занятость</a>
+            <a class="accordion-title shade main" style="background-color: #95c9c3; color:#fff;">Какая-то вакансия</a>
+            <a id="0b" onclick="is_clicked_b(`0`, this)" style="padding: 9px;" class="button main top float-right shade">Развернуть</a>
+            <div id="0" style="display:none;" class="inf">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
             </div>');
+
+/* 
+                <ul class="accordion" data-accordion data-allow-all-closed="true">
+                    <li class="accordion-item" data-accordion-item>
+                        <a class="accordion-title">Предприятия</a>
+                        <div class="accordion-content" data-tab-content>
+                            <table>
+                              <thead>
+                                <tr>
+                                  <th>Название</th>
+                                  <th></th>
+                                  <th></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Иванов</td>
+                                  <td><button class="button">Принять</button></td>
+                                  <td><button class="button">Отклонить</button></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                    </li>
+                </ul>
+            ');  
+*/		/*
+            printf('
+            <a class="accordion-title shade main">Заявки</a>
+            <a class="accordion-title shade main" style="background-color: #95c9c3; color:#fff;">Какая-то вакансия</a>
+            <a id="0b" onclick="is_clicked_b(`0`, this)" style="padding: 9px;" class="button main top float-right shade">Развернуть</a>
+            <div id="0" style="display:none;" class="inf">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            </div>');*/
             //видно пользователю и администратору
             if (($_SESSION["is_auth"]&& $_SESSION["id"]==$id)||($_SESSION['is_auth']&& $_SESSION['role']==0)){
                 printf('
@@ -487,6 +549,10 @@ if ($id>0){
     </div>
     <?php include ("footer.php");?>
     <script>
+	window.onload = function() {
+		document.getElementById(`but_s`).href='download_group.php?grnname='+document.getElementById(`search`).value;
+		document.getElementById(`but_v`).href='profile.php?grnnamexls='+document.getElementById(`search`).value;
+	}
     function is_clicked(id, p){
             if (document.getElementById(id).style.display=='none'){ 
             document.getElementById(id).style.display='block'; 
@@ -567,6 +633,10 @@ if ($id>0){
         }
         return succeed;
     }
+	function prof(){
+		document.getElementById(`but_s`).href='download_group.php?grnname='+document.getElementById(`search`).value;
+		document.getElementById(`but_v`).href='profile.php?grnnamexls='+document.getElementById(`search`).value;
+	}
     </script>
   </body>
 </html>

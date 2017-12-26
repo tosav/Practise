@@ -18,9 +18,6 @@
 	  $group = $prof['group'];
 	  $res = mysql_query("SELECT number FROM `group` WHERE id = $group");
 	  $group = mysql_result($res, 0);	  
-	  $leader = $prof['leader'];
-	  $res = mysql_query("SELECT fio FROM `leader` WHERE id = $leader");
-	  $leader = mysql_result($res, 0);
 	  print_r('
             <div>
                 <a class="accordion-title shade">Профиль</a>
@@ -70,6 +67,7 @@
                             <input name="num" class="in" type="text" required value='.$prof['num'].'>
                             <span class="form-error"></span>
                         </div>
+						<input style="display:none" name="id" class="in" type="text" required value='.$prof['id'].'>
                         <fieldset class="small-12 columns">
                           <button class="button float-right login shade" style="background-color: 269489; min-width:95px; width: 10%" type="submit" value="Submit">Сохранить</button>
                         </fieldset>

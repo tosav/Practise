@@ -287,6 +287,7 @@ Stack trace:
 =======
 >>>>>>> master
 >>>>>>> master
+<<<<<<< HEAD
 [22-Dec-2017 07:37:01 Europe/Moscow] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in where clause is ambiguous' in D:\OpenServer\domains\Practise\profile.php:53
 Stack trace:
 #0 D:\OpenServer\domains\Practise\profile.php(53): PDO->prepare('SELECT c.*, v.*...')
@@ -415,3 +416,105 @@ Stack trace:
 [26-Dec-2017 07:11:49 Europe/Moscow] PHP Parse error:  syntax error, unexpected ')' in D:\OpenServer\domains\Practise\profile.php on line 315
 [26-Dec-2017 07:34:59 Europe/Moscow] PHP Parse error:  syntax error, unexpected '<' in D:\OpenServer\domains\Practise\index.php on line 96
 [26-Dec-2017 09:02:19 Europe/Moscow] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH) in D:\OpenServer\domains\Practise\profile.php on line 288
+=======
+[26-Dec-2017 04:30:12 Europe/Moscow] PHP Parse error:  syntax error, unexpected '*' in C:\OpenServer\domains\Practise\profile.php on line 209
+[26-Dec-2017 04:32:51 Europe/Moscow] PHP Parse error:  syntax error, unexpected '*' in C:\OpenServer\domains\Practise\profile.php on line 209
+[26-Dec-2017 04:42:22 Europe/Moscow] PHP Parse error:  syntax error, unexpected ''  <p><b>Логин: </b>'' (T_CONSTANT_ENCAPSED_STRING) in C:\OpenServer\domains\Practise\profile.php on line 96
+[26-Dec-2017 04:45:03 Europe/Moscow] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at C:\OpenServer\domains\Practise\download_groups.php:2) in C:\OpenServer\domains\Practise\download_groups.php on line 3
+[26-Dec-2017 04:45:03 Europe/Moscow] PHP Warning:  require_once(PHPExcel.php): failed to open stream: No such file or directory in C:\OpenServer\domains\Practise\download_groups.php on line 4
+[26-Dec-2017 04:45:03 Europe/Moscow] PHP Fatal error:  require_once(): Failed opening required 'PHPExcel.php' (include_path='.;c:/openserver/modules/php/PHP-5.5;c:/openserver/modules/php/PHP-5.5/PEAR/pear') in C:\OpenServer\domains\Practise\download_groups.php on line 4
+[26-Dec-2017 04:45:22 Europe/Moscow] PHP Warning:  require_once(PHPExcel.php): failed to open stream: No such file or directory in C:\OpenServer\domains\Practise\download_groups.php on line 4
+[26-Dec-2017 04:45:22 Europe/Moscow] PHP Fatal error:  require_once(): Failed opening required 'PHPExcel.php' (include_path='.;c:/openserver/modules/php/PHP-5.5;c:/openserver/modules/php/PHP-5.5/PEAR/pear') in C:\OpenServer\domains\Practise\download_groups.php on line 4
+[26-Dec-2017 04:48:56 Europe/Moscow] PHP Warning:  unlink(test.xlsx): Permission denied in C:\OpenServer\domains\Practise\Classes\PHPExcel\Writer\Excel2007.php on line 229
+[26-Dec-2017 04:48:56 Europe/Moscow] PHP Fatal error:  Uncaught exception 'PHPExcel_Writer_Exception' with message 'Could not close zip file test.xlsx.' in C:\OpenServer\domains\Practise\Classes\PHPExcel\Writer\Excel2007.php:389
+Stack trace:
+#0 C:\OpenServer\domains\Practise\download_groups.php(11): PHPExcel_Writer_Excel2007->save('test.xlsx')
+#1 {main}
+  thrown in C:\OpenServer\domains\Practise\Classes\PHPExcel\Writer\Excel2007.php on line 389
+[26-Dec-2017 05:05:15 Europe/Moscow] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in C:\OpenServer\domains\Practise\download_groups.php on line 9
+[26-Dec-2017 05:05:15 Europe/Moscow] PHP Warning:  mysql_query(): A link to the server could not be established in C:\OpenServer\domains\Practise\download_groups.php on line 9
+[26-Dec-2017 05:05:15 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 12
+[26-Dec-2017 05:05:36 Europe/Moscow] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at C:\OpenServer\domains\Practise\download_groups.php:2) in C:\OpenServer\domains\Practise\download_groups.php on line 3
+[26-Dec-2017 05:05:36 Europe/Moscow] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in C:\OpenServer\domains\Practise\download_groups.php on line 10
+[26-Dec-2017 05:05:36 Europe/Moscow] PHP Warning:  mysql_query(): A link to the server could not be established in C:\OpenServer\domains\Practise\download_groups.php on line 10
+[26-Dec-2017 05:05:36 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 13
+[26-Dec-2017 05:05:40 Europe/Moscow] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at C:\OpenServer\domains\Practise\download_groups.php:2) in C:\OpenServer\domains\Practise\download_groups.php on line 3
+[26-Dec-2017 05:05:40 Europe/Moscow] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in C:\OpenServer\domains\Practise\download_groups.php on line 10
+[26-Dec-2017 05:05:40 Europe/Moscow] PHP Warning:  mysql_query(): A link to the server could not be established in C:\OpenServer\domains\Practise\download_groups.php on line 10
+[26-Dec-2017 05:05:40 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 13
+[26-Dec-2017 05:07:59 Europe/Moscow] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in C:\OpenServer\domains\Practise\download_groups.php on line 10
+[26-Dec-2017 05:07:59 Europe/Moscow] PHP Warning:  mysql_query(): A link to the server could not be established in C:\OpenServer\domains\Practise\download_groups.php on line 10
+[26-Dec-2017 05:07:59 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 13
+[26-Dec-2017 05:11:20 Europe/Moscow] PHP Fatal error:  Call to a member function setCellValue() on a non-object in C:\OpenServer\domains\Practise\download_groups.php on line 15
+[26-Dec-2017 05:12:13 Europe/Moscow] PHP Fatal error:  Call to a member function setCellValue() on a non-object in C:\OpenServer\domains\Practise\download_groups.php on line 16
+[26-Dec-2017 05:21:27 Europe/Moscow] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in C:\OpenServer\domains\Practise\download_groups.php on line 11
+[26-Dec-2017 05:21:27 Europe/Moscow] PHP Warning:  mysql_query(): A link to the server could not be established in C:\OpenServer\domains\Practise\download_groups.php on line 11
+[26-Dec-2017 05:21:27 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 14
+[26-Dec-2017 05:21:27 Europe/Moscow] PHP Warning:  unlink(test.xlsx): Permission denied in C:\OpenServer\domains\Practise\Classes\PHPExcel\Writer\Excel2007.php on line 229
+[26-Dec-2017 05:21:27 Europe/Moscow] PHP Fatal error:  Uncaught exception 'PHPExcel_Writer_Exception' with message 'Could not close zip file test.xlsx.' in C:\OpenServer\domains\Practise\Classes\PHPExcel\Writer\Excel2007.php:389
+Stack trace:
+#0 C:\OpenServer\domains\Practise\download_groups.php(25): PHPExcel_Writer_Excel2007->save('test.xlsx')
+#1 {main}
+  thrown in C:\OpenServer\domains\Practise\Classes\PHPExcel\Writer\Excel2007.php on line 389
+[26-Dec-2017 05:21:53 Europe/Moscow] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in C:\OpenServer\domains\Practise\download_groups.php on line 11
+[26-Dec-2017 05:21:53 Europe/Moscow] PHP Warning:  mysql_query(): A link to the server could not be established in C:\OpenServer\domains\Practise\download_groups.php on line 11
+[26-Dec-2017 05:21:53 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 14
+[26-Dec-2017 05:22:25 Europe/Moscow] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in C:\OpenServer\domains\Practise\download_groups.php on line 12
+[26-Dec-2017 05:22:25 Europe/Moscow] PHP Warning:  mysql_query(): A link to the server could not be established in C:\OpenServer\domains\Practise\download_groups.php on line 12
+[26-Dec-2017 05:22:25 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 15
+[26-Dec-2017 05:22:29 Europe/Moscow] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in C:\OpenServer\domains\Practise\download_groups.php on line 12
+[26-Dec-2017 05:22:29 Europe/Moscow] PHP Warning:  mysql_query(): A link to the server could not be established in C:\OpenServer\domains\Practise\download_groups.php on line 12
+[26-Dec-2017 05:22:29 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 15
+[26-Dec-2017 05:22:36 Europe/Moscow] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in C:\OpenServer\domains\Practise\download_groups.php on line 12
+[26-Dec-2017 05:22:36 Europe/Moscow] PHP Warning:  mysql_query(): A link to the server could not be established in C:\OpenServer\domains\Practise\download_groups.php on line 12
+[26-Dec-2017 05:22:36 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 15
+[26-Dec-2017 06:36:31 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 16
+[26-Dec-2017 06:38:19 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 16
+[26-Dec-2017 06:39:17 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 16
+[26-Dec-2017 06:39:19 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 16
+[26-Dec-2017 06:39:23 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 16
+[26-Dec-2017 06:42:27 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 16
+[26-Dec-2017 06:42:29 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 16
+[26-Dec-2017 06:42:32 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 16
+[26-Dec-2017 06:42:51 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 16
+[26-Dec-2017 06:43:45 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 16
+[26-Dec-2017 06:44:19 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 16
+[26-Dec-2017 06:44:20 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 16
+[26-Dec-2017 06:44:20 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 16
+[26-Dec-2017 06:44:20 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 16
+[26-Dec-2017 06:45:28 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 16
+[26-Dec-2017 06:45:29 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 16
+[26-Dec-2017 06:45:31 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 16
+[26-Dec-2017 06:47:05 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 16
+[26-Dec-2017 06:50:46 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 16
+[26-Dec-2017 06:51:18 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 16
+[26-Dec-2017 06:54:12 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 16
+[26-Dec-2017 06:54:13 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 16
+[26-Dec-2017 06:54:13 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 16
+[26-Dec-2017 06:54:14 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 16
+[26-Dec-2017 06:54:14 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\download_groups.php on line 16
+[26-Dec-2017 06:59:45 Europe/Moscow] PHP Warning:  unlink(test.xlsx): Permission denied in C:\OpenServer\domains\Practise\Classes\PHPExcel\Writer\Excel2007.php on line 229
+[26-Dec-2017 06:59:45 Europe/Moscow] PHP Fatal error:  Uncaught exception 'PHPExcel_Writer_Exception' with message 'Could not close zip file test.xlsx.' in C:\OpenServer\domains\Practise\Classes\PHPExcel\Writer\Excel2007.php:389
+Stack trace:
+#0 C:\OpenServer\domains\Practise\download_groups.php(27): PHPExcel_Writer_Excel2007->save('test.xlsx')
+#1 {main}
+  thrown in C:\OpenServer\domains\Practise\Classes\PHPExcel\Writer\Excel2007.php on line 389
+[26-Dec-2017 10:00:20 Europe/Moscow] PHP Warning:  unlink(Group.xlsx): Permission denied in C:\OpenServer\domains\Practise\Classes\PHPExcel\Writer\Excel2007.php on line 229
+[26-Dec-2017 10:00:20 Europe/Moscow] PHP Fatal error:  Uncaught exception 'PHPExcel_Writer_Exception' with message 'Could not close zip file Group.xlsx.' in C:\OpenServer\domains\Practise\Classes\PHPExcel\Writer\Excel2007.php:389
+Stack trace:
+#0 C:\OpenServer\domains\Practise\download_group.php(29): PHPExcel_Writer_Excel2007->save('Group.xlsx')
+#1 {main}
+  thrown in C:\OpenServer\domains\Practise\Classes\PHPExcel\Writer\Excel2007.php on line 389
+[26-Dec-2017 10:00:48 Europe/Moscow] PHP Warning:  unlink(Group.xlsx): Permission denied in C:\OpenServer\domains\Practise\Classes\PHPExcel\Writer\Excel2007.php on line 229
+[26-Dec-2017 10:00:48 Europe/Moscow] PHP Fatal error:  Uncaught exception 'PHPExcel_Writer_Exception' with message 'Could not close zip file Group.xlsx.' in C:\OpenServer\domains\Practise\Classes\PHPExcel\Writer\Excel2007.php:389
+Stack trace:
+#0 C:\OpenServer\domains\Practise\download_group.php(29): PHPExcel_Writer_Excel2007->save('Group.xlsx')
+#1 {main}
+  thrown in C:\OpenServer\domains\Practise\Classes\PHPExcel\Writer\Excel2007.php on line 389
+[26-Dec-2017 10:01:15 Europe/Moscow] PHP Warning:  unlink(Group.xlsx): Permission denied in C:\OpenServer\domains\Practise\Classes\PHPExcel\Writer\Excel2007.php on line 229
+[26-Dec-2017 10:01:15 Europe/Moscow] PHP Fatal error:  Uncaught exception 'PHPExcel_Writer_Exception' with message 'Could not close zip file Group.xlsx.' in C:\OpenServer\domains\Practise\Classes\PHPExcel\Writer\Excel2007.php:389
+Stack trace:
+#0 C:\OpenServer\domains\Practise\download_group.php(29): PHPExcel_Writer_Excel2007->save('Group.xlsx')
+#1 {main}
+  thrown in C:\OpenServer\domains\Practise\Classes\PHPExcel\Writer\Excel2007.php on line 389
+>>>>>>> Ветка

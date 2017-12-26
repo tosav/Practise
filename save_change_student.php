@@ -12,7 +12,7 @@
 	$group = $_POST['group'];
 	$phone = $_POST['phone'];
 	$num = $_POST['num'];
-
+    $id = $_POST['id'];
  if (empty($login) or empty($password)) //если пользователь не ввел логин или пароль, то выдаем ошибку и останавливаем скрипт
     {
     exit ("Вы ввели не всю информацию, вернитесь назад и заполните все поля!");
@@ -22,7 +22,7 @@
     mysql_select_db ("practice",$db);
 
  // если такого нет, то сохраняем данные
-    $id = $_SESSION['id'];
+
     $result2 = mysql_query ("UPDATE users  SET login='$login', password='$password' ,email='$email', phone='$phone' 
 	WHERE id='$id'");
 	$res1 = mysql_query("SELECT id FROM `group` WHERE number='$group'");
