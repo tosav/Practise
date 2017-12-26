@@ -82,6 +82,15 @@ if ($_GET['actid']){
     $stmt->bindParam(':id', $_GET['actid'], PDO::PARAM_INT);   
     $stmt->execute();
 }
+//блокировать пользователя
+if ($_GET['disid']){
+    //еще студенты
+    $sql = "UPDATE users SET activate = '0'
+    WHERE id = :id";
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':id', $_GET['actid'], PDO::PARAM_INT);   
+    $stmt->execute();
+}
 //дизактивировать пользователя
 if ($_GET['disactid']){
     //еще студенты
@@ -263,7 +272,7 @@ if ($id>0){
             if ($_SESSION['is_auth']&&$_SESSION['role']==0){
                 print_r('<a class="accordion-title shade main" style="background-color:#ffda9c;
                 border: 1px solid #ffda9c;"></br></a>
-                <a href="vac.php?id='.$row['id'].'" style="padding: 9px; margin-left: 18px; background-color: #ca3838; width: 200px; min-width: 200px;" class="button main top float-right shade">Блокировать пользователя</a>');
+                <a href="profile.php?disid='.$row['id'].'" style="padding: 9px; margin-left: 18px; background-color: #ca3838; width: 200px; min-width: 200px;" class="button main top float-right shade">Блокировать пользователя</a>');
             }
             //видно всем
             printf('
@@ -321,7 +330,7 @@ if ($id>0){
             if ($_SESSION['is_auth']&&$_SESSION['role']==0){
                 print_r('<a class="accordion-title shade main" style="background-color:#ffda9c;
                 border: 1px solid #ffda9c;"></br></a>
-                <a href="vac.php?id='.$row['id'].'" style="padding: 9px; margin-left: 18px; background-color: #ca3838; width: 200px; min-width: 200px;" class="button main top float-right shade">Блокировать пользователя</a>');
+                <a href="profile.php?disid='.$row['id'].'" style="padding: 9px; margin-left: 18px; background-color: #ca3838; width: 200px; min-width: 200px;" class="button main top float-right shade">Блокировать пользователя</a>');
             }
             //видно всем 
             printf('
@@ -351,7 +360,7 @@ if ($id>0){
             if ($_SESSION['is_auth']&&$_SESSION['role']==0){
                 print_r('<a class="accordion-title shade main" style="background-color:#ffda9c;
                 border: 1px solid #ffda9c;"></br></a>
-                <a href="vac.php?id='.$row['id'].'" style="padding: 9px; margin-left: 18px; background-color: #ca3838; width: 200px; min-width: 200px;" class="button main top float-right shade">Блокировать пользователя</a>');
+                <a href="profile.php?disid='.$row['id'].'" style="padding: 9px; margin-left: 18px; background-color: #ca3838; width: 200px; min-width: 200px;" class="button main top float-right shade">Блокировать пользователя</a>');
             }
             $a=0;
             //видно всем
