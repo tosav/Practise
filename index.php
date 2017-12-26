@@ -36,6 +36,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Практики</title>
     <?php include ("head.php");?>
+    <link rel="icon" type="image/png" href="favicon.png" />
   </head>
   <body>  
       <?php include ("menu.php");?>

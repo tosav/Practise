@@ -1,7 +1,7 @@
 ﻿    <link rel="stylesheet" href="../css/foundation.css">
     <link rel="stylesheet" href="../css/jquery-ui.css">
     <link rel="stylesheet" href="../css/app.css">
-    <link rel="shortcut icon" href="../favicon.png" type="image/png">
+    <link rel="icon" type="image/png" href="/favicon.png">
     <script src="../js/vendor/jquery.js"></script>
     <script src="../js/vendor/jquery.js"></script>
     <script src="../js/vendor/jquery-ui.min.js"></script>
