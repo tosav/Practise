@@ -396,3 +396,18 @@ Stack trace:
 #0 D:\OpenServer\domains\Practise\profile.php(80): PDO->prepare('UPDATE student ...')
 #1 {main}
   thrown in D:\OpenServer\domains\Practise\profile.php on line 80
+[26-Dec-2017 06:10:09 Europe/Moscow] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 2031 ' in D:\OpenServer\domains\Practise\profile.php:105
+Stack trace:
+#0 D:\OpenServer\domains\Practise\profile.php(105): PDOStatement->execute()
+#1 {main}
+  thrown in D:\OpenServer\domains\Practise\profile.php on line 105
+[26-Dec-2017 06:16:32 Europe/Moscow] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 2031 ' in D:\OpenServer\domains\Practise\profile.php:105
+Stack trace:
+#0 D:\OpenServer\domains\Practise\profile.php(105): PDOStatement->execute()
+#1 {main}
+  thrown in D:\OpenServer\domains\Practise\profile.php on line 105
+[26-Dec-2017 06:17:21 Europe/Moscow] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id = ?' at line 1' in D:\OpenServer\domains\Practise\profile.php:101
+Stack trace:
+#0 D:\OpenServer\domains\Practise\profile.php(101): PDO->prepare('DELETE FROM use...')
+#1 {main}
+  thrown in D:\OpenServer\domains\Practise\profile.php on line 101

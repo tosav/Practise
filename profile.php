@@ -73,12 +73,37 @@ if ($id&&$_GET['delst']){
     $stmt->bindParam(':id', $_GET['delst'], PDO::PARAM_INT);   
     $stmt->execute();
 }
+//активировать пользователя
 if ($_GET['actid']){
     //еще студенты
     $sql = "UPDATE users SET activate = '1'
     WHERE id = :id";
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':id', $_GET['actid'], PDO::PARAM_INT);   
+    $stmt->execute();
+}
+//дизактивировать пользователя
+if ($_GET['disactid']){
+    //еще студенты
+    $sql = "SELECT role FROM users WHERE id = ?";
+    $stm = $pdo->prepare($sql);
+    $stm->execute([$_GET['disactid']]);
+    $roleq = $stm->fetch();
+    $sql = "DELETE FROM leader WHERE id = :id";
+    switch($roleq['role']){
+        case '2':
+            $sql = "DELETE FROM student WHERE id = :id";
+        break;
+        case '3':
+            $sql = "DELETE FROM company WHERE id = :id";
+        break;
+    }
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':id', $_GET['disactid'], PDO::PARAM_INT);   
+    $stmt->execute();
+    $sql = "DELETE FROM users WHERE id = :id";
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':id', $_GET['disactid'], PDO::PARAM_INT);   
     $stmt->execute();
 }
 //удалить вакансию
@@ -102,7 +127,7 @@ if ($id&&$_GET['delvac']){
         }
     }
 }
-if ($id){
+if ($id>0){
     $sql="SELECT * FROM users WHERE id=?";
     
     $stm = $pdo->prepare($sql);
@@ -163,6 +188,7 @@ if ($id){
           break;
     }
 }
+echo $_SESSION['id'];
 ?>
 <!doctype html>
 <html class="no-js" lang="ru" dir="ltr">
@@ -179,6 +205,8 @@ if ($id){
       //блокировать пользователя
       //если его страница   
       switch ($role){
+        case -1:
+        break;
         case 0://Админ
             $a=0;
             if (count($st)>0){
@@ -190,7 +218,7 @@ if ($id){
                         $stm = $pdo->prepare($sql);
                         $stm->execute([$link['id']]);
                         $fio = $stm->fetch();
-                        printf('<a class="accordion-title podt" href="profile.php?id='.$link['id'].'" style="margin-bottom: 5px;">'.$link['login'].'</a>
+                        printf('<a class="accordion-title podt" href="profile.php?id='.$link['id'].'" style="margin-bottom: 5px;">'.$fio['fio'].'</a>
                         <a href="profile.php?disactid='.$link['id'].'" style="top: -58px; padding: 9px; margin-left: 18px; background-color: #ca3838;" class="button main top float-right shade">Отклонить</a>
                         <a href="profile.php?actid='.$link['id'].'" style="top: -58px; padding: 9px;" class="button main top float-right shade">Принять</a>');
                         $a++;
@@ -295,16 +323,12 @@ if ($id){
               </br>
               </p>
             </div>');
-            if ($_SESSION["is_auth"]&& $_SESSION["id"]=$id){
+            if ($_SESSION["is_auth"]&& $_SESSION["id"]==$id){
                 printf('
                 <a href="reg.php?id='.$row['id'].'" style="padding: 9px;" class="button main top float-right shade">Изменить</a>
                     ');   
             }
         break;
-/*
-        case 3:
-            //администратор
- */
         case 3  ://компания
             $a=0;
             printf('
@@ -414,8 +438,6 @@ if ($id){
                 $a++;
             }
 
-        break;
-        default:
         break;
       }
       ?>
