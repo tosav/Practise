@@ -187,7 +187,7 @@ if (isset($_GET["is_exit"])) { //Если нажата кнопка выхода
 <div class="modal">
     <a class="accordion-title shade">Авторизация</a>
     <form id="login" action="" method="POST" class="log-in-form shade">
-        <input class="reg" type="text" name="login" placeholder="Login">
+        <input id="in_login" class="reg" type="text" name="login" placeholder="Login">
         <input class="reg" type="password" name="password" placeholder="Password">
       <p><input type="submit" style="padding: 0;" class="button login" value="Вход"></input></p>
     </form>
@@ -265,6 +265,7 @@ if (isset($_GET["is_exit"])) { //Если нажата кнопка выхода
         $('.modal, .bg_layer').hide();
         $('#openD').click(function(){
             $('.modal, .bg_layer').show();
+            document.getElementById("in_login").focus();
             $(".modal").css({
                 
             });          
