@@ -188,7 +188,6 @@ if ($id>0){
           break;
     }
 }
-echo $_SESSION['id'];
 ?>
 <!doctype html>
 <html class="no-js" lang="ru" dir="ltr">
@@ -202,63 +201,71 @@ echo $_SESSION['id'];
   <body> 
       <?php include ("menu.php");?>
       <? 
-      //блокировать пользователя
-      //если его страница   
       switch ($role){
         case -1:
         break;
-        case 0://Админ
-            $a=0;
-            if (count($st)>0){
-                printf('<a class="accordion-title shade main">Студенты</a>
-                <a id="'.$a.'b" onclick="is_clicked_b(`'.$a.'`, this)" style="padding: 9px;" class="button main top float-right shade">Развернуть</a>
-                <div id="'.$a.'" style="display:none;" class="podtv">');
-                    foreach($st as $rw => $link){
-                        $sql='SELECT fio FROM student WHERE id=?';
-                        $stm = $pdo->prepare($sql);
-                        $stm->execute([$link['id']]);
-                        $fio = $stm->fetch();
-                        printf('<a class="accordion-title podt" href="profile.php?id='.$link['id'].'" style="margin-bottom: 5px;">'.$fio['fio'].'</a>
-                        <a href="profile.php?disactid='.$link['id'].'" style="top: -58px; padding: 9px; margin-left: 18px; background-color: #ca3838;" class="button main top float-right shade">Отклонить</a>
-                        <a href="profile.php?actid='.$link['id'].'" style="top: -58px; padding: 9px;" class="button main top float-right shade">Принять</a>');
-                        $a++;
-                    }
-                printf('</div>');
-            }
-            if (count($leader)>0){
-                printf('<a class="accordion-title shade main">Руководители</a>
-                <a id="'.$a.'b" onclick="is_clicked_b(`'.$a.'`, this)" style="padding: 9px;" class="button main top float-right shade">Развернуть</a>
-                <div id="'.$a.'" style="display:none;" class="podtv">');
-                    foreach($leader as $rw => $link){
-                        $sql='SELECT fio FROM leader WHERE id=?';
-                        $stm = $pdo->prepare($sql);
-                        $stm->execute([$link['id']]);
-                        $fio = $stm->fetch();
-                        printf('<a class="accordion-title podt" href="profile.php?id='.$link['id'].'" style="margin-bottom: 5px;">'.$fio['fio'].'</a>
-                        <a href="profile.php?disactid='.$link['id'].'" style="top: -58px; padding: 9px; margin-left: 18px; background-color: #ca3838;" class="button main top float-right shade">Отклонить</a>
-                        <a href="profile.php?actid='.$link['id'].'" style="top: -58px; padding: 9px;" class="button main top float-right shade">Принять</a>');
-                        $a++;
-                    }
-                printf('</div>');
-            }
-            if (count($cmp)>0){
-                printf('<a class="accordion-title shade main">Предприятия</a>
-                <a id="'.$a.'b" onclick="is_clicked_b(`'.$a.'`, this)" style="padding: 9px;" class="button main top float-right shade">Развернуть</a>
-                <div id="'.$a.'" style="display:none;" class="podtv">');
-                    foreach($cmp as $rw => $link){
-                        $sql='SELECT name FROM company WHERE id=?';
-                        $stm = $pdo->prepare($sql);
-                        $stm->execute([$link['id']]);
-                        $fio = $stm->fetch();
-                        printf('<a class="accordion-title podt" href="profile.php?id='.$link['id'].'" style="margin-bottom: 5px;">'.$fio['name'].'</a>
-                        <a href="profile.php?disactid='.$link['id'].'" style="top: -58px; padding: 9px; margin-left: 18px; background-color: #ca3838;" class="button main top float-right shade">Отклонить</a>
-                        <a href="profile.php?actid='.$link['id'].'" style="top: -58px; padding: 9px;" class="button main top float-right shade">Принять</a>');
-                        $a++;
-                    }
-                printf('</div>');
+        case 0://Админ         
+            //видно админам   
+            if ($_SESSION['is_auth']&&$_SESSION['role']==0){
+                $a=0;
+                if (count($st)>0){
+                    printf('<a class="accordion-title shade main">Студенты</a>
+                    <a id="'.$a.'b" onclick="is_clicked_b(`'.$a.'`, this)" style="padding: 9px;" class="button main top float-right shade">Развернуть</a>
+                    <div id="'.$a.'" style="display:none;" class="podtv">');
+                        foreach($st as $rw => $link){
+                            $sql='SELECT fio FROM student WHERE id=?';
+                            $stm = $pdo->prepare($sql);
+                            $stm->execute([$link['id']]);
+                            $fio = $stm->fetch();
+                            printf('<a class="accordion-title podt" href="profile.php?id='.$link['id'].'" style="margin-bottom: 5px;">'.$fio['fio'].'</a>
+                            <a href="profile.php?disactid='.$link['id'].'" style="top: -58px; padding: 9px; margin-left: 18px; background-color: #ca3838;" class="button main top float-right shade">Отклонить</a>
+                            <a href="profile.php?actid='.$link['id'].'" style="top: -58px; padding: 9px;" class="button main top float-right shade">Принять</a>');
+                            $a++;
+                        }
+                    printf('</div>');
+                }
+                if (count($leader)>0){
+                    printf('<a class="accordion-title shade main">Руководители</a>
+                    <a id="'.$a.'b" onclick="is_clicked_b(`'.$a.'`, this)" style="padding: 9px;" class="button main top float-right shade">Развернуть</a>
+                    <div id="'.$a.'" style="display:none;" class="podtv">');
+                        foreach($leader as $rw => $link){
+                            $sql='SELECT fio FROM leader WHERE id=?';
+                            $stm = $pdo->prepare($sql);
+                            $stm->execute([$link['id']]);
+                            $fio = $stm->fetch();
+                            printf('<a class="accordion-title podt" href="profile.php?id='.$link['id'].'" style="margin-bottom: 5px;">'.$fio['fio'].'</a>
+                            <a href="profile.php?disactid='.$link['id'].'" style="top: -58px; padding: 9px; margin-left: 18px; background-color: #ca3838;" class="button main top float-right shade">Отклонить</a>
+                            <a href="profile.php?actid='.$link['id'].'" style="top: -58px; padding: 9px;" class="button main top float-right shade">Принять</a>');
+                            $a++;
+                        }
+                    printf('</div>');
+                }
+                if (count($cmp)>0){
+                    printf('<a class="accordion-title shade main">Предприятия</a>
+                    <a id="'.$a.'b" onclick="is_clicked_b(`'.$a.'`, this)" style="padding: 9px;" class="button main top float-right shade">Развернуть</a>
+                    <div id="'.$a.'" style="display:none;" class="podtv">');
+                        foreach($cmp as $rw => $link){
+                            $sql='SELECT name FROM company WHERE id=?';
+                            $stm = $pdo->prepare($sql);
+                            $stm->execute([$link['id']]);
+                            $fio = $stm->fetch();
+                            printf('<a class="accordion-title podt" href="profile.php?id='.$link['id'].'" style="margin-bottom: 5px;">'.$fio['name'].'</a>
+                            <a href="profile.php?disactid='.$link['id'].'" style="top: -58px; padding: 9px; margin-left: 18px; background-color: #ca3838;" class="button main top float-right shade">Отклонить</a>
+                            <a href="profile.php?actid='.$link['id'].'" style="top: -58px; padding: 9px;" class="button main top float-right shade">Принять</a>');
+                            $a++;
+                        }
+                    printf('</div>');
+                }
             }
         break;
         case 1://Руководитель //выбрать данные
+            //видно админу
+            if ($_SESSION['is_auth']&&$_SESSION['role']==0){
+                print_r('<a class="accordion-title shade main" style="background-color:#ffda9c;
+                border: 1px solid #ffda9c;"></br></a>
+                <a href="vac.php?id='.$row['id'].'" style="padding: 9px; margin-left: 18px; background-color: #ca3838; width: 200px; min-width: 200px;" class="button main top float-right shade">Блокировать пользователя</a>');
+            }
+            //видно всем
             printf('
             <a class="accordion-title shade main">Профиль</a>
             <div class="inf">');              
@@ -278,36 +285,45 @@ echo $_SESSION['id'];
             </div>
             <a href="reg.php?id='.$row['id'].'" style="padding: 9px;" class="button main top float-right shade">Изменить</a>
                 ');               
-                
-            printf('
-            <a class="accordion-title shade main">Отчет</a>
-            <div class="inf adm">
-                    <div class="grid-x">
-                        <div class="large-12 cell">
-                            <div class="grid-x grid-margin-x">
-                                <div class="medium-1 cell">
-                                    <p class="adm"><b>Группа: </b></p>
-                                </div> 
-                                <div class="medium-3 cell">
-                                   <input id="search" type="text" class="adm" value="'.$_GET['search'].'" name="search">
-                                </div>
-                                <div class="medium-2 cell">
-                                    <a id="but_s" class="button adm top shade" onclick="is_clicked("but_s","student")">Вывести</a>
-                                </div>
-                                <div class="medium-2 cell">
-                                    <a id="but_l" class="button adm top shade" onclick="is_clicked("but_l","leader")">Скачать .xls</a>
-                                </div>
-                                <div class="medium-4 cell">
-                                    <a id="but_c" class="button adm top shade" onclick="is_clicked("but_c","company")">Скачать все группы .xls</a>
+            //ВИДНО ПОЛЬЗОВАТЕЛЮ
+            if ($_SESSION["is_auth"]&& $_SESSION["id"]==$id) {
+                printf('
+                <a class="accordion-title shade main">Отчет</a>
+                <div class="inf adm">
+                        <div class="grid-x">
+                            <div class="large-12 cell">
+                                <div class="grid-x grid-margin-x">
+                                    <div class="medium-1 cell">
+                                        <p class="adm"><b>Группа: </b></p>
+                                    </div> 
+                                    <div class="medium-3 cell">
+                                       <input id="search" type="text" class="adm" value="'.$_GET['search'].'" name="search">
+                                    </div>
+                                    <div class="medium-2 cell">
+                                        <a id="but_s" class="button adm top shade" onclick="is_clicked("but_s","student")">Вывести</a>
+                                    </div>
+                                    <div class="medium-2 cell">
+                                        <a id="but_l" class="button adm top shade" onclick="is_clicked("but_l","leader")">Скачать .xls</a>
+                                    </div>
+                                    <div class="medium-4 cell">
+                                        <a id="but_c" class="button adm top shade" onclick="is_clicked("but_c","company")">Скачать все группы .xls</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-            </div>
-                ');   
+                </div>
+                    ');   
+            }
                 
         break;
         case 2://студент
+            //видно администратору
+            if ($_SESSION['is_auth']&&$_SESSION['role']==0){
+                print_r('<a class="accordion-title shade main" style="background-color:#ffda9c;
+                border: 1px solid #ffda9c;"></br></a>
+                <a href="vac.php?id='.$row['id'].'" style="padding: 9px; margin-left: 18px; background-color: #ca3838; width: 200px; min-width: 200px;" class="button main top float-right shade">Блокировать пользователя</a>');
+            }
+            //видно всем 
             printf('
             <a class="accordion-title shade main">Профиль</a>
             <div class="inf">
@@ -323,14 +339,22 @@ echo $_SESSION['id'];
               </br>
               </p>
             </div>');
-            if ($_SESSION["is_auth"]&& $_SESSION["id"]==$id){
+            //видно пользователю и администратору
+            if (($_SESSION["is_auth"]&& $_SESSION["id"]==$id)||($_SESSION['is_auth']&& $_SESSION['role']==0)){
                 printf('
                 <a href="reg.php?id='.$row['id'].'" style="padding: 9px;" class="button main top float-right shade">Изменить</a>
                     ');   
             }
         break;
         case 3  ://компания
+            //видно админитсратору
+            if ($_SESSION['is_auth']&&$_SESSION['role']==0){
+                print_r('<a class="accordion-title shade main" style="background-color:#ffda9c;
+                border: 1px solid #ffda9c;"></br></a>
+                <a href="vac.php?id='.$row['id'].'" style="padding: 9px; margin-left: 18px; background-color: #ca3838; width: 200px; min-width: 200px;" class="button main top float-right shade">Блокировать пользователя</a>');
+            }
             $a=0;
+            //видно всем
             printf('
             <a class="accordion-title shade main">Профиль</a>
             <div class="inf">
@@ -340,8 +364,14 @@ echo $_SESSION['id'];
               <b>Описание: </b>'.$row['description'].'</br>
               </br>
               </p>
-            </div>
-            <a href="reg.php?id='.$row['id'].'" style="padding: 9px;" class="button main top float-right shade">Изменить</a>');
+            </div>');
+            //видно пользователю и администратору
+            if (($_SESSION["is_auth"]&& $_SESSION["id"]==$id)||($_SESSION['is_auth']&& $_SESSION['role']==0)){
+                printf('
+                <a href="reg.php?id='.$row['id'].'" style="padding: 9px;" class="button main top float-right shade">Изменить</a>');
+            }
+            //видно пользоватетлю
+            if ($_SESSION["is_auth"]&& $_SESSION["id"]==$id) {
             printf('<a class="accordion-title shade main">Занятость</a>');
             foreach ($vac as $rw => $link) {
                 $sql="SELECT s.*, g.name, g.number
@@ -437,7 +467,7 @@ echo $_SESSION['id'];
                 }
                 $a++;
             }
-
+        }
         break;
       }
       ?>
