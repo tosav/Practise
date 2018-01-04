@@ -396,49 +396,7 @@ if ($id>0){
               <b>Описание: </b>'.$row['description'].'</br>
               </br>
               </p>
-            </div>
-            <a href="reg.php?id='.$row['id'].'" style="padding: 9px;" class="button main top float-right shade">Изменить</a>');
-            /*printf('
-            <a class="accordion-title shade main">Занятость</a>
-            <a class="accordion-title shade main" style="background-color: #95c9c3; color:#fff;">Какая-то вакансия</a>
-            <a id="0b" onclick="is_clicked_b(`0`, this)" style="padding: 9px;" class="button main top float-right shade">Развернуть</a>
-            <div id="0" style="display:none;" class="inf">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
             </div>');
-
-/* 
-                <ul class="accordion" data-accordion data-allow-all-closed="true">
-                    <li class="accordion-item" data-accordion-item>
-                        <a class="accordion-title">Предприятия</a>
-                        <div class="accordion-content" data-tab-content>
-                            <table>
-                              <thead>
-                                <tr>
-                                  <th>Название</th>
-                                  <th></th>
-                                  <th></th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>Иванов</td>
-                                  <td><button class="button">Принять</button></td>
-                                  <td><button class="button">Отклонить</button></td>
-                                </tr>
-                              </tbody>
-                            </table>
-                        </div>
-                    </li>
-                </ul>
-            ');  
-*/		/*
-            printf('
-            <a class="accordion-title shade main">Заявки</a>
-            <a class="accordion-title shade main" style="background-color: #95c9c3; color:#fff;">Какая-то вакансия</a>
-            <a id="0b" onclick="is_clicked_b(`0`, this)" style="padding: 9px;" class="button main top float-right shade">Развернуть</a>
-            <div id="0" style="display:none;" class="inf">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-            </div>');*/
             //видно пользователю и администратору
             if (($_SESSION["is_auth"]&& $_SESSION["id"]==$id)||($_SESSION['is_auth']&& $_SESSION['role']==0)){
                 printf('

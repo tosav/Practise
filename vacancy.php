@@ -6,10 +6,16 @@ session_start();
         PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
         PDO::ATTR_EMULATE_PREPARES   => false,
-    ];
-     
+    ];     
     $pdo = new PDO($dsn, 'root', '', $opt);
     $_GET['id']=trim($_GET['id']);
+    if ($_GET['stid']){  
+        $sql = "UPDATE vacancies SET students = concat(students,:students) WHERE id = :id";
+        $stmt = $pdo->prepare($sql);                                  
+        $stmt->bindParam(':students', $_SESSION['id'].'', PDO::PARAM_STR);   
+        $stmt->bindParam(':id', $_GET['id'], PDO::PARAM_INT);   
+        $stmt->execute(); 
+    }
     $sql="SELECT v.*, c.name as com_name, c.description as descr, u.email, u.phone 
     FROM vacancies v 
     LEFT OUTER JOIN company c ON v.company=c.id
@@ -37,7 +43,7 @@ session_start();
                 if ($_SESSION['role']==2 OR $_SESSION['role']==3){
                     $show=true;
                     if ($_SESSION['role']==2){
-                        $string='<a href="'.$_SERVER['REQUEST_URI'].'&stid='.$_SESSION.'" style="padding: 9px;" class="button main top float-right shade">Записаться</a>';
+                        $string='<a href="'.$_SERVER['REQUEST_URI'].'&stid='.$_SESSION['id'].'" style="padding: 9px;" class="button main top float-right shade">Записаться</a>';
                     }
                     else{                    
                         if ($_SESSION['id']==$row['company']){
