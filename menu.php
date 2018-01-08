@@ -77,7 +77,7 @@ class AuthClass {
             } 
             else
             { //если существует, то сверяем пароли
-                $password=$password;
+                $password=md5($password);
                 if ($res['password']==$password) 
                 {
                     if($res['activate']==0)
