@@ -50,12 +50,12 @@
                         </div>
                         <div class="small-12 columns">
                           <label class="reg">ФИО</label>
-                            <input  name="fullName" class="in" type="text" required>
+                            <input  name="fullName" class="in" type="e" required>
                             <span class="form-error"></span>
                         </div>
                         <div class="small-12 columns">
                           <label class="reg">E-mail</label>
-                            <input name="email" class="in" type="text" required>
+                            <input name="email" class="in" type="email" required>
                             <span class="form-error"></span>                      
                         </div>
                         <div class="small-12 columns">
@@ -65,12 +65,12 @@
                         </div>
                         <div class="small-12 columns">
                           <label class="reg">Номер телефона</label>
-                            <input name="phone" class="in" type="text" required>
+                            <input name="phone" class="in" type="number" required>
                             <span class="form-error"></span>
                         </div>
                         <div class="small-12 columns">
                             <label class="reg">Номер зачётной книжки</label>
-                            <input name="num" class="in" type="text" required>
+                            <input name="num" class="in" type="number" required>
                             <span class="form-error"></span>
                         </div>
                         <fieldset class="small-12 columns">
@@ -105,7 +105,7 @@
                         </div>
                         <div class="small-12 columns">
                           <label class="reg">E-mail</label>
-                            <input name="email" class="in" type="text" required>
+                            <input name="email" class="in" type="email" required>
                             <span class="form-error"></span>                      
                         </div>
                         <div class="small-12 columns">
@@ -115,7 +115,7 @@
                         </div>
                         <div class="small-12 columns">
                           <label class="reg">Номер телефона</label>
-                            <input name="phone" class="in" type="text" required>
+                            <input name="phone" class="in" type="number" required>
                             <span class="form-error"></span>
                         </div>
                         <fieldset class="small-12 columns">
@@ -150,22 +150,22 @@
                         </div>
                         <div class="small-12 columns">
                           <label class="reg">E-mail</label>
-                            <input name="email" class="in" type="text" required>
+                            <input name="email" class="in" type="email" required>
                             <span class="form-error"></span>                      
                         </div>
                         <div class="small-12 columns">
                           <label class="reg">Номер телефона</label>
-                            <input name="phone" class="in" type="text" required>
+                            <input name="phone" class="in" type="number" required>
                             <span class="form-error"></span>
                         </div>
 						<div class="small-12 columns">
                           <label class="reg">ИНН</label>
-                            <input name="inn" class="in" type="text" required>
+                            <input name="inn" class="in" type="number" length="12" required>
                             <span class="form-error"></span>
                         </div>
 						<div class="small-12 columns">
                           <label class="reg">Описание предприятия</label>
-                            <input name="description" class="in" type="text" required>
+                            <input name="description" class="in" maxlength="2000" type="text" required>
                             <span class="form-error"></span>
                         </div>
 						<div class="small-12 columns">
