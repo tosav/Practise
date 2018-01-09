@@ -23,7 +23,7 @@
 
  // если такого нет, то сохраняем данные
 
-    $result2 = mysql_query ("UPDATE users  SET login='$login', password='$password' ,email='$email', phone='$phone' 
+    $result2 = mysql_query ("UPDATE users  SET login='$login', password=md5('$password') ,email='$email', phone='$phone' 
 	WHERE id='$id'");
 	$res1 = mysql_query("SELECT id FROM `group` WHERE number='$group'");
 	$res = mysql_result($res1, 0);
@@ -37,7 +37,7 @@
     {
 		if ($_SESSION['id'] == $id){
 		$_SESSION['login'] = $login;	
-		$_SESSION['password'] = $password;}
+		$_SESSION['password'] = md5($password);}
 		header("Location: reg.php?id=$id");	
     }
  else {

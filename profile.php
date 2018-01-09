@@ -88,7 +88,7 @@ if ($_GET['disid']){
     $sql = "UPDATE users SET activate = '0'
     WHERE id = :id";
     $stmt = $pdo->prepare($sql);
-    $stmt->bindParam(':id', $_GET['actid'], PDO::PARAM_INT);   
+    $stmt->bindParam(':id', $_GET['disid'], PDO::PARAM_INT);   
     $stmt->execute();
 }
 //дизактивировать пользователя
@@ -149,14 +149,26 @@ if ($id>0){
             $stm = $pdo->prepare($sql);
             $stm->execute([]);
             $leader = $stm->fetchAll();
+            $sql="SELECT * FROM users WHERE activate='1' AND role='1'";
+            $stm = $pdo->prepare($sql);
+            $stm->execute([]);
+            $unleader = $stm->fetchAll();
             $sql="SELECT * FROM users WHERE activate = '0' AND role = '2'";
             $stm = $pdo->prepare($sql);
             $stm->execute([]);
             $st = $stm->fetchAll();
+            $sql="SELECT * FROM users WHERE activate = '1' AND role = '2'";
+            $stm = $pdo->prepare($sql);
+            $stm->execute([]);
+            $unst = $stm->fetchAll();
             $sql="SELECT * FROM users WHERE activate='0' AND role='3'";
             $stm = $pdo->prepare($sql);
             $stm->execute([]);
             $cmp = $stm->fetchAll();
+            $sql="SELECT * FROM users WHERE activate='1' AND role='3'";
+            $stm = $pdo->prepare($sql);
+            $stm->execute([]);
+            $uncmp = $stm->fetchAll();
           break;
           case 1://complete
             $sql="SELECT * FROM leader WHERE id=?";
@@ -217,7 +229,7 @@ if ($id>0){
             //видно админам   
             if ($_SESSION['is_auth']&&$_SESSION['role']==0){
                 $a=0;
-                if (count($st)>0){
+                if (count($st)>0||count($unst)>0){
                     printf('<a class="accordion-title shade main">Студенты</a>
                     <a id="'.$a.'b" onclick="is_clicked_b(`'.$a.'`, this)" style="padding: 9px;" class="button main top float-right shade">Развернуть</a>
                     <div id="'.$a.'" style="display:none;" class="podtv">');
@@ -231,9 +243,18 @@ if ($id>0){
                             <a href="profile.php?actid='.$link['id'].'" style="top: -58px; padding: 9px;" class="button main top float-right shade">Принять</a>');
                             $a++;
                         }
+                        foreach($unst as $rw => $link){
+                            $sql='SELECT fio FROM student WHERE id=?';
+                            $stm = $pdo->prepare($sql);
+                            $stm->execute([$link['id']]);
+                            $fio = $stm->fetch();
+                            printf('<a class="accordion-title podt" href="profile.php?id='.$link['id'].'" style="margin-bottom: 5px;">'.$fio['fio'].'</a>
+                            <a href="profile.php?disid='.$link['id'].'" style="top: -58px; padding: 9px; margin-left: 18px; background-color: #ca3838; width: 200px; min-width: 200px;" class="button main top float-right shade">Блокировать пользователя</a>');
+                            $a++;
+                        }
                     printf('</div>');
                 }
-                if (count($leader)>0){
+                if (count($leader)>0||count($unleader)>0){
                     printf('<a class="accordion-title shade main">Руководители</a>
                     <a id="'.$a.'b" onclick="is_clicked_b(`'.$a.'`, this)" style="padding: 9px;" class="button main top float-right shade">Развернуть</a>
                     <div id="'.$a.'" style="display:none;" class="podtv">');
@@ -247,9 +268,18 @@ if ($id>0){
                             <a href="profile.php?actid='.$link['id'].'" style="top: -58px; padding: 9px;" class="button main top float-right shade">Принять</a>');
                             $a++;
                         }
+                        foreach($unleader as $rw => $link){
+                            $sql='SELECT fio FROM leader WHERE id=?';
+                            $stm = $pdo->prepare($sql);
+                            $stm->execute([$link['id']]);
+                            $fio = $stm->fetch();
+                            printf('<a class="accordion-title podt" href="profile.php?id='.$link['id'].'" style="margin-bottom: 5px;">'.$fio['fio'].'</a>
+                            <a href="profile.php?disid='.$link['id'].'" style="top: -58px; padding: 9px; margin-left: 18px; background-color: #ca3838; width: 200px; min-width: 200px;" class="button main top float-right shade">Блокировать пользователя</a>');
+                            $a++;
+                        }
                     printf('</div>');
                 }
-                if (count($cmp)>0){
+                if (count($cmp)>0||count($uncmp)>0){
                     printf('<a class="accordion-title shade main">Предприятия</a>
                     <a id="'.$a.'b" onclick="is_clicked_b(`'.$a.'`, this)" style="padding: 9px;" class="button main top float-right shade">Развернуть</a>
                     <div id="'.$a.'" style="display:none;" class="podtv">');
@@ -261,6 +291,15 @@ if ($id>0){
                             printf('<a class="accordion-title podt" href="profile.php?id='.$link['id'].'" style="margin-bottom: 5px;">'.$fio['name'].'</a>
                             <a href="profile.php?disactid='.$link['id'].'" style="top: -58px; padding: 9px; margin-left: 18px; background-color: #ca3838;" class="button main top float-right shade">Отклонить</a>
                             <a href="profile.php?actid='.$link['id'].'" style="top: -58px; padding: 9px;" class="button main top float-right shade">Принять</a>');
+                            $a++;
+                        }
+                        foreach($uncmp as $rw => $link){
+                            $sql='SELECT name FROM company WHERE id=?';
+                            $stm = $pdo->prepare($sql);
+                            $stm->execute([$link['id']]);
+                            $fio = $stm->fetch();
+                            printf('<a class="accordion-title podt" href="profile.php?id='.$link['id'].'" style="margin-bottom: 5px;">'.$fio['name'].'</a>
+                            <a href="profile.php?disid='.$link['id'].'" style="top: -58px; padding: 9px; margin-left: 18px; background-color: #ca3838; width: 200px; min-width: 200px;" class="button main top float-right shade">Блокировать пользователя</a>');
                             $a++;
                         }
                     printf('</div>');

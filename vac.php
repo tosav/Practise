@@ -37,7 +37,7 @@ if ($id && $id!=-1){//если пользователь авторизован
       foreach ($ides as $i => $id) {
           $ids[]=$id['id'];
       }
-      if (in_array($_GET['id'], $ids)){//если у него есть эта вакансия
+      if ($_SESSION==0||in_array($_GET['id'], $ids)){//если у него есть эта вакансия
           $sql="SELECT *
             FROM vacancies
             WHERE id=?";
@@ -99,7 +99,7 @@ function pdoSet($allowed, &$values, $source = array()) {
                         </div>
                         <div class="small-12 columns">
                           <label class="reg">Наименование</label>
-                            <input style="font-size: 0.7rem;" name="name" class="in" type="text" value=<?echo $vacdt['name']?>'' required>
+                            <input style="font-size: 0.7rem;" name="name" class="in" type="text" value="<?echo $vacdt['name']?>" required>
                             <span class="form-error"></span>
                         </div>
                         <div class="small-12 columns">

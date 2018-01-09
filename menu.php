@@ -1,4 +1,4 @@
-<?php 
+<?php
 $db = mysql_connect ("Practise","root","");
 mysql_select_db ("practice",$db);
  
@@ -77,7 +77,7 @@ class AuthClass {
             } 
             else
             { //если существует, то сверяем пароли
-                $password=$password;
+                $password=md5($password);
                 if ($res['password']==$password) 
                 {
                     if($res['activate']==0)

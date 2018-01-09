@@ -33,7 +33,7 @@
                             </div>
                         </div>
                     </div>
-                    <form id="student" action="save_user.php" method="post" data-abide style="display: block;">
+                    <form id="student" action="save_user.php" method="post" data-abide style="display: blo ck;">
                       <div data-abide-error class="alert callout" style="display: none;">
                         <p class="reg"><i class="fi-alert"></i> На этой странице присутствуют ошибки</p>
                       </div>
