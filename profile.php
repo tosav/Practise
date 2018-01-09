@@ -458,7 +458,7 @@ if ($id>0){
                 $stm->execute([$link['id']]);
                 $std = $stm->fetchAll();
                 printf('
-                <a class="accordion-title shade main" style="background-color: #95c9c3; color:#fff;">'.$link['name'].'</a>
+                <a class="accordion-title shade main" style="background-color: #95c9c3; color:#fff; border-color:#95c9c3;">'.$link['name'].'</a>
                 <a id="'.$a.'b" onclick="is_clicked_b(`'.$a.'`, this)" style="padding: 9px;" class="button main top float-right shade">Развернуть</a>
                 <div id='.$a.' style="display:none;min-height: 60px;" class="inf">');
                 if ($_SESSION["is_auth"]&& $_SESSION["id"]=$id)
@@ -505,10 +505,10 @@ if ($id>0){
                 $stds=explode(";",$link['students']);
                 if ($stds[0]){
                     printf('
-                    <a class="accordion-title shade main" style="background-color: #95c9c3; color:#fff;">'.$link['name'].'</a>
+                    <a class="accordion-title shade main" style="background-color: #95c9c3; color:#fff; border-color:#95c9c3;">'.$link['name'].'</a>
                     <a id="'.$a.'b" onclick="is_clicked_b(`'.$a.'`, this)" style="padding: 9px;" class="button main top float-right shade">Развернуть</a>
                     <div id='.$a.' style="" class="inf">');
-                    printf('<table class="mtable" style="position: relative; top: -40px;">');
+                    printf('<table class="mtable" style="position: relative; top: -50px;">');
                             foreach ($stds as $st) {                               
                                 $sql="SELECT s.*, g.name, g.number
                                 FROM student s
