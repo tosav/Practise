@@ -377,10 +377,14 @@ if ($id>0){
 			$query = "SELECT * FROM `student` LEFT OUTER JOIN `group` ON student.`group`=group.id where group.number = '$grnnamexls' ORDER BY student.fio";
 			$res = mysql_query( $query );
 			while( $prd = mysql_fetch_assoc($res) ) {
+			$vac = $prd['vacancy'];
+			$query2 =
+			mysql_query("SELECT vacancies.name FROM vacancies LEFT OUTER JOIN student ON student.vacancy=vacancies.id where vacancies.id = '$vac'");
+			$res1 = mysql_result($query2, 0); 
 			printf('
 				<tr>
 				<td align="center">'.$prd['fio'].'</td>
-				<td align="center">'.$prd['vacancy'].'</td>
+				<td align="center">'.$res1.'</td>
 				</tr> ');
 			}
 
