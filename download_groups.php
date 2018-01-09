@@ -28,4 +28,5 @@ while( $prd = mysql_fetch_assoc($res) ) {
 $page->setTitle("Groups");
 $objWriter = PHPExcel_IOFactory::createWriter($phpexcel, 'Excel2007');
 $objWriter->save("Groups.xlsx");
+header("Location: Groups.xlsx");
 ?>
