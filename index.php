@@ -51,9 +51,9 @@ session_start();
           if ($row['contract']==1){
                 $contr='Есть';
           }
-          print_r('          
-            <a class="accordion-title shade main">'.$row['name'].'</a>
-            <a class="float-right text">Даты которых нигде нет</a>
+          print_r('  
+            <div style="height:285px; margin-bottom:2rem;">        
+            <a class="accordion-title shade main" style="z-index: 2;">'.$row['name'].'</a>
             <div class="inf box" >
               <p><b>Условие приема: </b>'.$row['conditions'].'</br>
               <b>Договор с ДВФУ: </b>'.$contr.'</br>
@@ -61,9 +61,10 @@ session_start();
               </br>
               </p>
             </div>            
-            <div class="inf" style="position: relative; height: 40px; top: -22px;">
+            <div class="inf" style="position: relative; height: 45px; top: 0px;">
             </div>
-            <a href="vacancy.php?id='.$row['id'].'" style="padding: 9px; top:-75px;" class="button main top float-right shade">Подробнее</a>
+            <a href="vacancy.php?id='.$row['id'].'" style="padding: 9px; top:-60px;" class="button main top float-right shade">Подробнее</a>  
+            </div>   
          ');
         }
         ?> 
