@@ -1,4 +1,4 @@
-<?php 
+<?php
 $db = mysql_connect ("Practise","root","");
 mysql_select_db ("practice",$db);
  

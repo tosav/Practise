@@ -11,8 +11,9 @@ session_start();
     $_GET['id']=trim($_GET['id']);
     if ($_GET['stid']){  
         $sql = "UPDATE vacancies SET students = concat(students,:students) WHERE id = :id";
-        $stmt = $pdo->prepare($sql);                                  
-        $stmt->bindParam(':students', $_SESSION['id'].'', PDO::PARAM_STR);   
+        $stmt = $pdo->prepare($sql);     
+        $stid=';'.$_SESSION['id'];                            
+        $stmt->bindParam(':students', $stid, PDO::PARAM_STR);   
         $stmt->bindParam(':id', $_GET['id'], PDO::PARAM_INT);   
         $stmt->execute(); 
     }
