@@ -8,6 +8,13 @@ session_start();
         PDO::ATTR_EMULATE_PREPARES   => false,
     ];     
     $pdo = new PDO($dsn, 'root', '', $opt);
+    if ($_GET['id']&&$_GET['del']){      
+      $sql = "DELETE FROM vacancies WHERE id = :id";
+      $stmt = $pdo->prepare($sql);
+      $stmt->bindParam(':id', $_GET['id'], PDO::PARAM_INT);  
+      $stmt->execute();      
+     echo "<script>window.location.href='http://practise'</script>";//ну тип
+    }
     $_GET['id']=trim($_GET['id']);
     if ($_GET['stid']){  
         $sql = "UPDATE vacancies SET students = concat(students,:students) WHERE id = :id";
@@ -60,8 +67,8 @@ session_start();
            if($_SESSION['is_auth'] && $_SESSION['role']==0){
                 print_r('<a class="accordion-title shade main" style="background-color:#ffda9c;
                 border: 1px solid #ffda9c;"></br></a>
-                <a href="vac.php?id='.$row['id'].'" style="padding: 9px; margin-left: 18px; background-color: #ca3838;" class="button main top float-right shade">Удалить</a>
-                <a href="del.php?id='.$row['id'].'" style="padding: 9px;" class="button main top float-right shade">Изменить</a>'
+                <a href="vacancy.php?id='.$row['id'].'&del=1" style="padding: 9px; margin-left: 18px; background-color: #ca3838;" class="button main top float-right shade">Удалить</a>
+                <a href="vac.php?id='.$row['id'].'" style="padding: 9px;" class="button main top float-right shade">Изменить</a>'
                 );
            };
           print_r('          

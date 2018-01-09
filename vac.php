@@ -20,13 +20,13 @@ if ($id && $id!=-1){//если пользователь авторизован
     else{
         $allowed=array("company", "name", "description", "contract", "conditions", "num");             
         $_POST['contract']= $_POST['contract']=="Да"?1:0;
-        $sql = "INSERT INTO vacancies SET `company`=:company, ".pdoSet($allowed,$values);
+        $sql = "INSERT INTO vacancies SET ".pdoSet($allowed,$values);
         $stmt = $pdo->prepare($sql) or die(mysql_error());        
-        $values["company"] = $id;  
+        //$values["company"] = $id;  
         $stmt->execute($values);
     }
   }
-  if ($_GET['id']){
+  if ($_GET['id']){ 
     $sql="SELECT id
       FROM vacancies
       WHERE company=?";
@@ -37,7 +37,7 @@ if ($id && $id!=-1){//если пользователь авторизован
       foreach ($ides as $i => $id) {
           $ids[]=$id['id'];
       }
-      if (in_array($_GET['id'], $ids)){//если у него есть эта вакансия
+      if ($_SESSION['role']==0||in_array($_GET['id'], $ids)){//если у него есть эта вакансия
           $sql="SELECT *
             FROM vacancies
             WHERE id=?";
