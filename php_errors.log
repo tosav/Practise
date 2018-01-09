@@ -655,35 +655,6 @@ Stack trace:
 [28-Dec-2017 17:10:19 Europe/Moscow] PHP Fatal error:  Cannot pass parameter 2 by reference in D:\OpenServer\domains\Practise\vacancy.php on line 15
 [28-Dec-2017 17:10:19 Europe/Moscow] PHP Fatal error:  Cannot pass parameter 2 by reference in D:\OpenServer\domains\Practise\vacancy.php on line 15
 [28-Dec-2017 17:10:19 Europe/Moscow] PHP Fatal error:  Cannot pass parameter 2 by reference in D:\OpenServer\domains\Practise\vacancy.php on line 15
-<<<<<<< HEAD
-[08-Jan-2018 17:51:33 Europe/Moscow] PHP Fatal error:  Cannot pass parameter 2 by reference in C:\OpenServer\domains\Practise\vacancy.php on line 15
-[08-Jan-2018 17:55:20 Europe/Moscow] PHP Fatal error:  Cannot pass parameter 2 by reference in C:\OpenServer\domains\Practise\vacancy.php on line 15
-[08-Jan-2018 18:05:37 Europe/Moscow] PHP Fatal error:  Cannot pass parameter 2 by reference in C:\OpenServer\domains\Practise\vacancy.php on line 15
-[09-Jan-2018 02:20:05 Europe/Moscow] PHP Parse error:  syntax error, unexpected 'but_s' (T_STRING) in C:\OpenServer\domains\Practise\reg.php on line 22
-[09-Jan-2018 02:22:09 Europe/Moscow] PHP Parse error:  syntax error, unexpected '<' in C:\OpenServer\domains\Practise\reg.php on line 187
-[09-Jan-2018 02:22:38 Europe/Moscow] PHP Fatal error:  Call to undefined function isAuth() in C:\OpenServer\domains\Practise\reg.php on line 13
-[09-Jan-2018 02:24:16 Europe/Moscow] PHP Warning:  printf(): Too few arguments in C:\OpenServer\domains\Practise\reg.php on line 186
-[09-Jan-2018 02:25:04 Europe/Moscow] PHP Warning:  printf(): Too few arguments in C:\OpenServer\domains\Practise\reg.php on line 186
-[09-Jan-2018 02:26:00 Europe/Moscow] PHP Parse error:  syntax error, unexpected 'but_s' (T_STRING) in C:\OpenServer\domains\Practise\reg.php on line 22
-[09-Jan-2018 02:33:57 Europe/Moscow] PHP Parse error:  syntax error, unexpected 'but_s' (T_STRING) in C:\OpenServer\domains\Practise\reg.php on line 22
-[09-Jan-2018 02:33:59 Europe/Moscow] PHP Parse error:  syntax error, unexpected 'but_s' (T_STRING) in C:\OpenServer\domains\Practise\reg.php on line 22
-[09-Jan-2018 02:35:18 Europe/Moscow] PHP Parse error:  syntax error, unexpected ''but_s'' (T_CONSTANT_ENCAPSED_STRING) in C:\OpenServer\domains\Practise\reg.php on line 22
-[09-Jan-2018 02:42:12 Europe/Moscow] PHP Parse error:  syntax error, unexpected '<' in C:\OpenServer\domains\Practise\reg.php on line 14
-[09-Jan-2018 04:15:48 Europe/Moscow] PHP Parse error:  syntax error, unexpected end of file in C:\OpenServer\domains\Practise\reg.php on line 284
-[09-Jan-2018 04:38:56 Europe/Moscow] PHP Parse error:  syntax error, unexpected end of file in C:\OpenServer\domains\Practise\reg.php on line 352
-[09-Jan-2018 04:39:50 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\reg.php on line 256
-[09-Jan-2018 05:12:47 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 7 in C:\OpenServer\domains\Practise\reg.php on line 15
-[09-Jan-2018 05:12:53 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 8 in C:\OpenServer\domains\Practise\reg.php on line 15
-[09-Jan-2018 05:12:54 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 7 in C:\OpenServer\domains\Practise\reg.php on line 15
-[09-Jan-2018 05:13:03 Europe/Moscow] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in C:\OpenServer\domains\Practise\reg.php on line 320
-[09-Jan-2018 05:51:39 Europe/Moscow] PHP Parse error:  syntax error, unexpected '/', expecting ']' in C:\OpenServer\domains\Practise\reg.php on line 347
-[09-Jan-2018 05:53:02 Europe/Moscow] PHP Parse error:  syntax error, unexpected 'name' (T_STRING) in C:\OpenServer\domains\Practise\reg.php on line 347
-[09-Jan-2018 05:53:33 Europe/Moscow] PHP Parse error:  syntax error, unexpected 'name' (T_STRING) in C:\OpenServer\domains\Practise\reg.php on line 347
-[09-Jan-2018 05:53:52 Europe/Moscow] PHP Parse error:  syntax error, unexpected '/' in C:\OpenServer\domains\Practise\reg.php on line 347
-[09-Jan-2018 05:54:24 Europe/Moscow] PHP Parse error:  syntax error, unexpected 'name' (T_STRING) in C:\OpenServer\domains\Practise\reg.php on line 347
-[09-Jan-2018 05:55:13 Europe/Moscow] PHP Parse error:  syntax error, unexpected 'name' (T_STRING) in C:\OpenServer\domains\Practise\reg.php on line 347
-[09-Jan-2018 06:00:10 Europe/Moscow] PHP Parse error:  syntax error, unexpected '\' (T_NS_SEPARATOR) in C:\OpenServer\domains\Practise\reg.php on line 347
-=======
 [09-Jan-2018 03:15:16 Europe/Moscow] PHP Fatal error:  Cannot pass parameter 2 by reference in D:\OpenServer\domains\Practise\vacancy.php on line 15
 [09-Jan-2018 03:16:32 Europe/Moscow] PHP Fatal error:  Cannot pass parameter 2 by reference in D:\OpenServer\domains\Practise\vacancy.php on line 15
 [09-Jan-2018 03:16:33 Europe/Moscow] PHP Fatal error:  Cannot pass parameter 2 by reference in D:\OpenServer\domains\Practise\vacancy.php on line 15
@@ -692,4 +663,3 @@ Stack trace:
 [09-Jan-2018 03:18:35 Europe/Moscow] PHP Fatal error:  Cannot pass parameter 2 by reference in D:\OpenServer\domains\Practise\vacancy.php on line 15
 [09-Jan-2018 03:33:59 Europe/Moscow] PHP Fatal error:  Call to a member function prepare() on a non-object in D:\OpenServer\domains\Practise\vacancy.php on line 12
 [09-Jan-2018 03:35:32 Europe/Moscow] PHP Fatal error:  Call to a member function prepare() on a non-object in D:\OpenServer\domains\Practise\vacancy.php on line 12
->>>>>>> da25a6eba91d8f6f06159d0e86fbaa37f3bace15
