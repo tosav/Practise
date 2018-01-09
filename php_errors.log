@@ -663,3 +663,9 @@ Stack trace:
 [09-Jan-2018 03:18:35 Europe/Moscow] PHP Fatal error:  Cannot pass parameter 2 by reference in D:\OpenServer\domains\Practise\vacancy.php on line 15
 [09-Jan-2018 03:33:59 Europe/Moscow] PHP Fatal error:  Call to a member function prepare() on a non-object in D:\OpenServer\domains\Practise\vacancy.php on line 12
 [09-Jan-2018 03:35:32 Europe/Moscow] PHP Fatal error:  Call to a member function prepare() on a non-object in D:\OpenServer\domains\Practise\vacancy.php on line 12
+[09-Jan-2018 08:37:42 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 7 in C:\OpenServer\domains\Practise\reg.php on line 15
+[09-Jan-2018 08:40:41 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 7 in C:\OpenServer\domains\Practise\reg.php on line 15
+[09-Jan-2018 08:40:49 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 7 in C:\OpenServer\domains\Practise\reg.php on line 15
+[09-Jan-2018 08:41:24 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 7 in C:\OpenServer\domains\Practise\reg.php on line 16
+[09-Jan-2018 08:48:04 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 8 in C:\OpenServer\domains\Practise\reg.php on line 16
+[09-Jan-2018 08:48:05 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 7 in C:\OpenServer\domains\Practise\reg.php on line 16

@@ -10,9 +10,10 @@
   </head>
   <body>
       <?php include ("menu.php");
+	  if ($_SESSION["is_auth"]==true){
 	  $id = $_GET['id'];
 	  $res = mysql_query("SELECT role FROM users WHERE id='$id'");
-	  $role = mysql_result($res, 0);
+	  $role = mysql_result($res, 0);}
 	  if ($_SESSION["is_auth"]==false)
 	  print_r('
             <div>
