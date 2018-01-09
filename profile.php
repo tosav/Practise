@@ -22,7 +22,7 @@ if ($id&&$_GET['addst']&&$_GET['vac']){
     $vac = $stm->fetchAll();
     //удалить из списка желающих
     foreach ($vac as $rw => $link) {
-        if ($link['id']==$GET['vac']){
+        if ($link['id']==$_GET['vac']){
             $stds=explode(";",$link['students']);
             $key=array_search($_GET['addst'],$stds);
             unset($stds[$key]);
@@ -460,7 +460,7 @@ if ($id>0){
                 if ($_SESSION["is_auth"]&& $_SESSION["id"]=$id)
                     echo '<a href="profile.php?delvac='.$link['id'].'" style="padding: 9px; height: 30px; line-height:1; margin-left: 18px; background-color: #b1051a; position: relative; top: 0px; margin: 0px; width: 200px; min-width:200px; right:-85px;" class="button main top float-right shade">Удалить вакансию</a>';
                 if (count($std)>0){
-                    printf('<table class="mytable">
+                    printf('<table class="mytable" >
                             <tr class="myrow">
                                 <td class="mytd">
                                     Фио
@@ -503,8 +503,8 @@ if ($id>0){
                     printf('
                     <a class="accordion-title shade main" style="background-color: #95c9c3; color:#fff;">'.$link['name'].'</a>
                     <a id="'.$a.'b" onclick="is_clicked_b(`'.$a.'`, this)" style="padding: 9px;" class="button main top float-right shade">Развернуть</a>
-                    <div id='.$a.' style="display:none;min-height: 60px;" class="inf">');
-                    printf('<table class="mtable">');
+                    <div id='.$a.' style="" class="inf">');
+                    printf('<table class="mtable" style="position: relative; top: -40px;">');
                             foreach ($stds as $st) {                               
                                 $sql="SELECT s.*, g.name, g.number
                                 FROM student s
