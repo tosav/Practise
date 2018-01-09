@@ -505,7 +505,7 @@ if ($id>0){
                     <a id="'.$a.'b" onclick="is_clicked_b(`'.$a.'`, this)" style="padding: 9px;" class="button main top float-right shade">Развернуть</a>
                     <div id='.$a.' style="display:none;min-height: 60px;" class="inf">');
                     printf('<table class="mtable">');
-                            foreach ($stds as $st) {                                
+                            foreach ($stds as $st) {                               
                                 $sql="SELECT s.*, g.name, g.number
                                 FROM student s
                                 LEFT OUTER JOIN `group` g
@@ -514,24 +514,26 @@ if ($id>0){
                                 $stm = $pdo->prepare($sql);
                                 $stm->execute([$st]);
                                 $std = $stm->fetch();
-                                printf('
-                                <tr id="mrow">
-                                    <td class="mtd">
-                                        <p><a style="color:#31c0b2; text-decoration: underline;" href="profile.php?id='.$std['id'].'">'.$std['fio'].'</a></p>
-                                    </td>
-                                    <td class="mtd">
-                                        '.$std['name'].'
-                                    </td>
-                                    <td class="mtd">
-                                        '.$std['number'].'
-                                    </td>
-                                    <td class="mtd">
-                                        <a href="profile.php?addst='.$std['id'].'&vac='.$link['id'].'" style="padding: 9px; background-color: #228379; top: 0px;  height: 30px; line-height:1;" class="button main float-right shade">Принять</a>
-                                    </td>
-                                    <td class="mtd">
-                                        <a href="profile.php?deletest='.$std['id'].'&vac='.$link['id'].'" style="padding: 9px; background-color: #ca3838; top: 0px;  height: 30px; line-height:1;" class="button main float-right shade">Отклонить</a>
-                                    </td>
-                                </tr>');
+                                if ($std){
+                                    printf('
+                                    <tr id="mrow">
+                                        <td class="mtd">
+                                            <p><a style="color:#31c0b2; text-decoration: underline;" href="profile.php?id='.$std['id'].'">'.$std['fio'].'</a></p>
+                                        </td>
+                                        <td class="mtd">
+                                            '.$std['name'].'
+                                        </td>
+                                        <td class="mtd">
+                                            '.$std['number'].'
+                                        </td>
+                                        <td class="mtd">
+                                            <a href="profile.php?addst='.$std['id'].'&vac='.$link['id'].'" style="padding: 9px; background-color: #228379; top: 0px;  height: 30px; line-height:1;" class="button main float-right shade">Принять</a>
+                                        </td>
+                                        <td class="mtd">
+                                            <a href="profile.php?deletest='.$std['id'].'&vac='.$link['id'].'" style="padding: 9px; background-color: #ca3838; top: 0px;  height: 30px; line-height:1;" class="button main float-right shade">Отклонить</a>
+                                        </td>
+                                    </tr>');
+                                }
                             }
                     printf('</table>
                     </div>');
