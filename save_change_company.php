@@ -9,9 +9,10 @@
 	}
 	$fullName = $_POST['fullName'];
 	$email = $_POST['email'];
-	$group = $_POST['group'];
 	$phone = $_POST['phone'];
-	$num = $_POST['num'];
+	$inn = $_POST['inn'];
+	$description = $_POST['description'];
+	$contract = $_POST['contract'];
     $id = $_POST['id'];
  if (empty($login) or empty($password)) //если пользователь не ввел логин или пароль, то выдаем ошибку и останавливаем скрипт
     {
@@ -22,23 +23,21 @@
     mysql_select_db ("practice",$db);
 
  // если такого нет, то сохраняем данные
-
+	
     $result2 = mysql_query ("UPDATE users  SET login='$login', password='$password' ,email='$email', phone='$phone' 
 	WHERE id='$id'");
-	$res1 = mysql_query("SELECT id FROM `group` WHERE number='$group'");
-	$res = mysql_result($res1, 0);
 
-	$result3 = mysql_query ("UPDATE student
-	SET fio = '$fullName', num = '$num', `group` = '$res' WHERE id='$id'");
-	//INSERT INTO student (id, fio, num, `group`, `leader`)
-//SELECT id, 'lName', 'um', '1', '2' FROM users WHERE login='44'
+
+	$result3 = mysql_query ("UPDATE company
+	SET name = '$fullName', inn = '$inn', description = '$description', contract = '$contract' WHERE id='$id'");
+
     // Проверяем, есть ли ошибки
-    if ($result2=='TRUE' and $result3=='TRUE')
+    if ($result2 and $result3)
     {
 		if ($_SESSION['id'] == $id){
 		$_SESSION['login'] = $login;	
 		$_SESSION['password'] = $password;}
-		header("Location: reg.php?id=$id");	
+		header("Location: reg.php?id=$id");
     }
  else {
     echo "Ошибка!";

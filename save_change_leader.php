@@ -35,9 +35,10 @@
     // Проверяем, есть ли ошибки
     if ($result2 and $result3)
     {
-		echo "Изменения сохранены <a href='index.php'>Главная страница</a>";
+		if ($_SESSION['id'] == $id){
 		$_SESSION['login'] = $login;	
-		$_SESSION['password'] = $password;
+		$_SESSION['password'] = $password;}
+		header("Location: reg.php?id=$id");
     }
  else {
     echo "Ошибка!";
