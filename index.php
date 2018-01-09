@@ -54,14 +54,16 @@ session_start();
           print_r('          
             <a class="accordion-title shade main">'.$row['name'].'</a>
             <a class="float-right text">Даты которых нигде нет</a>
-            <div class="inf">
+            <div class="inf box" >
               <p><b>Условие приема: </b>'.$row['conditions'].'</br>
               <b>Договор с ДВФУ: </b>'.$contr.'</br>
               <b>Описание деятельности студента: </b>'.$row['description'].'</br>
               </br>
               </p>
+            </div>            
+            <div class="inf" style="position: relative; height: 40px; top: -22px;">
             </div>
-            <a href="vacancy.php?id='.$row['id'].'" style="padding: 9px;" class="button main top float-right shade">Подробнее</a>
+            <a href="vacancy.php?id='.$row['id'].'" style="padding: 9px; top:-75px;" class="button main top float-right shade">Подробнее</a>
          ');
         }
         ?> 
