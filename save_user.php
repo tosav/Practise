@@ -31,9 +31,9 @@
  // если такого нет, то сохраняем данные
 
 	$role = 2;
-	$activate = 1; 
+	$activate = 0; 
     $result2 = mysql_query ("INSERT INTO users (login,password,email,phone,role,activate) 
-	VALUES('$login','$password','$email','$phone','$role','$activate')");
+	VALUES('$login',md5('$password'),'$email','$phone','$role','$activate')");
 	$res1 = mysql_query("SELECT id FROM `group` WHERE number='$group'");
 	$res = mysql_result($res1, 0);
 
@@ -44,7 +44,7 @@
     // Проверяем, есть ли ошибки
     if ($result2=='TRUE' and $result3=='TRUE')
     {
-		echo "Вы успешно зарегистрированы! Теперь вы можете зайти на сайт. <a href='index.php'>Главная страница</a>";		
+		echo "Вы успешно зарегистрированы! Ожидайте подтверждения от администратора <a href='index.php'>Главная страница</a>";	
     }
  else {
     echo "Ошибка! Вы не зарегистрированы.";

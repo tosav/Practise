@@ -31,15 +31,15 @@
     }
  // если такого нет, то сохраняем данные
 	$role = 3;
-	$activate = 1; 
+	$activate = 0; 
     $result2 = mysql_query ("INSERT INTO users (login,password,email,phone,role,activate) 
-	VALUES('$login','$password','$email','$phone','$role','$activate')");
+	VALUES('$login',md5('$password'),'$email','$phone','$role','$activate')");
 	$result3 = mysql_query ("INSERT INTO company (id, inn, name, description, contract)
 	SELECT id, '$inn','$fullName','$description','$contract' FROM users WHERE login='$login'");
     // Проверяем, есть ли ошибки
     if ($result2=='TRUE' and $result3=='TRUE')
     {
-		echo "Вы успешно зарегистрированы! Теперь вы можете зайти на сайт. <a href='index.php'>Главная страница</a>";		
+		echo "Вы успешно зарегистрированы! Ожидайте подтверждения от администратора <a href='index.php'>Главная страница</a>";		
     }
  else {
     echo "Ошибка! Вы не зарегистрированы.";
