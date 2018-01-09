@@ -24,7 +24,7 @@
 
  // если такого нет, то сохраняем данные
 	
-    $result2 = mysql_query ("UPDATE users  SET login='$login', password='$password' ,email='$email', phone='$phone' 
+    $result2 = mysql_query ("UPDATE users  SET login='$login', password=md5('$password') ,email='$email', phone='$phone' 
 	WHERE id='$id'");
 
 
@@ -35,9 +35,10 @@
     // Проверяем, есть ли ошибки
     if ($result2 and $result3)
     {
-		echo "Изменения сохранены <a href='index.php'>Главная страница</a>";
+		if ($_SESSION['id'] == $id){
 		$_SESSION['login'] = $login;	
-		$_SESSION['password'] = $password;
+		$_SESSION['password'] = md5($password);}
+		header("Location: reg.php?id=$id");
     }
  else {
     echo "Ошибка!";
