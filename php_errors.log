@@ -767,3 +767,6 @@ Stack trace:
 [17-Jan-2018 02:03:27 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 43 in C:\OpenServer\domains\Practise\download_group.php on line 24
 [17-Jan-2018 02:03:27 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 47 in C:\OpenServer\domains\Practise\download_group.php on line 24
 [17-Jan-2018 02:03:27 Europe/Moscow] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OpenServer\domains\Practise\download_group.php:24) in C:\OpenServer\domains\Practise\download_group.php on line 35
+[17-Jan-2018 02:30:35 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 7 in C:\OpenServer\domains\Practise\reg.php on line 16
+[17-Jan-2018 02:35:59 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 8 in C:\OpenServer\domains\Practise\reg.php on line 16
+[17-Jan-2018 02:36:01 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 7 in C:\OpenServer\domains\Practise\reg.php on line 16
