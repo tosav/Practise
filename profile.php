@@ -323,7 +323,7 @@ if ($id>0){
               <b>Номер телефона: </b>'.$res['phone'].'</br>
               <b>Почта: </b>'.$res['email'].'</br>
               <b>Группы: </b>');
-            $stds=explode(";",$row['gropus']);
+            $stds=explode(";",$row['groups']);
             foreach($stds as $gr){
                 $sql='SELECT number, name FROM `group` WHERE id=?';
                 $stm = $pdo->prepare($sql);
