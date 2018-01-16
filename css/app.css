@@ -128,7 +128,7 @@ input.adm{
     z-index: 9100;
  }
  ul.menu.align-center {
-    width: 55%;
+    width: 100%;
 }   
 li.menu-input {
     width: 80%;
@@ -164,7 +164,7 @@ li.menu-input {
     display:none;
 }
 .mytable{
-    width: 87%;
+    width: 80%;
     text-align: center;
     font-size: 13px;
     table-layout: fixed;
@@ -196,7 +196,7 @@ li.menu-input {
 }
 .mtd{
     padding: 6px 8px;
-    line-height: inherit;
+    line-height: 10px;
 }
 #mrow{
     line-height: 20px;

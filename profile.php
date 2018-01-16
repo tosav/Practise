@@ -380,14 +380,9 @@ if ($id>0){
 			$res1 = "";
 			if ($prd['vacancy']<>""){
 			$vac = $prd['vacancy'];
-<<<<<<< HEAD
 			$query2 =
 			mysql_query("SELECT vacancies.name FROM vacancies LEFT OUTER JOIN student ON student.vacancy=vacancies.id where (vacancies.id = '$vac')");
 			$res1 = mysql_result($query2, 0);} 
-=======
-			$query2 =mysql_query("SELECT vacancies.name FROM vacancies LEFT OUTER JOIN student ON student.vacancy=vacancies.id where vacancies.id = '$vac'");
-			$res1 = mysql_result($query2, 0); 
->>>>>>> 044f814fa1c102978ffaa7279a4aa55a1cdc551f
 			printf('
 				<tr>
 				<td align="center">'.$prd['fio'].'</td>
