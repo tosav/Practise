@@ -254,7 +254,7 @@ if (isset($_GET["is_exit"])) { //Если нажата кнопка выхода
               ');
             }
            ?>
-          <li><a id="openD" class="button top"><?
+          <li><a id="openD" <?if ($_SESSION["is_auth"]) echo('href="http://practise/?is_exit=1"');?> class="button top"><?
           if ($_GET['name'])
             echo $_GET['name'];
           else if($_SESSION['is_auth'])
