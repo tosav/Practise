@@ -703,6 +703,7 @@ Stack trace:
 [09-Jan-2018 09:33:22 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 46 in C:\OpenServer\domains\Practise\download_group.php on line 28
 [09-Jan-2018 09:33:22 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 47 in C:\OpenServer\domains\Practise\download_group.php on line 28
 [09-Jan-2018 09:33:22 Europe/Moscow] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OpenServer\domains\Practise\download_group.php:28) in C:\OpenServer\domains\Practise\download_group.php on line 40
+<<<<<<< HEAD
 [09-Jan-2018 10:10:26 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 8 in C:\OpenServer\domains\Practise\reg.php on line 16
 [09-Jan-2018 10:10:28 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 7 in C:\OpenServer\domains\Practise\reg.php on line 16
 [16-Jan-2018 13:21:23 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 9 in C:\OpenServer\domains\Practise\profile.php on line 383
@@ -758,3 +759,35 @@ Stack trace:
 [16-Jan-2018 20:58:07 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 49 in C:\OpenServer\domains\Practise\download_groups.php on line 31
 [16-Jan-2018 20:58:08 Europe/Moscow] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OpenServer\domains\Practise\download_groups.php:31) in C:\OpenServer\domains\Practise\download_groups.php on line 39
 [16-Jan-2018 21:30:30 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 7 in C:\OpenServer\domains\Practise\reg.php on line 16
+=======
+[09-Jan-2018 10:10:03 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 43 in D:\OpenServer\domains\Practise\download_groups.php on line 27
+[09-Jan-2018 10:10:03 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 44 in D:\OpenServer\domains\Practise\download_groups.php on line 27
+[09-Jan-2018 10:10:03 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 46 in D:\OpenServer\domains\Practise\download_groups.php on line 27
+[09-Jan-2018 10:10:04 Europe/Moscow] PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\Practise\download_groups.php:27) in D:\OpenServer\domains\Practise\download_groups.php on line 35
+[09-Jan-2018 10:10:38 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 43 in D:\OpenServer\domains\Practise\download_group.php on line 28
+[09-Jan-2018 10:10:38 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 44 in D:\OpenServer\domains\Practise\download_group.php on line 28
+[09-Jan-2018 10:10:38 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 46 in D:\OpenServer\domains\Practise\download_group.php on line 28
+[09-Jan-2018 10:10:38 Europe/Moscow] PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\Practise\download_group.php:28) in D:\OpenServer\domains\Practise\download_group.php on line 40
+[09-Jan-2018 10:10:48 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 9 in D:\OpenServer\domains\Practise\profile.php on line 383
+[09-Jan-2018 10:10:48 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 10 in D:\OpenServer\domains\Practise\profile.php on line 383
+[09-Jan-2018 10:10:48 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 12 in D:\OpenServer\domains\Practise\profile.php on line 383
+[09-Jan-2018 10:12:12 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 43 in D:\OpenServer\domains\Practise\download_group.php on line 28
+[09-Jan-2018 10:12:12 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 44 in D:\OpenServer\domains\Practise\download_group.php on line 28
+[09-Jan-2018 10:12:12 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 46 in D:\OpenServer\domains\Practise\download_group.php on line 28
+[09-Jan-2018 10:12:12 Europe/Moscow] PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\Practise\download_group.php:28) in D:\OpenServer\domains\Practise\download_group.php on line 40
+[09-Jan-2018 10:13:00 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 44 in D:\OpenServer\domains\Practise\download_groups.php on line 27
+[09-Jan-2018 10:13:00 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 46 in D:\OpenServer\domains\Practise\download_groups.php on line 27
+[09-Jan-2018 10:13:00 Europe/Moscow] PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\domains\Practise\download_groups.php:27) in D:\OpenServer\domains\Practise\download_groups.php on line 35
+[14-Jan-2018 12:18:34 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 9 in D:\OpenServer\domains\Practise\profile.php on line 382
+[14-Jan-2018 12:18:34 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 10 in D:\OpenServer\domains\Practise\profile.php on line 382
+[14-Jan-2018 12:18:34 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 11 in D:\OpenServer\domains\Practise\profile.php on line 382
+[14-Jan-2018 12:18:54 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 9 in D:\OpenServer\domains\Practise\profile.php on line 382
+[14-Jan-2018 12:18:55 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 10 in D:\OpenServer\domains\Practise\profile.php on line 382
+[14-Jan-2018 12:18:55 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 11 in D:\OpenServer\domains\Practise\profile.php on line 382
+[16-Jan-2018 12:12:28 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 9 in D:\OpenServer\domains\Practise\profile.php on line 382
+[16-Jan-2018 12:12:29 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 10 in D:\OpenServer\domains\Practise\profile.php on line 382
+[16-Jan-2018 12:12:29 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 11 in D:\OpenServer\domains\Practise\profile.php on line 382
+[16-Jan-2018 12:44:59 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 9 in D:\OpenServer\domains\Practise\profile.php on line 382
+[16-Jan-2018 12:45:00 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 10 in D:\OpenServer\domains\Practise\profile.php on line 382
+[16-Jan-2018 12:45:00 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 11 in D:\OpenServer\domains\Practise\profile.php on line 382
+>>>>>>> 044f814fa1c102978ffaa7279a4aa55a1cdc551f
