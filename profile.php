@@ -378,8 +378,7 @@ if ($id>0){
 			$res = mysql_query( $query );
 			while( $prd = mysql_fetch_assoc($res) ) {
 			$vac = $prd['vacancy'];
-			$query2 =
-			mysql_query("SELECT vacancies.name FROM vacancies LEFT OUTER JOIN student ON student.vacancy=vacancies.id where vacancies.id = '$vac'");
+			$query2 =mysql_query("SELECT vacancies.name FROM vacancies LEFT OUTER JOIN student ON student.vacancy=vacancies.id where vacancies.id = '$vac'");
 			$res1 = mysql_result($query2, 0); 
 			printf('
 				<tr>
