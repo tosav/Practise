@@ -77,7 +77,8 @@ class AuthClass {
             } 
             else
             { //если существует, то сверяем пароли
-                $password=md5($password);
+				$pass = $password;
+                $password=md5($password);				
                 if ($res['password']==$password) 
                 {
                     if($res['activate']==0)
@@ -94,7 +95,8 @@ class AuthClass {
                     {
                         $_SESSION["is_auth"]=true;
                         //если пароли совпадают, то запускаем пользователю сессию! Можете его поздравить, он вошел!
-                        $_SESSION['login']=$res['login']; 
+                        $_SESSION['login']=$res['login'];
+						$_SESSION['pass']=$pass;						
                         $_SESSION['password']=$res['password']; 
                         $_SESSION['id']=$res['id'];
                         $_SESSION['role']=$res['role'];//эти данные очень часто используются, вот их и будет "носить с собой" вошедший пользователь
@@ -184,6 +186,8 @@ if (isset($_GET["is_exit"])) { //Если нажата кнопка выхода
     }
 }
 ?>
+
+	 
 <div class="modal">
     <a class="accordion-title shade">Авторизация</a>
     <form id="login" action="" method="POST" class="log-in-form shade">
@@ -195,7 +199,8 @@ if (isset($_GET["is_exit"])) { //Если нажата кнопка выхода
     <label style="color: #949494; padding: 5px 0;"><center>У вас еще нет аккаунта?</center>
     </label>
     <a href="http://practise/reg.php" style="padding: 9px;" class="button login">Регистрация</a>
-    </div>
+    </div> ');
+}?>
 </div>
 <div class="bg_layer"></div>
 <div class="grid-container"> 

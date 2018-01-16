@@ -758,3 +758,12 @@ Stack trace:
 [16-Jan-2018 20:58:07 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 49 in C:\OpenServer\domains\Practise\download_groups.php on line 31
 [16-Jan-2018 20:58:08 Europe/Moscow] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OpenServer\domains\Practise\download_groups.php:31) in C:\OpenServer\domains\Practise\download_groups.php on line 39
 [16-Jan-2018 21:30:30 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 7 in C:\OpenServer\domains\Practise\reg.php on line 16
+[16-Jan-2018 22:01:58 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 8 in C:\OpenServer\domains\Practise\reg.php on line 16
+[16-Jan-2018 22:02:00 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 7 in C:\OpenServer\domains\Practise\reg.php on line 16
+[16-Jan-2018 22:04:55 Europe/Moscow] PHP Parse error:  syntax error, unexpected 'id' (T_STRING) in C:\OpenServer\domains\Practise\menu.php on line 193
+[16-Jan-2018 22:05:14 Europe/Moscow] PHP Parse error:  syntax error, unexpected 'id' (T_STRING) in C:\OpenServer\domains\Practise\menu.php on line 193
+[17-Jan-2018 01:56:41 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 43 in C:\OpenServer\domains\Practise\download_group.php on line 24
+[17-Jan-2018 01:56:42 Europe/Moscow] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OpenServer\domains\Practise\download_group.php:24) in C:\OpenServer\domains\Practise\download_group.php on line 35
+[17-Jan-2018 02:03:27 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 43 in C:\OpenServer\domains\Practise\download_group.php on line 24
+[17-Jan-2018 02:03:27 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 47 in C:\OpenServer\domains\Practise\download_group.php on line 24
+[17-Jan-2018 02:03:27 Europe/Moscow] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OpenServer\domains\Practise\download_group.php:24) in C:\OpenServer\domains\Practise\download_group.php on line 35
