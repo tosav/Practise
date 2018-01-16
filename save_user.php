@@ -36,9 +36,10 @@
 	VALUES('$login',md5('$password'),'$email','$phone','$role','$activate')");
 	$res1 = mysql_query("SELECT id FROM `group` WHERE number='$group'");
 	$res = mysql_result($res1, 0);
-
+	$lead1 = mysql_query("SELECT id FROM `leader`");
+	$lead = mysql_result($res1, 0);
 	$result3 = mysql_query ("INSERT INTO student (id, fio, num,`group`, `leader`)
-	SELECT id, '$fullName', '$num', '$res', '2' FROM users WHERE login='$login'");
+	SELECT id, '$fullName', '$num', '$res', '$lead' FROM users WHERE login='$login'");
 	//INSERT INTO student (id, fio, num, `group`, `leader`)
 //SELECT id, 'lName', 'um', '1', '2' FROM users WHERE login='44'
     // Проверяем, есть ли ошибки

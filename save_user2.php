@@ -33,11 +33,21 @@
 
 	$role = 1;
 	$activate = 0; 
+	$stds=explode(" ",$gropus);
+    foreach($stds as $gr){
+
+	$sql11=mysql_query("SELECT `group`.id FROM `group` WHERE number='$gr'");
+
+                $group = mysql_result($sql11, 0);
+
+                $gropus1 = "$gropus1" . "$group" . ";";	
+	}
+	$gropus1 = substr($gropus1, 0, -1);
     $result2 = mysql_query ("INSERT INTO users (login,password,email,phone,role,activate) 
 	VALUES('$login',md5('$password'),'$email','$phone','$role','$activate')");
-	$result3 = mysql_query ("INSERT INTO leader (id, fio, gropus) SELECT id, '$fullName', '$gropus'  FROM users WHERE login='$login'");
+	$result3 = mysql_query ("INSERT INTO leader (id, fio, gropus) SELECT id, '$fullName', '$gropus1'  FROM users WHERE login='$login'");
     // Проверяем, есть ли ошибки
-    if ($result2=='TRUE')
+    if ($result2=='TRUE' and $result3=='True')
     {
 		echo "Вы успешно зарегистрированы! Ожидайте подтверждения от администратора <a href='index.php'>Главная страница</a>";	
     }

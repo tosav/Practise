@@ -1,7 +1,7 @@
 <?php
    session_start();
-    if (isset($_POST['login'])) { $login = $_POST['login']; if ($login == '') { unset($login);} } //заносим введенный пользователем логин в переменную $login, если он пустой, то уничтожаем переменную
-    if (isset($_POST['password'])) { $password=$_POST['password']; if ($password =='') { unset($password);} }
+    $login = $_POST['login'];
+    $password=$_POST['password'];
 	$checkPassword = $_POST['checkPassword'];
 	if ($password != $checkPassword)
 	{
@@ -23,13 +23,23 @@
     mysql_select_db ("practice",$db);
 
  // если такого нет, то сохраняем данные
+	$stds=explode(" ",$gropus);
+    foreach($stds as $gr){
+
+	$sql11=mysql_query("SELECT `group`.id FROM `group` WHERE number='$gr'");
+
+                $group = mysql_result($sql11, 0);
+
+                $gropus1 = "$gropus1" . "$group" . ";";	
+	}
+	$gropus1 = substr($gropus1, 0, -1);
 	
-    $result2 = mysql_query ("UPDATE users  SET login='$login', password=md5('$password') ,email='$email', phone='$phone' 
+    $result2 = mysql_query ("UPDATE users  SET login='$login', password=md5('$password'), email='$email', phone='$phone' 
 	WHERE id='$id'");
 
 
 	$result3 = mysql_query ("UPDATE leader
-	SET fio = '$fullName', `gropus` = '$gropus' WHERE id='$id'");
+	SET fio = '$fullName', `gropus` = '$gropus1' WHERE id='$id'");
 	//INSERT INTO student (id, fio, num, `group`, `leader`)
 //SELECT id, 'lName', 'um', '1', '2' FROM users WHERE login='44'
     // Проверяем, есть ли ошибки

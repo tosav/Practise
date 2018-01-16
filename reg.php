@@ -191,6 +191,13 @@
 	$prof1 = mysql_query("SELECT * FROM users INNER JOIN leader ON (users.id = leader.id)
 	where users.id = '$id'");
 	$prof = mysql_fetch_assoc($prof1);
+	$stds=explode(";",$prof['gropus']);
+	$gropus = "";
+    foreach($stds as $gr){
+        $sql=mysql_query("SELECT number FROM `group` WHERE id='$gr'");
+        $group = mysql_result($sql, 0);      
+	    $gropus = $gropus . $group . " ";}
+		$gropus = substr($gropus, 0, -1);
 		print_r('
 	    <div>
                 <a class="accordion-title shade">Профиль</a>
@@ -202,7 +209,7 @@
                       <div class="row">
                         <div class="small-12 columns">
                           <label class="reg">Логин</label>
-                            <input name="login" class="in" type="text" required value='.$prof['login'].'>
+                            <input name="login" class="in" type="text" required value="'.$prof['login'].'">
                             <span class="form-error"></span>
                         </div>
                         <div class="small-12 columns">
@@ -222,17 +229,17 @@
                         </div>
                         <div class="small-12 columns">
                           <label class="reg">E-mail</label>
-                            <input name="email" class="in" type="text" required value='.$prof['email'].'>
+                            <input name="email" class="in" type="text" required value="'.$prof['email'].'">
                             <span class="form-error"></span>                      
                         </div>
                         <div class="small-12 columns">
                           <label class="reg">Номера групп</label>
-                            <input name="gropus" class="in" type="text" required value="'.$prof['gropus'].'">
+                            <input name="gropus" class="in" type="text" required value="'.$gropus.'">
                             <span class="form-error"></span>
                         </div>
                         <div class="small-12 columns">
                           <label class="reg">Номер телефона</label>
-                            <input name="phone" class="in" type="text" required value='.$prof['phone'].'>
+                            <input name="phone" class="in" type="text" required value="'.$prof['phone'].'">
                             <span class="form-error"></span>
                         </div>
 

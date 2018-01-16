@@ -703,3 +703,58 @@ Stack trace:
 [09-Jan-2018 09:33:22 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 46 in C:\OpenServer\domains\Practise\download_group.php on line 28
 [09-Jan-2018 09:33:22 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 47 in C:\OpenServer\domains\Practise\download_group.php on line 28
 [09-Jan-2018 09:33:22 Europe/Moscow] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OpenServer\domains\Practise\download_group.php:28) in C:\OpenServer\domains\Practise\download_group.php on line 40
+[09-Jan-2018 10:10:26 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 8 in C:\OpenServer\domains\Practise\reg.php on line 16
+[09-Jan-2018 10:10:28 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 7 in C:\OpenServer\domains\Practise\reg.php on line 16
+[16-Jan-2018 13:21:23 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 9 in C:\OpenServer\domains\Practise\profile.php on line 383
+[16-Jan-2018 13:22:59 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 9 in C:\OpenServer\domains\Practise\profile.php on line 384
+[16-Jan-2018 13:23:26 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 9 in C:\OpenServer\domains\Practise\profile.php on line 384
+[16-Jan-2018 13:23:30 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 9 in C:\OpenServer\domains\Practise\profile.php on line 384
+[16-Jan-2018 13:24:06 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 9 in C:\OpenServer\domains\Practise\profile.php on line 383
+[16-Jan-2018 13:26:46 Europe/Moscow] PHP Parse error:  syntax error, unexpected 'is_null' (T_STRING), expecting '(' in C:\OpenServer\domains\Practise\profile.php on line 383
+[16-Jan-2018 13:29:16 Europe/Moscow] PHP Parse error:  syntax error, unexpected '!', expecting '(' in C:\OpenServer\domains\Practise\profile.php on line 383
+[16-Jan-2018 13:29:27 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 9 in C:\OpenServer\domains\Practise\profile.php on line 384
+[16-Jan-2018 13:30:27 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 9 in C:\OpenServer\domains\Practise\profile.php on line 384
+[16-Jan-2018 13:33:12 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 9 in C:\OpenServer\domains\Practise\profile.php on line 384
+[16-Jan-2018 13:33:21 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 9 in C:\OpenServer\domains\Practise\profile.php on line 384
+[16-Jan-2018 13:33:39 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 9 in C:\OpenServer\domains\Practise\profile.php on line 384
+[16-Jan-2018 13:43:37 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 9 in C:\OpenServer\domains\Practise\profile.php on line 384
+[16-Jan-2018 13:44:42 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 9 in C:\OpenServer\domains\Practise\profile.php on line 383
+[16-Jan-2018 14:00:31 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 7 in C:\OpenServer\domains\Practise\reg.php on line 16
+[16-Jan-2018 14:03:02 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 7 in C:\OpenServer\domains\Practise\reg.php on line 16
+[16-Jan-2018 18:29:50 Europe/Moscow] PHP Fatal error:  Call to a member function prepare() on a non-object in C:\OpenServer\domains\Practise\save_user2.php on line 39
+[16-Jan-2018 18:34:49 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 5 in C:\OpenServer\domains\Practise\save_user.php on line 38
+[16-Jan-2018 18:41:32 Europe/Moscow] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, string given in C:\OpenServer\domains\Practise\save_user2.php on line 40
+[16-Jan-2018 18:41:32 Europe/Moscow] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, string given in C:\OpenServer\domains\Practise\save_user2.php on line 40
+[16-Jan-2018 18:41:32 Europe/Moscow] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, string given in C:\OpenServer\domains\Practise\save_user2.php on line 40
+[16-Jan-2018 18:44:51 Europe/Moscow] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, string given in C:\OpenServer\domains\Practise\save_user2.php on line 41
+[16-Jan-2018 18:44:51 Europe/Moscow] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, string given in C:\OpenServer\domains\Practise\save_user2.php on line 41
+[16-Jan-2018 18:44:51 Europe/Moscow] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, string given in C:\OpenServer\domains\Practise\save_user2.php on line 41
+[16-Jan-2018 18:48:13 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 5 in C:\OpenServer\domains\Practise\save_user.php on line 38
+[16-Jan-2018 18:49:34 Europe/Moscow] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, string given in C:\OpenServer\domains\Practise\save_user2.php on line 41
+[16-Jan-2018 18:49:34 Europe/Moscow] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, string given in C:\OpenServer\domains\Practise\save_user2.php on line 41
+[16-Jan-2018 18:49:34 Europe/Moscow] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, string given in C:\OpenServer\domains\Practise\save_user2.php on line 41
+[16-Jan-2018 18:51:18 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 5 in C:\OpenServer\domains\Practise\save_user.php on line 38
+[16-Jan-2018 18:51:44 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, string given in C:\OpenServer\domains\Practise\save_user2.php on line 41
+[16-Jan-2018 18:51:44 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, string given in C:\OpenServer\domains\Practise\save_user2.php on line 41
+[16-Jan-2018 18:51:44 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, string given in C:\OpenServer\domains\Practise\save_user2.php on line 41
+[16-Jan-2018 18:53:41 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, string given in C:\OpenServer\domains\Practise\save_user2.php on line 41
+[16-Jan-2018 18:53:41 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, string given in C:\OpenServer\domains\Practise\save_user2.php on line 41
+[16-Jan-2018 18:53:41 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, string given in C:\OpenServer\domains\Practise\save_user2.php on line 41
+[16-Jan-2018 18:57:21 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, string given in C:\OpenServer\domains\Practise\save_user2.php on line 41
+[16-Jan-2018 18:57:21 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, string given in C:\OpenServer\domains\Practise\save_user2.php on line 41
+[16-Jan-2018 18:57:21 Europe/Moscow] PHP Warning:  mysql_result() expects parameter 1 to be resource, string given in C:\OpenServer\domains\Practise\save_user2.php on line 41
+[16-Jan-2018 18:59:28 Europe/Moscow] PHP Warning:  Illegal string offset 'id' in C:\OpenServer\domains\Practise\save_user2.php on line 43
+[16-Jan-2018 18:59:28 Europe/Moscow] PHP Warning:  Illegal string offset 'id' in C:\OpenServer\domains\Practise\save_user2.php on line 43
+[16-Jan-2018 18:59:28 Europe/Moscow] PHP Warning:  Illegal string offset 'id' in C:\OpenServer\domains\Practise\save_user2.php on line 43
+[16-Jan-2018 19:03:43 Europe/Moscow] PHP Parse error:  syntax error, unexpected '=' in C:\OpenServer\domains\Practise\save_user2.php on line 43
+[16-Jan-2018 19:29:47 Europe/Moscow] PHP Fatal error:  Call to a member function prepare() on a non-object in C:\OpenServer\domains\Practise\reg.php on line 198
+[16-Jan-2018 19:32:09 Europe/Moscow] PHP Fatal error:  Call to a member function prepare() on a non-object in C:\OpenServer\domains\Practise\reg.php on line 198
+[16-Jan-2018 20:09:31 Europe/Moscow] PHP Parse error:  syntax error, unexpected '=' in C:\OpenServer\domains\Practise\save_user.php on line 39
+[16-Jan-2018 20:09:59 Europe/Moscow] PHP Parse error:  syntax error, unexpected '=' in C:\OpenServer\domains\Practise\save_user.php on line 39
+[16-Jan-2018 20:57:57 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 8 in C:\OpenServer\domains\Practise\reg.php on line 16
+[16-Jan-2018 20:58:00 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 7 in C:\OpenServer\domains\Practise\reg.php on line 16
+[16-Jan-2018 20:58:07 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 44 in C:\OpenServer\domains\Practise\download_groups.php on line 31
+[16-Jan-2018 20:58:07 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 47 in C:\OpenServer\domains\Practise\download_groups.php on line 31
+[16-Jan-2018 20:58:07 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 49 in C:\OpenServer\domains\Practise\download_groups.php on line 31
+[16-Jan-2018 20:58:08 Europe/Moscow] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OpenServer\domains\Practise\download_groups.php:31) in C:\OpenServer\domains\Practise\download_groups.php on line 39
+[16-Jan-2018 21:30:30 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 7 in C:\OpenServer\domains\Practise\reg.php on line 16
