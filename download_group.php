@@ -18,13 +18,15 @@ $i = 1;
 while( $prd = mysql_fetch_assoc($res) ) {
     $page->setCellValue('A'.($i+2), $i);
     $page->setCellValue('B'.($i+2), $prd['fio']);
+	$res1 = "";
+	if ($prd['vacancy']<>""){
 	$vac = $prd['vacancy'];
 	$query2 =
 	mysql_query("SELECT vacancies.name FROM vacancies LEFT OUTER JOIN student ON student.vacancy=vacancies.id where vacancies.id = '$vac'");
 	$res1 = mysql_result($query2, 0); 
 	$page->setCellValue('C'.($i+2), $res1);
     $i++;
-}
+}}
 if ($i == 1) {
 	header("Location: profile.php");
 	exit;
