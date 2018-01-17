@@ -209,8 +209,13 @@ if (isset($_GET["is_exit"])) { //Если нажата кнопка выхода
           <? if($_SESSION['is_auth'] && $_SESSION['role']==0){
                 printf ('<li><a href="../profile.php" class="button admin">');
             }
-            else{
+            else{ 
+                if ($_SESSION['is_auth']){
                 printf ('<li><a href="../profile.php" class="button top">');
+                }
+                else{
+                printf ('<li><a class="button top">');
+                }
             }
             ?>
                                     <? if($_SESSION['is_auth']){
