@@ -37,7 +37,7 @@ if ($id && $id!=-1){//если пользователь авторизован
       foreach ($ides as $i => $id) {
           $ids[]=$id['id'];
       }
-      if ($_SESSION==0||in_array($_GET['id'], $ids)){//если у него есть эта вакансия
+      if ($_SESSION['role']==0||in_array($_GET['id'], $ids)){//если он админ или у него есть эта вакансия
           $sql="SELECT *
             FROM vacancies
             WHERE id=?";
