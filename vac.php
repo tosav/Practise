@@ -121,7 +121,7 @@ function pdoSet($allowed, &$values, $source = array()) {
                         </div>
                         <div class="small-12 columns">
                           <label class="reg">Количество мест для практики</label>
-                            <input style="font-size: 0.7rem;" name="num" class="in" type="number" value="<?echo $vacdt['num']?>" required>
+                            <input style="font-size: 0.7rem;" name="num" class="in" type="number" min="1" "value="<?echo $vacdt['num']?>" required>
                             <span class="form-error"></span>                   
                         </div>
                         <fieldset class="small-12 columns">
