@@ -199,8 +199,7 @@ if (isset($_GET["is_exit"])) { //Если нажата кнопка выхода
     <label style="color: #949494; padding: 5px 0;"><center>У вас еще нет аккаунта?</center>
     </label>
     <a href="http://practise/reg.php" style="padding: 9px;" class="button login">Регистрация</a>
-    </div> ');
-}?>
+    </div>
 </div>
 <div class="bg_layer"></div>
 <div class="grid-container"> 
