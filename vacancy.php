@@ -17,12 +17,21 @@ session_start();
     }
     $_GET['id']=trim($_GET['id']);
     if ($_GET['stid']){  
-        $sql = "UPDATE vacancies SET students = concat(students,:students) WHERE id = :id";
-        $stmt = $pdo->prepare($sql);     
-        $stid=$_SESSION['id'].';';                            
-        $stmt->bindParam(':students', $stid, PDO::PARAM_STR);   
-        $stmt->bindParam(':id', $_GET['id'], PDO::PARAM_INT);   
+        $sql = "SELECT students FROM vacancies WHERE id=:id";
+        $stmt = $pdo->prepare($sql);      
+        $stmt->bindParam(':id', $_GET['id'], PDO::PARAM_INT);  
         $stmt->execute(); 
+        $stds=$stmt->fetch();  
+        $stds=explode(";",$stds['students']);
+        $key=in_array($_SESSION['id'],$stds);
+        if (!$key){
+          $sql = "UPDATE vacancies SET students = concat(students,:students) WHERE id = :id";
+          $stmt = $pdo->prepare($sql);     
+          $stid=$_SESSION['id'].';';                            
+          $stmt->bindParam(':students', $stid, PDO::PARAM_STR);   
+          $stmt->bindParam(':id', $_GET['id'], PDO::PARAM_INT);   
+          $stmt->execute(); 
+        }
     }
     $sql="SELECT v.*, c.name as com_name, c.description as descr, u.email, u.phone 
     FROM vacancies v 
@@ -75,6 +84,7 @@ session_start();
             <a class="accordion-title shade main">'.$row['name'].'</a>
             <!--<a class="float-right text">Даты которых нигде нет</a>-->
             <div class="inf">
+            
               <p><b>Условие приема: </b>'.$row['conditions'].'</br>
               <b>Договор с ДВФУ: </b>'.$contr.'</br>
               <b>Описание деятельности студента: </b>'.$row['description'].'</br>
