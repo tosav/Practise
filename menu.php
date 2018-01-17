@@ -165,14 +165,14 @@ class AuthClass {
     public function out() {
         $_SESSION = array(); //Очищаем сессию
         session_destroy(); //Уничтожаем
-		exit("<html><head><meta http-equiv='Refresh' content='0; URL=..".$_SERVER['PHP_SELF']."'></head></html>");
+		exit("<html><head><meta http-equiv='Refresh' content='0; URL=..".$_SERVER['REQUEST_URI']."'></head></html>");
     }
 }
 
 $auth = new AuthClass();
 if ($_POST["login"] && $_POST["password"]) { //Если логин и пароль были отправлены
     if (!$auth->auth($_POST["login"], $_POST["password"])) { //Если логин и пароль введен не правильно
-		exit("<html><head><meta http-equiv='Refresh' content='0; URL=..".$_SERVER['PHP_SELF']."'></head></html>");
+		exit("<html><head><meta http-equiv='Refresh' content='0; URL=..".$_SERVER['REQUEST_URI']."'></head></html>");
     }
     else{
         echo "<script>alert('Вы авторизованы');</script>";
