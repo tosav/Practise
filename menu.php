@@ -248,6 +248,10 @@ if (isset($_GET["is_exit"])) { //Если нажата кнопка выхода
                     <input type="submit" style="display:none;">
                     </form></li>';
                 }
+				else{ printf('
+				<li><a  href="index.php" class="button top" style="background-color:#89aeab; color:#fff;">
+                        Домой</a></li>
+				');}
           ?>
         </ul>
         <ul class="menu align-right">
@@ -259,9 +263,16 @@ if (isset($_GET["is_exit"])) { //Если нажата кнопка выхода
               ');
             }
            ?>
+		   <? if ($_SESSION["is_auth"]){
+		    printf('
+                      <li><a  href="?is_exit=1" class="button top" style="background-color:#89aeab; color:#fff;">
+                        Выход</a></li>
+              ');
+            } ?>
           <li><a id="openD" <?if ($_SESSION["is_auth"]){ echo 'onclick="exit_from_this_place()"';}?> class="button top"><?
-          if ($_GET['name'])
+          if ($_GET['name']){
             echo $_GET['name'];
+		  }
           else if($_SESSION['is_auth'])
             echo $_SESSION['name'];
           else 

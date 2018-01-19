@@ -96,6 +96,7 @@ session_start();
               </br>
               </p>
               '.$string.'
+			  <a href="index.php" style="padding: 9px;" class="button main top float-right shade">Назад</a>
             </div>
             
          ');

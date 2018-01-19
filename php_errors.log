@@ -825,3 +825,14 @@ Stack trace:
 [18-Jan-2018 05:12:47 Europe/Moscow] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in D:\OpenServer\domains\Practise\profile.php on line 46
 [19-Jan-2018 10:45:15 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 7 in D:\OpenServer\domains\Practise\reg.php on line 16
 >>>>>>> 3e5d42c37e76561b43f2c151794a47591dfe8f42
+[19-Jan-2018 11:42:06 Europe/Moscow] PHP Parse error:  syntax error, unexpected ''    </p>' (T_CONSTANT_ENCAPSED_STRING) in C:\OpenServer\domains\Practise\vacancy.php on line 103
+[19-Jan-2018 11:42:07 Europe/Moscow] PHP Parse error:  syntax error, unexpected ''    </p>' (T_CONSTANT_ENCAPSED_STRING) in C:\OpenServer\domains\Practise\vacancy.php on line 103
+[19-Jan-2018 11:42:13 Europe/Moscow] PHP Parse error:  syntax error, unexpected ''</p>' (T_CONSTANT_ENCAPSED_STRING) in C:\OpenServer\domains\Practise\vacancy.php on line 103
+[19-Jan-2018 12:30:56 Europe/Moscow] PHP Parse error:  syntax error, unexpected '$_SESSION' (T_VARIABLE), expecting '(' in C:\OpenServer\domains\Practise\menu.php on line 266
+[19-Jan-2018 12:31:11 Europe/Moscow] PHP Parse error:  syntax error, unexpected '$_SESSION' (T_VARIABLE), expecting '(' in C:\OpenServer\domains\Practise\menu.php on line 266
+[19-Jan-2018 12:31:12 Europe/Moscow] PHP Parse error:  syntax error, unexpected '$_SESSION' (T_VARIABLE), expecting '(' in C:\OpenServer\domains\Practise\menu.php on line 266
+[19-Jan-2018 12:31:13 Europe/Moscow] PHP Parse error:  syntax error, unexpected '$_SESSION' (T_VARIABLE), expecting '(' in C:\OpenServer\domains\Practise\menu.php on line 266
+[19-Jan-2018 12:31:14 Europe/Moscow] PHP Parse error:  syntax error, unexpected '$_SESSION' (T_VARIABLE), expecting '(' in C:\OpenServer\domains\Practise\menu.php on line 266
+[19-Jan-2018 12:31:15 Europe/Moscow] PHP Parse error:  syntax error, unexpected '$_SESSION' (T_VARIABLE), expecting '(' in C:\OpenServer\domains\Practise\menu.php on line 266
+[19-Jan-2018 12:31:16 Europe/Moscow] PHP Parse error:  syntax error, unexpected '$_SESSION' (T_VARIABLE), expecting '(' in C:\OpenServer\domains\Practise\menu.php on line 266
+[19-Jan-2018 12:31:17 Europe/Moscow] PHP Parse error:  syntax error, unexpected '$_SESSION' (T_VARIABLE), expecting '(' in C:\OpenServer\domains\Practise\menu.php on line 266
