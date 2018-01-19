@@ -214,12 +214,12 @@
                         </div>
                         <div class="small-12 columns">
                           <label class="reg">Пароль</label>
-                            <input name="password" class="in" type="password" id="password" required >
+                            <input name="password" class="in" type="password" id="password" value="'.$_SESSION['pass'].'" required >
                             <span class="form-error"></span>
                         </div>
                         <div class="small-12 columns">
                           <label class="reg">Повторите пароль</label>
-                            <input name="checkPassword" class="in" type="password" required data-equalto="password">
+                            <input name="checkPassword" class="in" type="password" value="'.$_SESSION['pass'].'" required data-equalto="password">
                             <span class="form-error"></span>
                         </div>
                         <div class="small-12 columns">
@@ -277,12 +277,12 @@
                         </div>
                         <div class="small-12 columns">
                           <label class="reg">Пароль</label>
-                            <input name="password" class="in" type="password" id="password" required >
+                            <input name="password" class="in" type="password" id="password" value="'.$_SESSION['pass'].'" required >
                             <span class="form-error"></span>
                         </div>
                         <div class="small-12 columns">
                           <label class="reg">Повторите пароль</label>
-                            <input name="checkPassword" class="in" type="password" required data-equalto="password">
+                            <input name="checkPassword" class="in" type="password" value="'.$_SESSION['pass'].'" required data-equalto="password">
                             <span class="form-error"></span>
                         </div>
                         <div class="small-12 columns">
@@ -342,12 +342,12 @@
                         </div>
                         <div class="small-12 columns">
                           <label class="reg">Пароль</label>
-                            <input name="password" class="in" type="password" id="password" required >
+                            <input name="password" class="in" type="password" id="password" value="'.$_SESSION['pass'].'" required >
                             <span class="form-error"></span>
                         </div>
                         <div class="small-12 columns">
                           <label class="reg">Повторите пароль</label>
-                            <input name="checkPassword" class="in" type="password" required data-equalto="password">
+                            <input name="checkPassword" class="in" type="password" value="'.$_SESSION['pass'].'"required data-equalto="password">
                             <span class="form-error"></span>
                         </div>
                         <div class="small-12 columns">

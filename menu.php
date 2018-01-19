@@ -165,14 +165,14 @@ class AuthClass {
     public function out() {
         $_SESSION = array(); //Очищаем сессию
         session_destroy(); //Уничтожаем
-		exit("<html><head><meta http-equiv='Refresh' content='0; URL=..".$_SERVER['PHP_SELF']."'></head></html>");
+		exit("<html><head><meta http-equiv='Refresh' content='0; URL=..".$_SERVER['REQUEST_URI']."'></head></html>");
     }
 }
 
 $auth = new AuthClass();
 if ($_POST["login"] && $_POST["password"]) { //Если логин и пароль были отправлены
     if (!$auth->auth($_POST["login"], $_POST["password"])) { //Если логин и пароль введен не правильно
-		exit("<html><head><meta http-equiv='Refresh' content='0; URL=..".$_SERVER['PHP_SELF']."'></head></html>");
+		exit("<html><head><meta http-equiv='Refresh' content='0; URL=..".$_SERVER['REQUEST_URI']."'></head></html>");
     }
     else{
         echo "<script>alert('Вы авторизованы');</script>";
@@ -209,8 +209,13 @@ if (isset($_GET["is_exit"])) { //Если нажата кнопка выхода
           <? if($_SESSION['is_auth'] && $_SESSION['role']==0){
                 printf ('<li><a href="../profile.php" class="button admin">');
             }
-            else{
+            else{ 
+                if ($_SESSION['is_auth']){
                 printf ('<li><a href="../profile.php" class="button top">');
+                }
+                else{
+                printf ('<li><a class="button top">');
+                }
             }
             ?>
                                     <? if($_SESSION['is_auth']){
@@ -254,7 +259,7 @@ if (isset($_GET["is_exit"])) { //Если нажата кнопка выхода
               ');
             }
            ?>
-          <li><a id="openD" <?if ($_SESSION["is_auth"]) echo('href="http://practise/?is_exit=1"');?> class="button top"><?
+          <li><a id="openD" <?if ($_SESSION["is_auth"]){ echo 'onclick="exit_from_this_place()"';}?> class="button top"><?
           if ($_GET['name'])
             echo $_GET['name'];
           else if($_SESSION['is_auth'])
@@ -266,6 +271,12 @@ if (isset($_GET["is_exit"])) { //Если нажата кнопка выхода
       </div>
 	 
 <script>
+        function exit_from_this_place(){
+            var answer=confirm('Вы хотите выйти?');
+            if (answer==true){
+                window.location.href="http://practise/?is_exit=1";
+            }
+        }
         $('.modal, .bg_layer').hide();
         $('#openD').click(function(){
             $('.modal, .bg_layer').show();
@@ -290,7 +301,4 @@ if (isset($_GET["is_exit"])) { //Если нажата кнопка выхода
          document.getElementById('search').value=match;
          return true;
      }         
-    window.onload = function(){
-        
-    }
 </script>

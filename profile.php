@@ -23,25 +23,32 @@ if ($id&&$_GET['addst']&&$_GET['vac']){
     //удалить из списка желающих
     foreach ($vac as $rw => $link) {
         if ($link['id']==$_GET['vac']){
-            $stds=explode(";",$link['students']);
-            $key=array_search($_GET['addst'],$stds);
-            unset($stds[$key]);
-            $str=implode(";",$stds);
-            $sql = "UPDATE vacancies SET students = :students
-            WHERE id = :id";
-            $stmt = $pdo->prepare($sql);                                  
-            $stmt->bindParam(':students', $str, PDO::PARAM_STR);   
-            $stmt->bindParam(':id', $_GET['vac'], PDO::PARAM_INT);   
-            $stmt->execute(); 
+            $check="SELECT count(*) as count FROM student WHERE vacancy=?";
+            $stm = $pdo -> prepare($check);
+            $stm -> execute([$_GET['vac']]);
+            $count = $stm -> fetch();
+            if ($count['count']<$link['num']){
+                $stds=explode(";",$link['students']);
+                $key=array_search($_GET['addst'],$stds);
+                unset($stds[$key]);
+                $str=implode(";",$stds);
+                $sql = "UPDATE vacancies SET students = :students
+                WHERE id = :id";
+                $stmt = $pdo->prepare($sql);                                  
+                $stmt->bindParam(':students', $str, PDO::PARAM_STR);   
+                $stmt->bindParam(':id', $_GET['vac'], PDO::PARAM_INT);   
+                $stmt->execute(); 
+                $sql = "UPDATE student SET vacancy = :vacancy
+                WHERE id = :id";
+                $stmt = $pdo->prepare($sql);                                  
+                $stmt->bindParam(':vacancy', $_GET['vac'], PDO::PARAM_INT);   
+                $stmt->bindParam(':id', $_GET['addst'], PDO::PARAM_INT);   
+                $stmt->execute(); 
+            }
+            else 
+                echo "<script>alert('Свободные места закончились');</script>";
         }
     }
-    //добавить вакансию
-    $sql = "UPDATE student SET vacancy = :vacancy
-    WHERE id = :id";
-    $stmt = $pdo->prepare($sql);                                  
-    $stmt->bindParam(':vacancy', $_GET['vac'], PDO::PARAM_INT);   
-    $stmt->bindParam(':id', $_GET['addst'], PDO::PARAM_INT);   
-    $stmt->execute(); 
 }
 //удалить студента
 if ($id&&$_GET['deletest']&&$_GET['vac']){
