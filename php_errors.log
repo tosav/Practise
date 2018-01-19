@@ -820,3 +820,4 @@ Stack trace:
 [18-Jan-2018 05:10:12 Europe/Moscow] PHP Parse error:  syntax error, unexpected '$stm' (T_VARIABLE) in D:\OpenServer\domains\Practise\profile.php on line 27
 [18-Jan-2018 05:11:14 Europe/Moscow] PHP Parse error:  syntax error, unexpected '$stme' (T_VARIABLE) in D:\OpenServer\domains\Practise\profile.php on line 27
 [18-Jan-2018 05:12:47 Europe/Moscow] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in D:\OpenServer\domains\Practise\profile.php on line 46
+[19-Jan-2018 10:45:15 Europe/Moscow] PHP Warning:  mysql_result(): Unable to jump to row 0 on MySQL result index 7 in D:\OpenServer\domains\Practise\reg.php on line 16

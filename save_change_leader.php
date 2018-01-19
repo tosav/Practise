@@ -2,11 +2,7 @@
    session_start();
     $login = $_POST['login'];
     $password=$_POST['password'];
-	$checkPassword = $_POST['checkPassword'];
-	if ($password != $checkPassword)
-	{
-		exit ("Пароли не совпадают");
-	}
+	
 	$fullName = $_POST['fullName'];
 	$email = $_POST['email'];
 
@@ -14,6 +10,11 @@
 
 	$gropus = $_POST['gropus'];
     $id = $_POST['id'];
+    $checkPassword = $_POST['checkPassword'];
+	if ($password != $checkPassword)
+	{
+		exit ("Пароли не совпадают <a href='reg.php?id=$id'>Вернуться</a>");
+	}
  if (empty($login) or empty($password)) //если пользователь не ввел логин или пароль, то выдаем ошибку и останавливаем скрипт
     {
     exit ("Вы ввели не всю информацию, вернитесь назад и заполните все поля!");
